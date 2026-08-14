@@ -1,0 +1,26 @@
+{
+  "name": "global-official-business-facts",
+  "version": "0.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "validate:catalogue": "tsx scripts/validate-catalogue.ts",
+    "build:catalogue": "tsx scripts/build-catalogue.ts",
+    "build:static": "tsx scripts/build-static.ts",
+    "build": "npm run validate:catalogue && npm run build:catalogue && npm run build:static",
+    "typecheck": "tsc --noEmit",
+    "test": "vitest run",
+    "check": "npm run build && npm run types:worker && npm run typecheck && npm test && wrangler deploy --dry-run",
+    "dev": "npm run build && npm run types:worker && wrangler dev",
+    "deploy": "npm run check && wrangler deploy",
+    "types:worker": "wrangler types"
+  },
+  "devDependencies": {
+    "@cloudflare/workers-types": "latest",
+    "tsx": "latest",
+    "typescript": "latest",
+    "vitest": "latest",
+    "wrangler": "latest",
+    "@types/node": "latest"
+  }
+}

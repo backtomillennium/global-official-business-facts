@@ -1,0 +1,27 @@
+{
+  "id": "basic-business-facts-v0",
+  "version": "0.1.0",
+  "allowedCanonicalFields": [
+    "identifiers",
+    "legalName",
+    "status",
+    "entityType",
+    "registrationDate",
+    "registeredAddress",
+    "industryCodes",
+    "provenance",
+    "warnings"
+  ],
+  "prohibitedFieldClasses": [
+    "officers",
+    "directors",
+    "shareholders",
+    "owners",
+    "beneficial-owners",
+    "personal-residential-addresses",
+    "person-identifiers",
+    "paid-documents",
+    "filing-binaries"
+  ],
+  "personDataAllowed": false
+}
