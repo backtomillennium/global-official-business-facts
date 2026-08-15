@@ -9,8 +9,17 @@
   ],
   "workers_dev": false,
   "preview_urls": false,
+  "alias": {
+    "uncrypto": "./src/compat/uncrypto-worker.ts"
+  },
   "vars": {
     "PUBLIC_HOSTNAME": "business.newbies.cool"
+  },
+  "secrets": {
+    "required": [
+      "CDP_API_KEY_ID",
+      "CDP_API_KEY_SECRET"
+    ]
   },
   "ratelimits": [
     {
@@ -28,6 +37,14 @@
         "limit": 30,
         "period": 60
       }
+    },
+    {
+      "name": "SINGAPORE_SOURCE_RATE_LIMITER",
+      "namespace_id": "7482303",
+      "simple": {
+        "limit": 4,
+        "period": 10
+      }
     }
   ],
   "assets": {
@@ -36,6 +53,11 @@
     "run_worker_first": true
   },
   "observability": {
-    "enabled": true
+    "enabled": true,
+    "logs": {
+      "enabled": true,
+      "invocation_logs": false,
+      "persist": true
+    }
   }
 }

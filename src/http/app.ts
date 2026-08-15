@@ -21,6 +21,7 @@ interface RateLimiterBinding {
 export type RuntimeBindings = Partial<PaymentSecrets> & {
   REQUEST_RATE_LIMITER?: RateLimiterBinding;
   UPSTREAM_RATE_LIMITER?: RateLimiterBinding;
+  SINGAPORE_SOURCE_RATE_LIMITER?: RateLimiterBinding;
 };
 
 type AppEnvironment = {
@@ -41,6 +42,13 @@ const CORS_HEADERS: Readonly<Record<string, string>> = {
   "access-control-expose-headers": "payment-required, payment-response",
   "access-control-max-age": "600",
 };
+
+function officialSourceSubrequestCost(jurisdictionId: string): number {
+  // RPO exact lookup is intentionally a documented two-call adapter:
+  // IČO search -> internal RPO id -> entity detail. The other V1 adapters
+  // issue one official-source subrequest per lookup.
+  return jurisdictionId === "SVK" ? 2 : 1;
+}
 
 function statusFor(code: DomainError["code"]): ContentfulStatusCode {
   switch (code) {
@@ -68,6 +76,7 @@ function statusFor(code: DomainError["code"]): ContentfulStatusCode {
     case "NO_PRODUCTION_ADAPTER":
       return 501;
     case "PAYMENT_UNAVAILABLE":
+    case "PAYMENT_OUTCOME_UNKNOWN":
     case "SOURCE_UNAVAILABLE":
     case "SOURCE_TIMEOUT":
     case "SOURCE_AUTH_ERROR":
@@ -156,6 +165,26 @@ export function createApp(input: AppInput) {
     const validated = input.lookupService.validateRequest(resolved);
     const requestId = c.get("requestId");
 
+    const hasPaymentSignature = Boolean(c.req.header("payment-signature"));
+
+    // Reserve source capacity before settlement, but only when a buyer actually
+    // presents a payment authorization. Ordinary unpaid 402 discovery requests
+    // must not consume the scarce official-source quota. This is a local
+    // abuse-control decision only: it does not query the registry or disclose
+    // entity existence. A locally rejected signed request therefore cannot be
+    // charged and then denied by our own upstream limiter.
+    if (hasPaymentSignature) {
+      const sourceLimiter = validated.jurisdictionId === "SGP"
+        ? c.env?.SINGAPORE_SOURCE_RATE_LIMITER ?? c.env?.UPSTREAM_RATE_LIMITER
+        : c.env?.UPSTREAM_RATE_LIMITER;
+      if (sourceLimiter) {
+        for (let index = 0; index < officialSourceSubrequestCost(validated.jurisdictionId); index += 1) {
+          const decision = await sourceLimiter.limit({ key: `upstream:${validated.jurisdictionId}` });
+          if (!decision.success) throw new DomainError("SOURCE_RATE_LIMITED", "Official source call rate limit exceeded");
+        }
+      }
+    }
+
     const payment = await input.paymentGateFactory(c.env ?? {}).authorizeAndSettle({
       method: c.req.method,
       url: c.req.url,
@@ -163,11 +192,6 @@ export function createApp(input: AppInput) {
     });
     paymentLog(requestId, validated.jurisdictionId, validated.identifier.schemeId, payment.resultClass);
     if (!payment.ok) return payment.response;
-
-    if (c.env?.UPSTREAM_RATE_LIMITER) {
-      const decision = await c.env.UPSTREAM_RATE_LIMITER.limit({ key: `upstream:${validated.jurisdictionId}` });
-      if (!decision.success) throw new DomainError("SOURCE_RATE_LIMITED", "Official source call rate limit exceeded");
-    }
 
     const result = await input.lookupService.lookup(validated, requestId);
     const manifest = input.catalogue.getAdapterManifest(result.execution.adapterId);

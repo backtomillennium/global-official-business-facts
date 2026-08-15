@@ -24,6 +24,6 @@
     "endpoint": "https://data.gov.sg/api/action/datastore_search",
     "authentication": { "type": "none", "required": false, "registration": "none", "credentialRef": null },
     "formats": ["application/json"],
-    "rateLimit": { "status": "not-stated", "requests": null, "windowSeconds": null }
+    "rateLimit": { "status": "stated", "requests": 4, "windowSeconds": 10 }
   }
 ]

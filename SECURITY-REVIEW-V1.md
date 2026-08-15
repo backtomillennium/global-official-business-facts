@@ -1,12 +1,12 @@
 # Global Official Business Facts — Security Review V1
 
-Review date: 2026-08-14
+Review date: 2026-08-15
 
 Scope: hardened R1 → deployable V1, including NOR/SVK/SGP adapters, canonical API, x402, Cloudflare configuration, static assets and dependency supply chain.
 
 ## Verdict
 
-No known critical or high-severity implementation finding remains open in the repository. Mainnet payment operation is intentionally fail-closed until Cloudflare CDP secrets are configured. A real settlement was not attempted.
+No known critical or high-severity implementation finding remains open in the repository. Mainnet payment operation remains fail-closed for missing/invalid configuration and facilitator failures. The operator has configured encrypted CDP secrets in Cloudflare; a real settlement was not attempted.
 
 ## Security controls verified
 
@@ -23,8 +23,10 @@ No known critical or high-severity implementation finding remains open in the re
 ### Abuse controls — PASS
 
 - `REQUEST_RATE_LIMITER`: 60 requests per 60 seconds per SHA-256 client-IP key.
-- `UPSTREAM_RATE_LIMITER`: 30 calls per 60 seconds per jurisdiction key.
-- Both are Cloudflare Workers Rate Limiting bindings, not browser controls.
+- `UPSTREAM_RATE_LIMITER`: 30 official subrequests per 60 seconds per jurisdiction key.
+- `SINGAPORE_SOURCE_RATE_LIMITER`: 4 official subrequests per 10 seconds, matching the designated anonymous data.gov.sg source tier.
+- Source capacity is consumed only when a payment authorization is present and before settlement. Norway/Singapore consume one unit; Slovakia consumes two for search plus detail.
+- These are Cloudflare Workers Rate Limiting bindings, not browser controls, financial ledgers or globally consistent concurrency locks.
 - Repeated malformed requests never reach payment verification or upstream adapters.
 
 ### SSRF and upstream boundary — PASS
@@ -44,8 +46,11 @@ No known critical or high-severity implementation finding remains open in the re
 - Official x402/Exact EVM/facilitator primitives are used. Cryptographic verification is not reimplemented.
 - The official resource-server settlement primitive completes before the paid upstream lookup.
 - Missing, malformed, wrong-network, wrong-asset, wrong-amount, wrong-payee, verify failure, settle failure and facilitator failure all fail closed.
+- A facilitator timeout after settlement starts returns `PAYMENT_OUTCOME_UNKNOWN`. It is not automatically retried or falsely reported as definitely unpaid, because settlement may have completed after the client stopped waiting.
 - Repeated identical payloads are never converted into an application entitlement; each request invokes verify and settle. On-chain/facilitator authorization semantics remain the replay authority.
 - Payment signatures and facilitator errors are not returned or logged.
+- The CDP SDK's `uncrypto` dependency is explicitly aliased to Cloudflare's platform Web Crypto implementation so JWT nonces use `globalThis.crypto.getRandomValues` in workerd. Coinbase/x402 cryptographic primitives remain unchanged.
+- Facilitator initialization failures are retried only after a ten-second cooldown. They fail closed, do not permanently poison a Worker isolate and cannot create an unbounded retry storm.
 
 ### Data exposure and persistence — PASS
 
@@ -56,6 +61,7 @@ No known critical or high-severity implementation finding remains open in the re
 - No D1, KV, R2, Durable Objects or company-data filesystem writes exist.
 - Business responses use `no-store`.
 - Person-heavy fields and documents are excluded by profile and adapter mappings.
+- Slovak registered-address normalization accepts only a current timed value and never falls back to an expired historical address.
 
 ### Deployment surface — PASS in repository
 
@@ -63,6 +69,7 @@ No known critical or high-severity implementation finding remains open in the re
 - Worker requires HTTPS and exact hostname `business.newbies.cool` for API and static assets.
 - Static CSP, frame denial, HSTS, `nosniff`, no-referrer and permissions restrictions are generated.
 - API responses receive restrictive security headers and request IDs.
+- Cloudflare automatic invocation logs are disabled; only application-generated, field-allowlisted logs are persisted.
 - CodeQL, CI and Dependabot configuration are committed.
 
 ### Dependency supply chain — PASS
@@ -78,13 +85,15 @@ No known critical or high-severity implementation finding remains open in the re
 
 The suite covers 2 KiB and oversized bodies, deep/malformed JSON, extra fields, long/Unicode/control/null identifiers, full URLs, invalid encoding, unsupported/duplicate content types, wrong methods, CORS, repeated malformed requests, rate limits, encoded slashes/dots/double encoding, alternate hostnames, preview/workers.dev names, SSRF, request-header injection, redirects to hostile/private/protocol-downgrade destinations, body streaming timeout, declared/streamed oversized responses, wrong content type/JSON/root/schema, all relevant upstream statuses, payment term substitution, malformed payment headers, facilitator failures, payment reuse behavior, paid not-found/timeout, response/log leakage and static header configuration.
 
-Final suite result: PASS — 12 test files / 92 total tests. The focused security command also passed 3 files / 39 tests. See `V1-IMPLEMENTATION-REPORT.md` for the release matrix.
+Final suite result: PASS — 13 test files / 104 total tests. The focused security command also passed 3 files / 41 tests. The official Base Sepolia no-payment challenge returned 402, and the designated Norway, Slovakia and Singapore source smokes all passed. See `V1-IMPLEMENTATION-REPORT.md` for the release matrix.
 
 ## Residual operational actions
 
-- Configure CDP secrets directly in Cloudflare.
+- Keep CDP secrets only in Cloudflare runtime bindings; rotate only if compromise is suspected, not for the resolved Web Crypto compatibility error.
 - Perform and observe one real Polygon USDC settlement.
 - Confirm GitHub secret scanning, push protection and branch protection in repository settings.
 - Monitor upstream schema/licence change triggers and dependency advisories.
+- Treat Workers Rate Limiting as best-effort per-location abuse control. Persistent distributed abuse should be handled with account-level Cloudflare WAF/rate-limit rules.
+- If a buyer receives `PAYMENT_OUTCOME_UNKNOWN`, do not reuse the authorization; reconcile public chain/wallet state using the request ID.
 
 These are deployment/account actions, not reasons to weaken or bypass repository controls.

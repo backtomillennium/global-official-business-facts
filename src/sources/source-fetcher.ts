@@ -44,19 +44,30 @@ export class WorkerSourceFetcher implements SourceFetcher {
       const response = await fetch(url, init);
 
       if (response.status >= 300 && response.status < 400) {
+        await this.discardBody(response);
         throw new DomainError("SOURCE_BAD_RESPONSE", "Official source returned an unexpected redirect", { sourceId, upstreamStatus: response.status });
       }
-      if (response.status === 429) throw new DomainError("SOURCE_RATE_LIMITED", "Official source rate-limited the request", { sourceId });
-      if (response.status === 401 || response.status === 403) throw new DomainError("SOURCE_AUTH_ERROR", "Official source rejected authentication/authorization", { sourceId });
-      if (response.status >= 500) throw new DomainError("SOURCE_UNAVAILABLE", "Official source is unavailable", { sourceId, upstreamStatus: response.status });
+      if (response.status === 429) {
+        await this.discardBody(response);
+        throw new DomainError("SOURCE_RATE_LIMITED", "Official source rate-limited the request", { sourceId });
+      }
+      if (response.status === 401 || response.status === 403) {
+        await this.discardBody(response);
+        throw new DomainError("SOURCE_AUTH_ERROR", "Official source rejected authentication/authorization", { sourceId });
+      }
+      if (response.status >= 500) {
+        await this.discardBody(response);
+        throw new DomainError("SOURCE_UNAVAILABLE", "Official source is unavailable", { sourceId, upstreamStatus: response.status });
+      }
 
       if (response.status < 200 || response.status >= 300) {
-        await response.body?.cancel();
+        await this.discardBody(response);
         return { status: response.status, headers: response.headers, body: null };
       }
 
       const declaredLength = Number(response.headers.get("content-length"));
       if (Number.isFinite(declaredLength) && declaredLength > maxResponseBytes) {
+        await this.discardBody(response);
         throw new DomainError("SOURCE_BAD_RESPONSE", "Official source response exceeds configured size limit", { sourceId });
       }
 
@@ -77,6 +88,15 @@ export class WorkerSourceFetcher implements SourceFetcher {
       throw new DomainError("SOURCE_UNAVAILABLE", "Official source transport failed", { sourceId });
     } finally {
       if (!responseBodyOwnsTimeout) clearTimeout(timeout);
+    }
+  }
+
+  private async discardBody(response: Response): Promise<void> {
+    try {
+      await response.body?.cancel();
+    } catch {
+      // The semantic error for the response status/size takes precedence over a
+      // best-effort cancellation failure.
     }
   }
 

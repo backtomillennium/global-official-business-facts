@@ -59,6 +59,8 @@ dd { margin: 0; overflow-wrap: anywhere; }
 pre { overflow-x: auto; padding: 1.25rem; color: #e8f2eb; background: #132119; border-radius: .45rem; line-height: 1.45; }
 .disclaimer { margin-top: 5rem; padding: 1.25rem 1.5rem; border: 1px solid var(--line); border-left: .35rem solid var(--accent); background: var(--panel); }
 .disclaimer p { margin: .35rem 0 0; color: var(--muted); }
+.notice { margin: 2rem 0; padding: 1.25rem 1.5rem; border: 1px solid #d7b45c; border-left: .35rem solid #9b6900; background: #fff8e5; }
+.notice p { margin: .35rem 0 0; color: #58440f; }
 @media (max-width: 760px) {
   .site-header, .section-heading, .title-row { align-items: flex-start; flex-direction: column; }
   main { padding-top: 2.5rem; }

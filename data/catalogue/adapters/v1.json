@@ -27,6 +27,6 @@
     "supportedIdentifierSchemeIds": ["sg-uen"],
     "sourceIds": ["sg-acra-datagovsg"],
     "capabilities": { "exactLookup": true, "nameSearch": false, "bulkSync": false, "incrementalSync": false, "documentFetch": false, "historicalLookup": false },
-    "scopeWarnings": ["The resource is an official ACRA open-data publication, not a current or certified BizFile+ profile.", "The source is refreshed monthly."]
+    "scopeWarnings": ["The resource is the official Entities Registered with ACRA open-data publication, not a current or certified BizFile+ profile.", "The source is refreshed monthly."]
   }
 ]

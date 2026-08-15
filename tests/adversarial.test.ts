@@ -1,3 +1,4 @@
+import { FacilitatorTimeoutError } from "@x402/core/server";
 import type { FacilitatorClient } from "@x402/core/server";
 import { decodePaymentRequiredHeader } from "@x402/core/http";
 import type { SettleResponse, VerifyResponse } from "@x402/core/types";
@@ -142,13 +143,14 @@ describe("adversarial routing and outbound transport", () => {
   });
 });
 
-function facilitator(input: { verify?: "valid" | "invalid" | "throw"; settle?: "valid" | "invalid" | "throw"; supported?: "valid" | "throw" } = {}) {
+function facilitator(input: { verify?: "valid" | "invalid" | "throw"; settle?: "valid" | "invalid" | "throw" | "timeout"; supported?: "valid" | "throw" } = {}) {
   const verify = vi.fn(async (): Promise<VerifyResponse> => {
     if (input.verify === "throw") throw new Error("FACILITATOR_SECRET_DETAIL");
     return input.verify === "invalid" ? { isValid: false, invalidReason: "bad-payment" } : { isValid: true, payer: "0x0000000000000000000000000000000000000001" };
   });
   const settle = vi.fn(async (): Promise<SettleResponse> => {
     if (input.settle === "throw") throw new Error("FACILITATOR_SECRET_DETAIL");
+    if (input.settle === "timeout") throw new FacilitatorTimeoutError("settle", 10_000);
     return input.settle === "invalid"
       ? { success: false, errorReason: "failed", transaction: "", network: BASE_SEPOLIA }
       : { success: true, transaction: "0xtest", network: BASE_SEPOLIA, payer: "0x0000000000000000000000000000000000000001" };
@@ -263,11 +265,65 @@ describe("x402 fail-closed payment boundary", () => {
     expect(await authorize(new X402PaymentGate({ facilitator: invalidSettle.client, network: BASE_SEPOLIA, asset: BASE_SEPOLIA_USDC, assetName: "USDC" }), paymentHeader()))
       .toMatchObject({ ok: false, resultClass: "invalid" });
 
+    const unavailableSettle = facilitator({ settle: "throw" });
+    const failedSettle = await authorize(new X402PaymentGate({ facilitator: unavailableSettle.client, network: BASE_SEPOLIA, asset: BASE_SEPOLIA_USDC, assetName: "USDC" }), paymentHeader());
+    expect(failedSettle).toMatchObject({ ok: false, resultClass: "invalid" });
+    if (failedSettle.ok) throw new Error("Expected failed settlement response");
+    expect(await failedSettle.response.text()).not.toContain("FACILITATOR_SECRET_DETAIL");
+
     const unavailable = facilitator({ supported: "throw" });
     const decision = await authorize(new X402PaymentGate({ facilitator: unavailable.client, network: BASE_SEPOLIA, asset: BASE_SEPOLIA_USDC, assetName: "USDC" }), paymentHeader());
     expect(decision).toMatchObject({ ok: false, resultClass: "unavailable" });
     if (decision.ok) throw new Error("Expected unavailable response");
     expect(await decision.response.text()).not.toContain("FACILITATOR_SECRET_DETAIL");
+  });
+
+  it("reports a settlement timeout as indeterminate instead of claiming no payment occurred", async () => {
+    const fake = facilitator({ settle: "timeout" });
+    const decision = await authorize(
+      new X402PaymentGate({ facilitator: fake.client, network: BASE_SEPOLIA, asset: BASE_SEPOLIA_USDC, assetName: "USDC" }),
+      paymentHeader(),
+    );
+    expect(decision).toMatchObject({ ok: false, resultClass: "indeterminate" });
+    if (decision.ok) throw new Error("Expected indeterminate settlement response");
+    expect(decision.response.status).toBe(503);
+    await expect(decision.response.json()).resolves.toMatchObject({
+      error: { code: "PAYMENT_OUTCOME_UNKNOWN" },
+    });
+    expect(fake.verify).toHaveBeenCalledOnce();
+    expect(fake.settle).toHaveBeenCalledOnce();
+  });
+
+  it("recovers from a transient initialization failure after the bounded cooldown", async () => {
+    let now = 1_000;
+    vi.spyOn(Date, "now").mockImplementation(() => now);
+
+    const fake = facilitator();
+    const supported = vi.fn()
+      .mockRejectedValueOnce(new Error("TRANSIENT_FACILITATOR_FAILURE"))
+      .mockResolvedValue({
+        kinds: [{ x402Version: 2, scheme: "exact", network: BASE_SEPOLIA }],
+        extensions: [],
+        signers: { [BASE_SEPOLIA]: ["0x0000000000000000000000000000000000000002"] },
+      });
+    fake.client.getSupported = supported;
+    const gate = new X402PaymentGate({ facilitator: fake.client, network: BASE_SEPOLIA, asset: BASE_SEPOLIA_USDC, assetName: "USDC" });
+
+    expect(await authorize(gate)).toMatchObject({ ok: false, resultClass: "unavailable" });
+    expect(supported).toHaveBeenCalledTimes(1);
+
+    // Requests during an outage fail closed without creating an upstream retry storm.
+    now += 5_000;
+    expect(await authorize(gate)).toMatchObject({ ok: false, resultClass: "unavailable" });
+    expect(supported).toHaveBeenCalledTimes(1);
+
+    // A healthy facilitator can recover the same long-lived Worker isolate.
+    now += 5_001;
+    const recovered = await authorize(gate);
+    expect(recovered).toMatchObject({ ok: false, resultClass: "required" });
+    if (recovered.ok) throw new Error("Expected payment requirement");
+    expect(recovered.response.status).toBe(402);
+    expect(supported).toHaveBeenCalledTimes(2);
   });
 
   it("does not log malformed payment signature material", async () => {

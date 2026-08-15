@@ -1,5 +1,11 @@
 import { createCdpFacilitatorClient } from "@coinbase/cdp-sdk/x402";
-import { HTTPFacilitatorClient, x402HTTPResourceServer, x402ResourceServer } from "@x402/core/server";
+import {
+  FacilitatorTimeoutError,
+  HTTPFacilitatorClient,
+  getFacilitatorResponseError,
+  x402HTTPResourceServer,
+  x402ResourceServer,
+} from "@x402/core/server";
 import type { FacilitatorClient, HTTPAdapter, HTTPRequestContext, HTTPResponseInstructions, RoutesConfig } from "@x402/core/server";
 import type { Network } from "@x402/core/types";
 import { ExactEvmScheme } from "@x402/evm/exact/server";
@@ -16,7 +22,7 @@ export const POLYGON_USDC = "0x3c499c542cEF5E3811e1192ce70d8cC03d5c3359";
 export const BASE_SEPOLIA = "eip155:84532";
 export const BASE_SEPOLIA_USDC = "0x036CbD53842c5426634e7929541eC2318f3dCF7e";
 
-export type PaymentResultClass = "required" | "invalid" | "settled" | "unavailable";
+export type PaymentResultClass = "required" | "invalid" | "settled" | "unavailable" | "indeterminate";
 
 export interface PaymentRequestDescriptor {
   method: string;
@@ -80,9 +86,27 @@ function paymentUnavailable(): PaymentDecision {
   };
 }
 
+function paymentOutcomeUnknown(): PaymentDecision {
+  return {
+    ok: false,
+    resultClass: "indeterminate",
+    response: new Response(JSON.stringify({
+      error: {
+        code: "PAYMENT_OUTCOME_UNKNOWN",
+        message: "Payment settlement outcome could not be confirmed. Do not reuse the same payment authorization; contact support with the x-request-id.",
+      },
+    }), {
+      status: 503,
+      headers: { "content-type": "application/json; charset=utf-8", "cache-control": "no-store" },
+    }),
+  };
+}
+
 export class X402PaymentGate implements PaymentGate {
   private readonly httpServer: x402HTTPResourceServer;
   private initialization: Promise<void> | null = null;
+  private initialized = false;
+  private initializationRetryAfter = 0;
 
   constructor(input: { facilitator: FacilitatorClient; network: Network; asset: string; assetName: string }) {
     const resourceServer = new x402ResourceServer(input.facilitator)
@@ -125,10 +149,37 @@ export class X402PaymentGate implements PaymentGate {
     this.httpServer = new x402HTTPResourceServer(resourceServer, routes);
   }
 
+  private async ensureInitialized(): Promise<void> {
+    if (this.initialized) return;
+
+    if (this.initialization === null) {
+      if (Date.now() < this.initializationRetryAfter) {
+        throw new Error("Payment facilitator initialization is cooling down");
+      }
+
+      this.initialization = this.httpServer.initialize()
+        .then(() => {
+          this.initialized = true;
+        })
+        .catch(error => {
+          // A transient facilitator failure must fail closed, but it must not
+          // permanently poison this Worker isolate. Bound retries so malformed
+          // traffic cannot turn an outage into an upstream request storm.
+          this.initializationRetryAfter = Date.now() + 10_000;
+          throw error;
+        })
+        .finally(() => {
+          this.initialization = null;
+        });
+    }
+
+    await this.initialization;
+  }
+
   async authorizeAndSettle(request: PaymentRequestDescriptor): Promise<PaymentDecision> {
+    let settlementStarted = false;
     try {
-      this.initialization ??= this.httpServer.initialize();
-      await this.initialization;
+      await this.ensureInitialized();
       const adapter = new RequestAdapter(request);
       const paymentHeader = adapter.getHeader("payment-signature");
       const context: HTTPRequestContext = {
@@ -154,6 +205,7 @@ export class X402PaymentGate implements PaymentGate {
       // Exact EIP-3009 normally settles after a framework handler. GOBF deliberately invokes
       // the official resource-server settlement primitive here so no paid upstream lookup is
       // executed until settlement has succeeded.
+      settlementStarted = true;
       const settled = await this.httpServer.processSettlement(
         processed.paymentPayload,
         processed.paymentRequirements,
@@ -165,6 +217,17 @@ export class X402PaymentGate implements PaymentGate {
       }
       return { ok: true, headers: settled.headers, resultClass: "settled" };
     } catch (error) {
+      const facilitatorError = getFacilitatorResponseError(error);
+      if (
+        settlementStarted
+        && facilitatorError instanceof FacilitatorTimeoutError
+        && facilitatorError.operation === "settle"
+      ) {
+        // A client-side settlement timeout is not proof that the facilitator did
+        // not settle onchain. Report the uncertainty explicitly so a buyer does
+        // not reuse the same authorization or assume that no charge occurred.
+        return paymentOutcomeUnknown();
+      }
       // Never serialize facilitator errors, auth material, payment payloads, or signatures.
       void error;
       return paymentUnavailable();

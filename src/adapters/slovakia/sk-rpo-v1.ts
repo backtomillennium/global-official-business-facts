@@ -117,7 +117,9 @@ function internalIdFromSearch(search: JsonObject): string {
 function addressFrom(entity: JsonObject): Fact<AddressValue> | undefined {
   const addresses = optionalArray(entity, "addresses", 100);
   if (!addresses) return undefined;
-  const address = currentTimed(addresses, "addresses") ?? timedObjects(addresses, "addresses")[0] ?? null;
+  // The request explicitly excludes historical data. If an upstream response
+  // nevertheless contains only ended addresses, do not relabel one as current.
+  const address = currentTimed(addresses, "addresses");
   if (!address) return undefined;
   const formatted = optionalString(address, "formatedAddress", SLOVAKIA_SOURCE_ID, 2_048);
   if (!formatted) return undefined;

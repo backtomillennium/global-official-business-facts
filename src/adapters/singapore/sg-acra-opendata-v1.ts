@@ -23,8 +23,8 @@ const REQUIRED_FIELDS = [
   "reg_street_name",
   "reg_postal_code",
 ] as const;
-const FRESHNESS_WARNING = "The ACRA open-data resource is refreshed monthly and may lag BizFile+.";
-const SCOPE_WARNING = "This is an ACRA open-data publication through data.gov.sg, not a current or certified BizFile+ profile.";
+const FRESHNESS_WARNING = "The Entities Registered with ACRA open-data resource is refreshed monthly and may lag BizFile+.";
+const SCOPE_WARNING = "This is the Entities Registered with ACRA open-data publication through data.gov.sg, not a current or certified BizFile+ profile.";
 
 function fact<T>(value: T, sourceValue: unknown, mappingConfidence: "high" | "medium" = "high"): Fact<T> {
   return {
@@ -116,7 +116,7 @@ function parseRecord(record: JsonObject, requestedUen: string, sourceUrl: string
     provenance: {
       sourceIds: [SINGAPORE_SOURCE_ID],
       authority: "Accounting and Corporate Regulatory Authority (ACRA)",
-      registry: "ACRA Information on Corporate Entities",
+      registry: "Entities Registered with ACRA",
       recordUrl: sourceUrl,
       retrievedAt,
       dataAsOf: null,

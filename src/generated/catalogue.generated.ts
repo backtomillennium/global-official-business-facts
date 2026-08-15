@@ -93,7 +93,7 @@ export const compiledCatalogue: CompiledCatalogue = {
         "name": "Accounting and Corporate Regulatory Authority (ACRA)",
         "type": "national-business-registry-authority"
       },
-      "name": "ACRA Information on Corporate Entities",
+      "name": "Entities Registered with ACRA",
       "registryRole": "official-open-data-publication",
       "scope": {
         "geographic": "national",
@@ -158,9 +158,9 @@ export const compiledCatalogue: CompiledCatalogue = {
         "application/json"
       ],
       "rateLimit": {
-        "status": "not-stated",
-        "requests": null,
-        "windowSeconds": null
+        "status": "stated",
+        "requests": 4,
+        "windowSeconds": 10
       }
     }
   ],
@@ -211,13 +211,13 @@ export const compiledCatalogue: CompiledCatalogue = {
       "id": "sg-acra-datagovsg",
       "registryId": "sg-acra-open-data",
       "authority": "Accounting and Corporate Regulatory Authority (ACRA) / GovTech Singapore",
-      "name": "ACRA Information on Corporate Entities — UEN-keyed resource",
+      "name": "Entities Registered with ACRA — UEN-keyed resource",
       "sourceKind": "government-open-data-api",
       "sourceForm": "per-entity-query",
       "official": true,
       "machineReadable": true,
       "recordScope": "Open-data publication of ACRA records; not a certified BizFile+ profile",
-      "url": "https://data.gov.sg/collections/2/view",
+      "url": "https://data.gov.sg/datasets/d_3f960c10fed6145404ca7b821f263b87/view",
       "accessMethodIds": [
         "sg-datagov-datastore-search"
       ],
@@ -226,7 +226,7 @@ export const compiledCatalogue: CompiledCatalogue = {
         "sg-monthly-refresh",
         "sg-open-data-scope"
       ],
-      "lastVerifiedAt": "2026-08-14"
+      "lastVerifiedAt": "2026-08-15"
     }
   ],
   "identifierSchemes": [
@@ -317,10 +317,10 @@ export const compiledCatalogue: CompiledCatalogue = {
       "redistribution": "allowed",
       "caching": "not-stated",
       "attributionRequired": true,
-      "attributionText": "Contains information from ACRA Information on Corporate Entities accessed on {date} from data.gov.sg which is made available under the terms of the Singapore Open Data Licence version 1.0 https://data.gov.sg/open-data-licence",
+      "attributionText": "Contains information from Entities Registered with ACRA accessed on {date} from data.gov.sg which is made available under the terms of the Singapore Open Data Licence version 1.0 https://data.gov.sg/open-data-licence",
       "attributionStatus": "verified",
       "sourceUrl": "https://data.gov.sg/open-data-licence",
-      "verifiedAt": "2026-08-14"
+      "verifiedAt": "2026-08-15"
     }
   ],
   "constraints": [
@@ -375,8 +375,8 @@ export const compiledCatalogue: CompiledCatalogue = {
       "scopeId": "sg-acra-datagovsg",
       "description": "The ACRA open-data publication is refreshed monthly.",
       "severity": "operational",
-      "sourceUrl": "https://data.gov.sg/collections/2/view",
-      "verifiedAt": "2026-08-14",
+      "sourceUrl": "https://data.gov.sg/datasets/d_3f960c10fed6145404ca7b821f263b87/view",
+      "verifiedAt": "2026-08-15",
       "confidence": "high"
     },
     {
@@ -386,8 +386,8 @@ export const compiledCatalogue: CompiledCatalogue = {
       "scopeId": "sg-acra-datagovsg",
       "description": "This is an official open-data publication with some columns removed, not a certified BizFile+ profile.",
       "severity": "informational",
-      "sourceUrl": "https://data.gov.sg/collections/2/view",
-      "verifiedAt": "2026-08-14",
+      "sourceUrl": "https://data.gov.sg/datasets/d_3f960c10fed6145404ca7b821f263b87/view",
+      "verifiedAt": "2026-08-15",
       "confidence": "high"
     }
   ],
@@ -578,9 +578,9 @@ export const compiledCatalogue: CompiledCatalogue = {
       "subjectType": "source",
       "subjectId": "sg-acra-datagovsg",
       "value": "ACRA open-data publication; some columns removed",
-      "sourceUrl": "https://data.gov.sg/collections/2/view",
+      "sourceUrl": "https://data.gov.sg/datasets/d_3f960c10fed6145404ca7b821f263b87/view",
       "sourceAuthority": "ACRA / GovTech Singapore",
-      "checkedAt": "2026-08-14",
+      "checkedAt": "2026-08-15",
       "confidence": "high",
       "evidenceClass": "first-party"
     },
@@ -592,7 +592,19 @@ export const compiledCatalogue: CompiledCatalogue = {
       "value": "The designated UEN-keyed resource result.fields contains uen and entity_name plus the mapped status, entity-type, issue-date and address fields",
       "sourceUrl": "https://data.gov.sg/api/action/datastore_search?resource_id=d_3f960c10fed6145404ca7b821f263b87&limit=1",
       "sourceAuthority": "GovTech Singapore / ACRA",
-      "checkedAt": "2026-08-14",
+      "checkedAt": "2026-08-15",
+      "confidence": "high",
+      "evidenceClass": "first-party"
+    },
+    {
+      "id": "EV-SGP-RATE-1",
+      "claimType": "RATE_LIMIT",
+      "subjectType": "access-method",
+      "subjectId": "sg-datagov-datastore-search",
+      "value": "Without API key: 4 Datastore Search calls per 10 seconds; 429 when exceeded",
+      "sourceUrl": "https://guide.data.gov.sg/developer-guide/api-overview/api-rate-limits",
+      "sourceAuthority": "GovTech Singapore",
+      "checkedAt": "2026-08-15",
       "confidence": "high",
       "evidenceClass": "first-party"
     }
@@ -700,7 +712,7 @@ export const compiledCatalogue: CompiledCatalogue = {
         "historicalLookup": false
       },
       "scopeWarnings": [
-        "The resource is an official ACRA open-data publication, not a current or certified BizFile+ profile.",
+        "The resource is the official Entities Registered with ACRA open-data publication, not a current or certified BizFile+ profile.",
         "The source is refreshed monthly."
       ]
     }

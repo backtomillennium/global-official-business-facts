@@ -68,9 +68,12 @@ describe("V1 HTTP API", () => {
     expect((await request(app, "/api/v1/health")).status).toBe(200);
     const catalogueResponse = await request(app, "/api/v1/catalogue/jurisdictions");
     expect((await catalogueResponse.json() as { jurisdictions: unknown[] }).jurisdictions).toHaveLength(3);
-    const openapi = await (await request(app, "/api/v1/openapi.json")).json() as { paths: Record<string, unknown> };
+    const openapi = await (await request(app, "/api/v1/openapi.json")).json() as {
+      paths: Record<string, { post?: { requestBody?: { content?: Record<string, { schema?: { oneOf?: unknown[] } }> } } }>;
+    };
     expect(openapi.paths).toHaveProperty("/api/v1/business/lookup");
     expect(openapi.paths).not.toHaveProperty("/api/business/:jurisdiction/:identifier");
+    expect(openapi.paths["/api/v1/business/lookup"]?.post?.requestBody?.content?.["application/json"]?.schema?.oneOf).toHaveLength(3);
   });
 
   it("validates a known request before returning an x402 challenge and never calls upstream", async () => {
@@ -159,11 +162,56 @@ describe("V1 HTTP API", () => {
     expect(first.status).toBe(429);
     expect(firstPayment).not.toHaveBeenCalled();
 
-    const { app: upstreamLimited, sourceRequest } = makeRuntime(settledDecision);
+    const { app: upstreamLimited, payment: secondPayment, sourceRequest } = makeRuntime(settledDecision);
     const second = await request(upstreamLimited, "/api/v1/business/lookup", {
-      method: "POST", headers: { "content-type": "application/json" }, body: validBody(),
+      method: "POST", headers: { "content-type": "application/json", "payment-signature": "signed-test-payment" }, body: validBody(),
     }, { UPSTREAM_RATE_LIMITER: denied });
     expect(second.status).toBe(429);
+    expect(secondPayment).not.toHaveBeenCalled();
+    expect(sourceRequest).not.toHaveBeenCalled();
+  });
+
+  it("does not spend official-source quota on an unpaid 402 challenge", async () => {
+    const limiter = { limit: vi.fn(async () => ({ success: false })) };
+    const { app, payment, sourceRequest } = makeRuntime(requiredDecision);
+    const response = await request(app, "/api/v1/business/lookup", {
+      method: "POST", headers: { "content-type": "application/json" }, body: validBody(),
+    }, { UPSTREAM_RATE_LIMITER: limiter });
+    expect(response.status).toBe(402);
+    expect(limiter.limit).not.toHaveBeenCalled();
+    expect(payment).toHaveBeenCalledOnce();
+    expect(sourceRequest).not.toHaveBeenCalled();
+  });
+
+  it("uses the official unauthenticated Singapore source quota before payment", async () => {
+    const generic = { limit: vi.fn(async () => ({ success: true })) };
+    const singapore = { limit: vi.fn(async () => ({ success: false })) };
+    const { app, payment, sourceRequest } = makeRuntime(settledDecision);
+    const response = await request(app, "/api/v1/business/lookup", {
+      method: "POST",
+      headers: { "content-type": "application/json", "payment-signature": "signed-test-payment" },
+      body: JSON.stringify({ jurisdiction: "SG", scheme: "sg-uen", identifier: "201201936C" }),
+    }, { UPSTREAM_RATE_LIMITER: generic, SINGAPORE_SOURCE_RATE_LIMITER: singapore });
+    expect(response.status).toBe(429);
+    expect(singapore.limit).toHaveBeenCalledWith({ key: "upstream:SGP" });
+    expect(generic.limit).not.toHaveBeenCalled();
+    expect(payment).not.toHaveBeenCalled();
+    expect(sourceRequest).not.toHaveBeenCalled();
+  });
+
+  it("reserves both official RPO subrequests before settling a Slovak lookup", async () => {
+    const limiter = { limit: vi.fn(async () => ({ success: true })) };
+    const { app, payment, sourceRequest } = makeRuntime(requiredDecision);
+    const response = await request(app, "/api/v1/business/lookup", {
+      method: "POST",
+      headers: { "content-type": "application/json", "payment-signature": "signed-test-payment" },
+      body: JSON.stringify({ jurisdiction: "SK", scheme: "sk-ico", identifier: "00166197" }),
+    }, { UPSTREAM_RATE_LIMITER: limiter });
+    expect(response.status).toBe(402);
+    expect(limiter.limit).toHaveBeenCalledTimes(2);
+    expect(limiter.limit).toHaveBeenNthCalledWith(1, { key: "upstream:SVK" });
+    expect(limiter.limit).toHaveBeenNthCalledWith(2, { key: "upstream:SVK" });
+    expect(payment).toHaveBeenCalledOnce();
     expect(sourceRequest).not.toHaveBeenCalled();
   });
 

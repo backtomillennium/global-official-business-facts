@@ -36,9 +36,9 @@
     "redistribution": "allowed",
     "caching": "not-stated",
     "attributionRequired": true,
-    "attributionText": "Contains information from ACRA Information on Corporate Entities accessed on {date} from data.gov.sg which is made available under the terms of the Singapore Open Data Licence version 1.0 https://data.gov.sg/open-data-licence",
+    "attributionText": "Contains information from Entities Registered with ACRA accessed on {date} from data.gov.sg which is made available under the terms of the Singapore Open Data Licence version 1.0 https://data.gov.sg/open-data-licence",
     "attributionStatus": "verified",
     "sourceUrl": "https://data.gov.sg/open-data-licence",
-    "verifiedAt": "2026-08-14"
+    "verifiedAt": "2026-08-15"
   }
 ]

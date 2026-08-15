@@ -19,7 +19,7 @@
     "id": "sg-acra-open-data",
     "jurisdictionId": "SGP",
     "authority": { "name": "Accounting and Corporate Regulatory Authority (ACRA)", "type": "national-business-registry-authority" },
-    "name": "ACRA Information on Corporate Entities",
+    "name": "Entities Registered with ACRA",
     "registryRole": "official-open-data-publication",
     "scope": { "geographic": "national", "entityScope": "ACRA-registered entities in the published open-data resource", "isPrimaryCompanyRegister": false }
   }

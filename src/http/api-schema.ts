@@ -2,9 +2,9 @@ import { DomainError } from "../domain/errors";
 
 export const LOOKUP_ROUTE = "/api/v1/business/lookup";
 export const SUPPORTED_LOOKUPS = {
-  NO: { jurisdictionId: "NOR", scheme: "no-organisasjonsnummer", maxLength: 32 },
-  SK: { jurisdictionId: "SVK", scheme: "sk-ico", maxLength: 32 },
-  SG: { jurisdictionId: "SGP", scheme: "sg-uen", maxLength: 64 },
+  NO: { jurisdictionId: "NOR", scheme: "no-organisasjonsnummer", maxLength: 32, pattern: "^[0-9 .-]+$" },
+  SK: { jurisdictionId: "SVK", scheme: "sk-ico", maxLength: 32, pattern: "^[0-9 ]+$" },
+  SG: { jurisdictionId: "SGP", scheme: "sg-uen", maxLength: 64, pattern: "^[A-Za-z0-9 ]+$" },
 } as const;
 
 export interface LookupBody {
@@ -14,14 +14,16 @@ export interface LookupBody {
 }
 
 export const lookupRequestJsonSchema = {
-  type: "object",
-  additionalProperties: false,
-  required: ["jurisdiction", "scheme", "identifier"],
-  properties: {
-    jurisdiction: { type: "string", enum: Object.keys(SUPPORTED_LOOKUPS) },
-    scheme: { type: "string", enum: Object.values(SUPPORTED_LOOKUPS).map((item) => item.scheme) },
-    identifier: { type: "string", minLength: 1, maxLength: 64, pattern: "^[A-Za-z0-9 .-]+$" },
-  },
+  oneOf: Object.entries(SUPPORTED_LOOKUPS).map(([jurisdiction, rule]) => ({
+    type: "object",
+    additionalProperties: false,
+    required: ["jurisdiction", "scheme", "identifier"],
+    properties: {
+      jurisdiction: { type: "string", const: jurisdiction },
+      scheme: { type: "string", const: rule.scheme },
+      identifier: { type: "string", minLength: 1, maxLength: rule.maxLength, pattern: rule.pattern },
+    },
+  })),
 } as const;
 
 function isObject(value: unknown): value is Record<string, unknown> {
@@ -57,7 +59,7 @@ export function parseLookupBody(value: unknown): LookupBody {
       identifierScheme: rule.scheme,
     });
   }
-  if (!/^[A-Za-z0-9 .-]+$/.test(value.identifier) || /[\u0000-\u001F\u007F]/.test(value.identifier)) {
+  if (!new RegExp(rule.pattern).test(value.identifier) || /[\u0000-\u001F\u007F]/.test(value.identifier)) {
     throw new DomainError("INVALID_IDENTIFIER", "Identifier contains unsupported characters", {
       jurisdiction,
       identifierScheme: rule.scheme,
@@ -68,22 +70,26 @@ export function parseLookupBody(value: unknown): LookupBody {
 
 export const publicBusinessResponseJsonSchema = {
   type: "object",
+  additionalProperties: false,
   required: ["schemaVersion", "jurisdiction", "identifier", "facts", "source", "warnings", "attribution"],
   properties: {
     schemaVersion: { type: "string", const: "1" },
     jurisdiction: {
       type: "object",
+      additionalProperties: false,
       required: ["id", "iso2", "name"],
       properties: { id: { type: "string" }, iso2: { type: "string" }, name: { type: "string" } },
     },
     identifier: {
       type: "object",
+      additionalProperties: false,
       required: ["scheme", "value"],
       properties: { scheme: { type: "string" }, value: { type: "string" }, kind: { type: "string" } },
     },
     facts: { type: "object", additionalProperties: true },
     source: {
       type: "object",
+      additionalProperties: false,
       required: ["authority", "sourceId", "sourceUrl", "retrievedAt"],
       properties: {
         authority: { type: "string" }, sourceId: { type: "string" }, sourceUrl: { type: "string", format: "uri" }, retrievedAt: { type: "string", format: "date-time" },
@@ -92,6 +98,7 @@ export const publicBusinessResponseJsonSchema = {
     warnings: { type: "array", items: { type: "string" } },
     attribution: {
       type: "object",
+      additionalProperties: false,
       required: ["required", "text", "licence"],
       properties: { required: { type: "boolean" }, text: { type: "string" }, licence: { type: "string" } },
     },
@@ -121,7 +128,7 @@ export function buildOpenApiDocument() {
       [LOOKUP_ROUTE]: {
         post: {
           summary: "Paid exact business lookup",
-          description: "Normalized official business facts from government and business-register sources. Lookup by jurisdiction-specific official identifier. Returns available basic entity facts plus official-source provenance, licence attribution and freshness/scope warnings.",
+          description: "Normalized official business facts from government and business-register sources. Lookup by jurisdiction-specific official identifier. Returns available basic entity facts plus official-source provenance, licence attribution and freshness/scope warnings. The fixed price buys one validated lookup execution attempt; NOT_FOUND may still be charged after settlement. See /terms/.",
           requestBody: {
             required: true,
             content: { "application/json": { schema: lookupRequestJsonSchema } },
@@ -133,7 +140,7 @@ export function buildOpenApiDocument() {
             "404": { description: "No official source record found" },
             "429": { description: "Request or upstream rate limited" },
             "502": { description: "Official source response invalid" },
-            "503": { description: "Payment or official source temporarily unavailable" },
+            "503": { description: "Payment or official source temporarily unavailable, or settlement outcome indeterminate; inspect the error code and do not reuse an authorization after PAYMENT_OUTCOME_UNKNOWN" },
           },
           "x-x402": {
             version: 2,

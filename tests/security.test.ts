@@ -34,7 +34,11 @@ describe("security boundaries", () => {
   });
 
   it("blocks unexpected redirects rather than following them", async () => {
-    const fetchSpy = vi.spyOn(globalThis, "fetch").mockResolvedValue(new Response(null, {
+    let bodyCancelled = false;
+    const body = new ReadableStream<Uint8Array>({
+      cancel() { bodyCancelled = true; },
+    });
+    const fetchSpy = vi.spyOn(globalThis, "fetch").mockResolvedValue(new Response(body, {
       status: 302,
       headers: { location: "https://attacker.example/steal" },
     }));
@@ -42,6 +46,7 @@ describe("security boundaries", () => {
     await expect(fetcher.request("test-source", { method: "GET", url: "https://official.example/api/x" }))
       .rejects.toMatchObject({ code: "SOURCE_BAD_RESPONSE" });
     expect(fetchSpy).toHaveBeenCalledWith(expect.any(URL), expect.objectContaining({ redirect: "manual" }));
+    expect(bodyCancelled).toBe(true);
     fetchSpy.mockRestore();
   });
 

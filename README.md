@@ -12,7 +12,7 @@ Production hostname: `https://business.newbies.cool`
 |---|---|---|---|
 | Norway | `no-brreg-enhetsregisteret-v1` | `no-organisasjonsnummer` | Brønnøysundregistrene Enhetsregisteret API |
 | Slovakia | `sk-rpo-v1` | `sk-ico` | Register právnických osôb (RPO) API |
-| Singapore | `sg-acra-opendata-v1` | `sg-uen` | ACRA data published through data.gov.sg |
+| Singapore | `sg-acra-opendata-v1` | `sg-uen` | Entities Registered with ACRA, published through data.gov.sg |
 
 Singapore was enabled only after a targeted field-binding smoke confirmed both `uen` and `entity_name` in resource `d_3f960c10fed6145404ca7b821f263b87`.
 
@@ -40,7 +40,7 @@ Example body:
 }
 ```
 
-The body is validated before the x402 challenge. An official-source lookup occurs only after successful payment verification and settlement.
+The body is validated before the x402 challenge. When a payment authorization is supplied, local official-source capacity is reserved before settlement. An official-source lookup occurs only after successful payment verification and settlement. The fixed price buys one execution attempt, so an official `NOT_FOUND` result may still be charged.
 
 ## Payment configuration
 
@@ -53,6 +53,8 @@ The body is validated before the x402 challenge. An official-source lookup occur
 - Test integration: Base Sepolia (`eip155:84532`)
 
 Production facilitator credentials are Cloudflare secrets named `CDP_API_KEY_ID` and `CDP_API_KEY_SECRET`. Never commit them, put them in `.dev.vars` that may be shared, paste them into issue/chat text, or log them.
+
+If settlement starts but its result cannot be confirmed before timeout, the API returns `PAYMENT_OUTCOME_UNKNOWN`. The buyer must not reuse that payment authorization; inspect the wallet or chain and contact support with the `X-Request-Id` instead. This avoids treating an indeterminate on-chain outcome as a definite failed payment.
 
 ## Data and privacy boundaries
 
@@ -90,6 +92,7 @@ Lookup flow:
 strict HTTP parser
 → typed jurisdiction + identifier scheme
 → production policy gate
+→ signed-request official-source capacity reservation
 → x402 verify + settle
 → fixed adapter
 → allowlisted official source transport
@@ -98,8 +101,8 @@ strict HTTP parser
 → no-store response
 ```
 
-Key separations are enforced in code and data: jurisdiction ≠ registry ≠ source ≠ adapter; research closure ≠ production permission; human availability ≠ machine availability ≠ reuse permission.
+Key separations are enforced in code and data: jurisdiction ≠ registry ≠ source ≠ adapter; research closure ≠ production permission; human availability ≠ machine availability ≠ reuse permission. Slovakia reserves two source subrequests because its lookup is a search-plus-detail flow; Norway and Singapore reserve one.
 
 ## Deployment
 
-Cloudflare is connected to GitHub branch `main`. A successful push builds the static assets and deploys Worker `global-official-business-facts`. Before enabling paid production, set the two CDP secrets directly in Cloudflare and then verify a real Polygon USDC settlement. See `USER-ACTIONS.md`.
+Cloudflare is connected to GitHub branch `main`. A successful push builds the static assets and deploys Worker `global-official-business-facts`. The two CDP secrets are runtime secrets, not build variables. After deploying this revision, first verify an unpaid HTTP 402 challenge and only then authorize one real Polygon USDC settlement. See `USER-ACTIONS.md`.

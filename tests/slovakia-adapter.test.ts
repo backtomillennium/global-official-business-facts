@@ -64,6 +64,18 @@ describe("Slovakia RPO adapter", () => {
     expect(result.record.facts.status?.sourceValue).toMatchObject({ value: { code: "1", value: "Aktívna" } });
   });
 
+  it("does not present an ended historical address as the current registered address", async () => {
+    const historicalOnly = {
+      ...entityFixture,
+      addresses: [{ formatedAddress: "Old address", validFrom: "2000-01-01", validTo: "2010-01-01" }],
+    };
+    const result = await slovakiaAdapter.lookup(
+      request,
+      context([upstream(200, searchFixture), upstream(200, historicalOnly)]),
+    );
+    expect(result.record.facts.registeredAddress).toBeUndefined();
+  });
+
   it("turns an empty search result into NOT_FOUND without making the entity call", async () => {
     const urls: string[] = [];
     await expect(slovakiaAdapter.lookup(request, context([upstream(200, { results: [] })], urls))).rejects.toMatchObject({ code: "NOT_FOUND" });
