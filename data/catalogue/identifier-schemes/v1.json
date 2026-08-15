@@ -1,0 +1,32 @@
+[
+  {
+    "id": "no-organisasjonsnummer",
+    "jurisdictionId": "NOR",
+    "name": "Norwegian organisation number",
+    "localName": "organisasjonsnummer",
+    "kind": "legal-entity",
+    "format": { "type": "numeric", "length": 9, "pattern": "^[0-9]{9}$" },
+    "issuingAuthority": "Brønnøysundregistrene",
+    "searchableSourceIds": ["no-brreg-enhetsregisteret"]
+  },
+  {
+    "id": "sk-ico",
+    "jurisdictionId": "SVK",
+    "name": "Identification number of organisation",
+    "localName": "IČO",
+    "kind": "company",
+    "format": { "type": "numeric", "length": 8, "pattern": "^[0-9]{8}$" },
+    "issuingAuthority": "Statistical Office of the Slovak Republic",
+    "searchableSourceIds": ["sk-rpo"]
+  },
+  {
+    "id": "sg-uen",
+    "jurisdictionId": "SGP",
+    "name": "Unique Entity Number",
+    "localName": "UEN",
+    "kind": "business",
+    "format": { "type": "alphanumeric", "length": null, "pattern": "^[A-Z0-9]{1,32}$" },
+    "issuingAuthority": "Singapore UEN issuance agencies",
+    "searchableSourceIds": ["sg-acra-datagovsg"]
+  }
+]

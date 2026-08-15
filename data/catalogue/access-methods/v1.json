@@ -1,0 +1,29 @@
+[
+  {
+    "id": "no-brreg-rest-v2",
+    "sourceId": "no-brreg-enhetsregisteret",
+    "type": "REST",
+    "endpoint": "https://data.brreg.no/enhetsregisteret/api/enheter/",
+    "authentication": { "type": "none", "required": false, "registration": "none", "credentialRef": null },
+    "formats": ["application/vnd.brreg.enhetsregisteret.enhet.v2+json"],
+    "rateLimit": { "status": "not-stated", "requests": null, "windowSeconds": null }
+  },
+  {
+    "id": "sk-rpo-rest-v1",
+    "sourceId": "sk-rpo",
+    "type": "REST",
+    "endpoint": "https://api.statistics.sk/rpo/v1/",
+    "authentication": { "type": "none", "required": false, "registration": "none", "credentialRef": null },
+    "formats": ["application/json"],
+    "rateLimit": { "status": "not-stated", "requests": null, "windowSeconds": null }
+  },
+  {
+    "id": "sg-datagov-datastore-search",
+    "sourceId": "sg-acra-datagovsg",
+    "type": "CKAN",
+    "endpoint": "https://data.gov.sg/api/action/datastore_search",
+    "authentication": { "type": "none", "required": false, "registration": "none", "credentialRef": null },
+    "formats": ["application/json"],
+    "rateLimit": { "status": "not-stated", "requests": null, "windowSeconds": null }
+  }
+]

@@ -1,0 +1,38 @@
+[
+  {
+    "adapterId": "no-brreg-enhetsregisteret-v1",
+    "jurisdictionId": "NOR",
+    "sourceIds": ["no-brreg-enhetsregisteret"],
+    "identifierSchemeIds": ["no-organisasjonsnummer"],
+    "exposureProfileId": "basic-business-facts-v0",
+    "promotionState": "PRODUCTION",
+    "enabledCapabilities": ["exactLookup"],
+    "technicalVerification": { "status": "pass", "verifiedAt": "2026-08-14", "verificationRecordIds": ["VR-NOR-SOURCE-V1"] },
+    "policyVerification": { "status": "pass", "verifiedAt": "2026-08-14", "verificationRecordIds": ["VR-NOR-LICENCE-V1"] },
+    "cachePolicy": { "mode": "no-store" }
+  },
+  {
+    "adapterId": "sk-rpo-v1",
+    "jurisdictionId": "SVK",
+    "sourceIds": ["sk-rpo"],
+    "identifierSchemeIds": ["sk-ico"],
+    "exposureProfileId": "basic-business-facts-v0",
+    "promotionState": "PRODUCTION",
+    "enabledCapabilities": ["exactLookup"],
+    "technicalVerification": { "status": "pass", "verifiedAt": "2026-08-14", "verificationRecordIds": ["VR-SVK-SOURCE-V1"] },
+    "policyVerification": { "status": "pass", "verifiedAt": "2026-08-14", "verificationRecordIds": ["VR-SVK-LICENCE-V1"] },
+    "cachePolicy": { "mode": "no-store" }
+  },
+  {
+    "adapterId": "sg-acra-opendata-v1",
+    "jurisdictionId": "SGP",
+    "sourceIds": ["sg-acra-datagovsg"],
+    "identifierSchemeIds": ["sg-uen"],
+    "exposureProfileId": "basic-business-facts-v0",
+    "promotionState": "PRODUCTION",
+    "enabledCapabilities": ["exactLookup"],
+    "technicalVerification": { "status": "pass", "verifiedAt": "2026-08-14", "verificationRecordIds": ["VR-SGP-SOURCE-V1"] },
+    "policyVerification": { "status": "pass", "verifiedAt": "2026-08-14", "verificationRecordIds": ["VR-SGP-LICENCE-V1"] },
+    "cachePolicy": { "mode": "no-store" }
+  }
+]

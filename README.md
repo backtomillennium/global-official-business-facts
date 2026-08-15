@@ -1,40 +1,105 @@
-# Global Official Business Facts — architecture skeleton
+# Global Official Business Facts V1
 
-This repository implements the Round 01–04 boundaries only.
+Official business facts from government and registry sources, normalized into one machine-readable interface.
 
-Current guarantees:
+Source-linked. Typed identifiers. No scraped global company master database.
 
-- Catalogue domain and lookup runtime are separate.
-- Research snapshots cannot directly enable production adapters.
-- Adapter, source transport, policy, HTTP, and serialization are separate layers.
-- `AdapterDefinition` (code/capability) and `AdapterManifest` (promotion/production decision) are separate.
-- Production adapters require explicit promotion and an eligible assessment.
-- Company lookup data is not persistently stored by default.
-- Cache policy defaults to `no-store`.
-- `basic-business-facts-v0` excludes people-heavy fields.
-- The FakeAdapter exists only under `tests/` / direct test injection and is never registered by the production Worker.
-- The production Worker currently registers zero real adapters.
+Production hostname: `https://business.newbies.cool`
 
-## Commands
+## V1 production adapters
 
-```sh
-npm install
-npm run check
-npm run dev
+| Jurisdiction | Adapter | Identifier scheme | Official machine source |
+|---|---|---|---|
+| Norway | `no-brreg-enhetsregisteret-v1` | `no-organisasjonsnummer` | Brønnøysundregistrene Enhetsregisteret API |
+| Slovakia | `sk-rpo-v1` | `sk-ico` | Register právnických osôb (RPO) API |
+| Singapore | `sg-acra-opendata-v1` | `sg-uen` | ACRA data published through data.gov.sg |
+
+Singapore was enabled only after a targeted field-binding smoke confirmed both `uen` and `entity_name` in resource `d_3f960c10fed6145404ca7b821f263b87`.
+
+## Public routes
+
+Free:
+
+- `GET /api/v1/health`
+- `GET /api/v1/openapi.json`
+- `GET /api/v1/catalogue`
+- `GET /api/v1/catalogue/jurisdictions`
+- `GET /api/v1/catalogue/jurisdictions/:iso2`
+
+Paid:
+
+- `POST /api/v1/business/lookup`
+
+Example body:
+
+```json
+{
+  "jurisdiction": "NO",
+  "scheme": "no-organisasjonsnummer",
+  "identifier": "923609016"
+}
 ```
 
-`npm run check` validates the catalogue, generates static pages, type-checks, runs tests, and performs a Wrangler dry-run deploy.
+The body is validated before the x402 challenge. An official-source lookup occurs only after successful payment verification and settlement.
 
-## Data flow
+## Payment configuration
 
-Research snapshot → verification → curated catalogue / candidate manifest → eligibility assessment → explicit production promotion.
+- Protocol: x402 v2
+- Scheme: `exact`
+- Production network: Polygon mainnet (`eip155:137`)
+- Asset: native USDC (`0x3c499c542cEF5E3811e1192ce70d8cC03d5c3359`)
+- Amount: `10000` atomic units (`$0.01` USDC)
+- Payee: `0xF3E577c98CFa7f300fE8f39F7EcFD14B368DCb2f`
+- Test integration: Base Sepolia (`eip155:84532`)
+
+Production facilitator credentials are Cloudflare secrets named `CDP_API_KEY_ID` and `CDP_API_KEY_SECRET`. Never commit them, put them in `.dev.vars` that may be shared, paste them into issue/chat text, or log them.
+
+## Data and privacy boundaries
+
+- No persistent company-record storage; adapter payloads are parsed in memory and discarded.
+- Business responses use `Cache-Control: no-store`.
+- No global entity resolution or person resolution.
+- V1 does not expose directors, officers, shareholders, owners, UBOs, person identifiers, personal residential addresses, paid documents or binary filings.
+- Official-source, machine-access and reuse-policy decisions remain distinct catalogue records.
+- Raw/source values and derived status provenance remain in the internal model; public output is compact.
+
+Global Official Business Facts is not an official registry. Facts are retrieved from identified official sources and normalized for machine use. Source scope, update frequency and legal meaning vary by jurisdiction. For authoritative or legally certified information, consult the originating registry.
+
+## Reproducible verification
+
+Node.js 22 or newer is required. Dependencies are exactly pinned, including a security override for the CDP SDK's Axios transitive dependency.
+
+```sh
+npm ci --ignore-scripts
+npm run build
+npm run types:worker
+npm run typecheck
+npm test
+npm run test:x402:testnet
+npm audit --omit=dev --audit-level=high
+npx --no-install wrangler deploy --dry-run
+```
+
+`npm run test:x402:testnet` performs a real no-payment challenge against the official testnet facilitator. It does not spend funds or execute a settlement.
+
+## Architecture
 
 Lookup flow:
 
-HTTP → route parser → typed lookup request → adapter registry → policy gate → adapter → source parser/normalization → canonical record → public serializer.
+```text
+strict HTTP parser
+→ typed jurisdiction + identifier scheme
+→ production policy gate
+→ x402 verify + settle
+→ fixed adapter
+→ allowlisted official source transport
+→ schema parser + deterministic normalization
+→ provenance-preserving public serializer
+→ no-store response
+```
 
-No real government endpoint or production permission is asserted in this skeleton.
+Key separations are enforced in code and data: jurisdiction ≠ registry ≠ source ≠ adapter; research closure ≠ production permission; human availability ≠ machine availability ≠ reuse permission.
 
-## Round 04 research pools
+## Deployment
 
-`data/research/candidate-pools-2026-08-14.json` records the 21 converged candidates, 4 Work-high pending candidates, and 9 reconciliation-required candidates exactly as research input. It deliberately creates no `AdapterManifest` and grants no production permission.
+Cloudflare is connected to GitHub branch `main`. A successful push builds the static assets and deploys Worker `global-official-business-facts`. Before enabling paid production, set the two CDP secrets directly in Cloudflare and then verify a real Polygon USDC settlement. See `USER-ACTIONS.md`.

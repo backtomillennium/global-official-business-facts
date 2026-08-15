@@ -10,6 +10,19 @@ function publicFact<T>(fact: Fact<T> | undefined): unknown {
   return fact.value;
 }
 
+function compactStatusSourceValue(value: unknown): string | number | boolean | null {
+  if (value === null || typeof value === "string" || typeof value === "number" || typeof value === "boolean") return value;
+  if (typeof value !== "object" || Array.isArray(value)) return null;
+  const record = value as Record<string, unknown>;
+  if (typeof record.value === "string" || typeof record.value === "number" || typeof record.value === "boolean") return record.value;
+  if (typeof record.value === "object" && record.value !== null && !Array.isArray(record.value)) {
+    const nested = record.value as Record<string, unknown>;
+    if (typeof nested.code === "string") return nested.code;
+    if (typeof nested.value === "string") return nested.value;
+  }
+  return null;
+}
+
 export function serializeBusinessRecord(record: BusinessFactRecord, catalogue: Catalogue, profile?: ExposureProfile): PublicBusinessResponse {
   const jurisdiction = catalogue.requireJurisdiction(record.jurisdictionId);
   const primary = record.identifiers.find((item) => item.primaryForLookup) ?? record.identifiers[0];
@@ -20,7 +33,11 @@ export function serializeBusinessRecord(record: BusinessFactRecord, catalogue: C
   if (allowed.has("legalName")) facts.legalName = publicFact(record.facts.legalName);
   const status = record.facts.status;
   if (allowed.has("status") && status && status.value !== null) {
-    facts.status = { value: status.value.canonical, sourceValue: status.sourceValue };
+    facts.status = {
+      canonical: status.value.canonical,
+      sourceValue: compactStatusSourceValue(status.sourceValue),
+      sourceLabel: status.value.sourceLabel,
+    };
   }
   const optional: Array<[string, unknown]> = [
     ["entityType", publicFact(record.facts.entityType)],
@@ -30,17 +47,33 @@ export function serializeBusinessRecord(record: BusinessFactRecord, catalogue: C
   ];
   for (const [key, value] of optional) if (allowed.has(key) && value !== undefined) facts[key] = value;
 
+  if (!jurisdiction.iso2) throw new Error("Production jurisdiction is missing ISO2");
+  const sourceId = record.provenance.sourceIds[0];
+  if (!sourceId) throw new Error("BusinessFactRecord has no source");
+  const source = catalogue.getSource(sourceId);
+  if (!source) throw new Error(`Catalogue source missing: ${sourceId}`);
+  const licence = source.licenceId ? catalogue.data.licences.find((item) => item.id === source.licenceId) : undefined;
+  if (!licence?.attributionText) throw new Error(`Verified attribution missing for source: ${sourceId}`);
+  const accessDate = record.provenance.retrievedAt.slice(0, 10);
+  const attributionText = licence.attributionText.replaceAll("{date}", accessDate);
+  const licenceLabel = [licence.name, licence.version].filter(Boolean).join(" ");
+
   return {
-    jurisdiction: { id: jurisdiction.id, iso2: jurisdiction.iso2 },
+    schemaVersion: "1",
+    jurisdiction: { id: jurisdiction.id, iso2: jurisdiction.iso2, name: jurisdiction.name.canonical },
     identifier: { scheme: primary.schemeId, kind: primary.kind, value: primary.value },
     facts,
     source: {
       authority: record.provenance.authority,
-      registry: record.provenance.registry,
-      sourceIds: record.provenance.sourceIds,
+      sourceId,
+      sourceUrl: record.provenance.recordUrl ?? source.url,
       retrievedAt: record.provenance.retrievedAt,
-      dataAsOf: record.provenance.dataAsOf,
     },
     warnings: record.warnings,
+    attribution: {
+      required: licence.attributionRequired === true,
+      text: attributionText,
+      licence: licenceLabel,
+    },
   };
 }

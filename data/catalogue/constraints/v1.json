@@ -1,0 +1,68 @@
+[
+  {
+    "id": "no-legal-entity-scope",
+    "type": "source-scope",
+    "scopeType": "source",
+    "scopeId": "no-brreg-enhetsregisteret",
+    "description": "Enhetsregisteret includes sole proprietorships, associations and other legal entities; it is not companies-only.",
+    "severity": "informational",
+    "sourceUrl": "https://www.brreg.no/om-oss/registrene-vare/om-enhetsregisteret/",
+    "verifiedAt": "2026-08-14",
+    "confidence": "high"
+  },
+  {
+    "id": "no-410-withdrawal",
+    "type": "legal-withdrawal",
+    "scopeType": "source",
+    "scopeId": "no-brreg-enhetsregisteret",
+    "description": "HTTP 410 means withdrawn for legal reasons and must remain distinct from not-found; V1 stores no record.",
+    "severity": "operational",
+    "sourceUrl": "https://data.brreg.no/enhetsregisteret/api/dokumentasjon/no/index.html",
+    "verifiedAt": "2026-08-14",
+    "confidence": "high"
+  },
+  {
+    "id": "sk-rpo-nightly",
+    "type": "freshness",
+    "scopeType": "source",
+    "scopeId": "sk-rpo",
+    "description": "The public RPO API is refreshed nightly and may lag the live register by up to 24 hours.",
+    "severity": "operational",
+    "sourceUrl": "https://rpo.minv.sk/rpo-api-doc.html",
+    "verifiedAt": "2026-08-14",
+    "confidence": "high"
+  },
+  {
+    "id": "sk-rpo-aggregation-scope",
+    "type": "source-scope",
+    "scopeType": "registry",
+    "scopeId": "sk-rpo-registry",
+    "description": "RPO aggregates multiple source registers and is not a single commercial register.",
+    "severity": "informational",
+    "sourceUrl": "https://rpo.minv.sk/rpo-api-doc.html",
+    "verifiedAt": "2026-08-14",
+    "confidence": "high"
+  },
+  {
+    "id": "sg-monthly-refresh",
+    "type": "freshness",
+    "scopeType": "source",
+    "scopeId": "sg-acra-datagovsg",
+    "description": "The ACRA open-data publication is refreshed monthly.",
+    "severity": "operational",
+    "sourceUrl": "https://data.gov.sg/collections/2/view",
+    "verifiedAt": "2026-08-14",
+    "confidence": "high"
+  },
+  {
+    "id": "sg-open-data-scope",
+    "type": "source-scope",
+    "scopeType": "source",
+    "scopeId": "sg-acra-datagovsg",
+    "description": "This is an official open-data publication with some columns removed, not a certified BizFile+ profile.",
+    "severity": "informational",
+    "sourceUrl": "https://data.gov.sg/collections/2/view",
+    "verifiedAt": "2026-08-14",
+    "confidence": "high"
+  }
+]

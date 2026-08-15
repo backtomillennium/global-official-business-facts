@@ -12,6 +12,4 @@ await writeFile(
   path.join(root, "src", "generated", "catalogue.generated.ts"),
   `import type { CompiledCatalogue } from "../catalogue/types";\n\nexport const compiledCatalogue: CompiledCatalogue = ${JSON.stringify(data, null, 2)};\n`,
 );
-await mkdir(path.join(root, "dist", "machine"), { recursive: true });
-await writeFile(path.join(root, "dist", "machine", "catalogue.json"), JSON.stringify(data, null, 2));
 console.log(`Compiled catalogue with ${data.jurisdictions.length} jurisdictions.`);

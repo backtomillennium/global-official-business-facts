@@ -5,12 +5,27 @@ import type { PolicyGate } from "../policy/policy-gate";
 import { AdapterRegistry } from "./adapter-registry";
 import type { AdapterContext, AdapterResult, LookupRequest } from "./types";
 
+function upstreamStatusClass(error: unknown): string {
+  if (!(error instanceof DomainError)) return "unclassified";
+  switch (error.code) {
+    case "NOT_FOUND": return "4xx-not-found";
+    case "WITHDRAWN_FOR_LEGAL_REASONS": return "4xx-withdrawn";
+    case "SOURCE_AUTH_ERROR": return "4xx-auth";
+    case "SOURCE_RATE_LIMITED": return "429";
+    case "SOURCE_TIMEOUT": return "timeout";
+    case "SOURCE_UNAVAILABLE": return "5xx-or-transport";
+    case "SOURCE_BAD_RESPONSE": return "invalid-response";
+    case "SOURCE_SCHEMA_CHANGED": return "schema-changed";
+    default: return "not-upstream";
+  }
+}
+
 export class LookupService {
   constructor(
     private readonly catalogue: Catalogue,
     private readonly registry: AdapterRegistry,
     private readonly policyGate: PolicyGate,
-    private readonly contextFactory: () => AdapterContext,
+    private readonly contextFactory: (requestId: string) => AdapterContext,
   ) {}
 
   resolveRequest(input: { jurisdiction: string; scheme?: string; value: string }): LookupRequest {
@@ -31,7 +46,38 @@ export class LookupService {
     return { jurisdictionId: jurisdiction.id, identifier: { schemeId, value: input.value } };
   }
 
-  async lookup(request: LookupRequest): Promise<AdapterResult> {
+  validateRequest(request: LookupRequest): LookupRequest {
+    const candidates = this.registry.find({
+      jurisdictionId: request.jurisdictionId,
+      identifierSchemeId: request.identifier.schemeId,
+      capability: "exactLookup",
+    });
+    if (candidates.length === 0) {
+      throw new DomainError("NO_PRODUCTION_ADAPTER", "No executable adapter is registered for this lookup", {
+        jurisdiction: request.jurisdictionId,
+        identifierScheme: request.identifier.schemeId,
+      });
+    }
+    for (const adapter of candidates) {
+      const definition = this.findDefinition(adapter.id);
+      const manifest = this.catalogue.getAdapterManifest(adapter.id);
+      if (!manifest || !this.policyGate.evaluate({ request, adapter: definition, manifest }).allowed) continue;
+      const validation = adapter.validateIdentifier({ schemeId: request.identifier.schemeId, value: request.identifier.value });
+      if (!validation.ok) {
+        throw new DomainError("INVALID_IDENTIFIER", validation.reason, {
+          jurisdiction: request.jurisdictionId,
+          identifierScheme: request.identifier.schemeId,
+        });
+      }
+      return { ...request, identifier: { ...request.identifier, value: validation.normalizedValue } };
+    }
+    throw new DomainError("NO_PRODUCTION_ADAPTER", "Compatible adapters exist but none are production-enabled", {
+      jurisdiction: request.jurisdictionId,
+      identifierScheme: request.identifier.schemeId,
+    });
+  }
+
+  async lookup(request: LookupRequest, requestId: string = crypto.randomUUID()): Promise<AdapterResult> {
     const candidates = this.registry.find({
       jurisdictionId: request.jurisdictionId,
       identifierSchemeId: request.identifier.schemeId,
@@ -65,13 +111,13 @@ export class LookupService {
           identifierScheme: request.identifier.schemeId,
         });
       }
-      const context = this.contextFactory();
+      const context = this.contextFactory(requestId);
+      const startedAtMs = context.clock.now().getTime();
       context.logger.info("adapter_lookup_start", {
         requestId: context.requestId,
         jurisdiction: request.jurisdictionId,
         identifierScheme: request.identifier.schemeId,
         adapterId: adapter.id,
-        sourceIds: adapter.sourceIds,
       });
       try {
         const result = await adapter.lookup(
@@ -84,6 +130,8 @@ export class LookupService {
           identifierScheme: request.identifier.schemeId,
           adapterId: adapter.id,
           result: "success",
+          latencyMs: Math.max(0, context.clock.now().getTime() - startedAtMs),
+          upstreamStatusClass: "2xx",
         });
         return result;
       } catch (error) {
@@ -92,7 +140,9 @@ export class LookupService {
           jurisdiction: request.jurisdictionId,
           identifierScheme: request.identifier.schemeId,
           adapterId: adapter.id,
-          code: error instanceof DomainError ? error.code : "UNCLASSIFIED",
+          result: "failure",
+          latencyMs: Math.max(0, context.clock.now().getTime() - startedAtMs),
+          upstreamStatusClass: upstreamStatusClass(error),
         });
         throw error;
       }

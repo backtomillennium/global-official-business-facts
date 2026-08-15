@@ -79,15 +79,16 @@ export interface Logger {
 }
 
 export interface PublicBusinessResponse {
-  jurisdiction: { id: string; iso2: string | null };
+  schemaVersion: "1";
+  jurisdiction: { id: string; iso2: string; name: string };
   identifier: { scheme: string; kind: IdentifierKind; value: string };
   facts: Record<string, unknown>;
   source: {
     authority: string;
-    registry: string;
-    sourceIds: string[];
+    sourceId: string;
+    sourceUrl: string;
     retrievedAt: string;
-    dataAsOf: string | null;
   };
   warnings: string[];
+  attribution: { required: boolean; text: string; licence: string };
 }

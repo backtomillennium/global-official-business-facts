@@ -58,6 +58,9 @@ export const fakeAdapter: BusinessAdapter = {
         dataAsOf: null,
         sourceForm: "per-entity-query" as const,
         origin: "official-source" as const,
+        adapterId: "test-basic-v1",
+        adapterVersion: "1.0.0",
+        normalizationVersion: "1",
       },
       warnings: ["TEST_DATA_ONLY"],
     };

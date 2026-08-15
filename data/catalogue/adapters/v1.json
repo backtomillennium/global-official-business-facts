@@ -1,0 +1,32 @@
+[
+  {
+    "id": "no-brreg-enhetsregisteret-v1",
+    "version": "1.0.0",
+    "normalizationVersion": "1",
+    "jurisdictionId": "NOR",
+    "supportedIdentifierSchemeIds": ["no-organisasjonsnummer"],
+    "sourceIds": ["no-brreg-enhetsregisteret"],
+    "capabilities": { "exactLookup": true, "nameSearch": false, "bulkSync": false, "incrementalSync": false, "documentFetch": false, "historicalLookup": false },
+    "scopeWarnings": ["Enhetsregisteret is Norway's national legal-entity register and is not limited to companies."]
+  },
+  {
+    "id": "sk-rpo-v1",
+    "version": "1.0.0",
+    "normalizationVersion": "1",
+    "jurisdictionId": "SVK",
+    "supportedIdentifierSchemeIds": ["sk-ico"],
+    "sourceIds": ["sk-rpo"],
+    "capabilities": { "exactLookup": true, "nameSearch": false, "bulkSync": false, "incrementalSync": false, "documentFetch": false, "historicalLookup": false },
+    "scopeWarnings": ["Official RPO API is refreshed nightly and may lag the live register by up to 24 hours.", "RPO is an aggregation register, not a single commercial register."]
+  },
+  {
+    "id": "sg-acra-opendata-v1",
+    "version": "1.0.0",
+    "normalizationVersion": "1",
+    "jurisdictionId": "SGP",
+    "supportedIdentifierSchemeIds": ["sg-uen"],
+    "sourceIds": ["sg-acra-datagovsg"],
+    "capabilities": { "exactLookup": true, "nameSearch": false, "bulkSync": false, "incrementalSync": false, "documentFetch": false, "historicalLookup": false },
+    "scopeWarnings": ["The resource is an official ACRA open-data publication, not a current or certified BizFile+ profile.", "The source is refreshed monthly."]
+  }
+]

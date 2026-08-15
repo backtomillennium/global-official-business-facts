@@ -3,11 +3,37 @@
   "name": "global-official-business-facts",
   "main": "src/index.ts",
   "compatibility_date": "2026-08-14",
-  "compatibility_flags": ["nodejs_compat"],
+  "compatibility_flags": [
+    "nodejs_compat",
+    "nodejs_compat_do_not_populate_process_env"
+  ],
+  "workers_dev": false,
+  "preview_urls": false,
+  "vars": {
+    "PUBLIC_HOSTNAME": "business.newbies.cool"
+  },
+  "ratelimits": [
+    {
+      "name": "REQUEST_RATE_LIMITER",
+      "namespace_id": "7482301",
+      "simple": {
+        "limit": 60,
+        "period": 60
+      }
+    },
+    {
+      "name": "UPSTREAM_RATE_LIMITER",
+      "namespace_id": "7482302",
+      "simple": {
+        "limit": 30,
+        "period": 60
+      }
+    }
+  ],
   "assets": {
     "directory": "./dist",
     "binding": "ASSETS",
-    "run_worker_first": ["/api/*"]
+    "run_worker_first": true
   },
   "observability": {
     "enabled": true

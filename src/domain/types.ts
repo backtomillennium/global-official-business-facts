@@ -345,6 +345,9 @@ export interface Provenance {
   dataAsOf: string | null;
   sourceForm: SourceForm;
   origin: FactOrigin;
+  adapterId: string;
+  adapterVersion: string;
+  normalizationVersion: string;
 }
 
 export interface BusinessFactRecord {
@@ -358,7 +361,7 @@ export interface BusinessFactRecord {
   facts: {
     legalName: Fact<string>;
     status?: Fact<{ canonical: string; sourceLabel: string | null }>;
-    entityType?: Fact<string>;
+    entityType?: Fact<{ code: string | null; label: string | null }>;
     registrationDate?: Fact<string>;
     registeredAddress?: Fact<AddressValue>;
     industryCodes?: Fact<string[]>;
