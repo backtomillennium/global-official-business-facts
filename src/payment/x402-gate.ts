@@ -1,4 +1,4 @@
-import { createCdpFacilitatorClient } from "@coinbase/cdp-sdk/x402";
+
 import {
   FacilitatorTimeoutError,
   HTTPFacilitatorClient,
@@ -244,13 +244,17 @@ export function createTestnetPaymentGate(): PaymentGate {
   });
 }
 
-export function createProductionPaymentGate(secrets?: Partial<PaymentSecrets>): PaymentGate {
-  if (!secrets?.CDP_API_KEY_ID || !secrets.CDP_API_KEY_SECRET) {
-    return { authorizeAndSettle: async () => paymentUnavailable() };
-  }
-  const facilitator = createCdpFacilitatorClient({
-    apiKeyId: secrets.CDP_API_KEY_ID,
-    apiKeySecret: secrets.CDP_API_KEY_SECRET,
+
+export function createProductionPaymentGate(_secrets?: Partial<PaymentSecrets>): PaymentGate {
+  const facilitator = new HTTPFacilitatorClient({
+    url: "https://facilitator.payai.network",
+    timeoutMs: 10_000,
   });
-  return new X402PaymentGate({ facilitator, network: POLYGON_MAINNET, asset: POLYGON_USDC, assetName: "USD Coin" });
+
+  return new X402PaymentGate({
+    facilitator,
+    network: POLYGON_MAINNET,
+    asset: POLYGON_USDC,
+    assetName: "USD Coin",
+  });
 }
