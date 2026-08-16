@@ -1,7 +1,0 @@
-# Optional cleanup from repository root.
-# These are historical implementation/review reports, not runtime dependencies.
-ARCHITECTURE-REVIEW-V1.md
-CHANGED-FILES.md
-SECURITY-REVIEW-V1.md
-USER-ACTIONS.md
-V1-IMPLEMENTATION-REPORT.md

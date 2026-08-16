@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="description" content="Official business registry links by jurisdiction.">
+  <title>Global Official Business Facts</title>
+  <link rel="stylesheet" href="./style.css">
+  <script src="./app.js" defer></script>
+</head>
+<body>
+  <main>
+    <header class="intro">
+      <h1>Global Official Business Facts</h1>
+      <p>Official business registry links by jurisdiction.</p>
+      <p class="muted">Rows are ordered alphabetically by English country or jurisdiction name. Review changes are saved only in this browser until you export them.</p>
+    </header>
+
+    <section class="toolbar" aria-label="Review tools">
+      <div>
+        <strong id="progress">Reviewed 0 / 0</strong>
+        <span id="save-status">Local changes saved automatically.</span>
+      </div>
+      <div class="actions">
+        <button id="export-button" type="button">Export JSON</button>
+        <button id="import-button" type="button">Import JSON</button>
+        <input id="import-file" type="file" accept=".json,application/json" hidden>
+      </div>
+    </section>
+
+    <section id="directory" class="directory" aria-label="Jurisdiction directory">
+      <p>Loading data…</p>
+    </section>
+  </main>
+</body>
+</html>

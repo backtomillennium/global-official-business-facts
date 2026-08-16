@@ -1,7 +1,5 @@
 {
-  "schemaVersion": "gobf-jurisdiction-directory-seed-v1",
-  "seededAt": "2026-08-16",
-  "note": "Manual review seed. Blank values are intentional; do not infer missing formats or URLs.",
+  "schemaVersion": "gobf-jurisdiction-directory-v1",
   "jurisdictions": [
     {
       "country": "Afghanistan",
@@ -10,8 +8,7 @@
       "officialUrl": "https://moci.gov.af/en/central-business-registry-intellectual-property-acbr-ip",
       "urlSource": "research",
       "queryFormat": "",
-      "formatSource": null,
-      "lookupAvailable": false
+      "formatSource": null
     },
     {
       "country": "Aland Islands",
@@ -20,8 +17,7 @@
       "officialUrl": "https://www.ytj.fi/en/index/companysearch.html",
       "urlSource": "research",
       "queryFormat": "Y-tunnus",
-      "formatSource": "research",
-      "lookupAvailable": false
+      "formatSource": "research"
     },
     {
       "country": "Albania",
@@ -30,8 +26,7 @@
       "officialUrl": "",
       "urlSource": null,
       "queryFormat": "",
-      "formatSource": null,
-      "lookupAvailable": false
+      "formatSource": null
     },
     {
       "country": "Algeria",
@@ -40,8 +35,7 @@
       "officialUrl": "https://sidjilcom.cnrc.dz/",
       "urlSource": "research",
       "queryFormat": "",
-      "formatSource": null,
-      "lookupAvailable": false
+      "formatSource": null
     },
     {
       "country": "American Samoa",
@@ -50,8 +44,7 @@
       "officialUrl": "",
       "urlSource": null,
       "queryFormat": "",
-      "formatSource": null,
-      "lookupAvailable": false
+      "formatSource": null
     },
     {
       "country": "Andorra",
@@ -60,8 +53,7 @@
       "officialUrl": "",
       "urlSource": null,
       "queryFormat": "",
-      "formatSource": null,
-      "lookupAvailable": false
+      "formatSource": null
     },
     {
       "country": "Angola",
@@ -70,8 +62,7 @@
       "officialUrl": "https://gue.gov.ao/",
       "urlSource": "research",
       "queryFormat": "",
-      "formatSource": null,
-      "lookupAvailable": false
+      "formatSource": null
     },
     {
       "country": "Anguilla",
@@ -80,8 +71,7 @@
       "officialUrl": "https://cres.gov.ai/bereg/searchbusinesspublic",
       "urlSource": "research",
       "queryFormat": "",
-      "formatSource": null,
-      "lookupAvailable": false
+      "formatSource": null
     },
     {
       "country": "Antarctica",
@@ -90,8 +80,7 @@
       "officialUrl": "https://www.ats.aq/e/antarctictreaty.html",
       "urlSource": "research",
       "queryFormat": "",
-      "formatSource": null,
-      "lookupAvailable": false
+      "formatSource": null
     },
     {
       "country": "Antigua and Barbuda",
@@ -100,8 +89,7 @@
       "officialUrl": "https://abipco.gov.ag/searchtheregister/",
       "urlSource": "research",
       "queryFormat": "",
-      "formatSource": null,
-      "lookupAvailable": false
+      "formatSource": null
     },
     {
       "country": "Argentina",
@@ -110,8 +98,7 @@
       "officialUrl": "https://www.argentina.gob.ar/justicia/igj",
       "urlSource": "research",
       "queryFormat": "",
-      "formatSource": null,
-      "lookupAvailable": false
+      "formatSource": null
     },
     {
       "country": "Armenia",
@@ -120,8 +107,7 @@
       "officialUrl": "https://www.e-register.am/en/",
       "urlSource": "research",
       "queryFormat": "",
-      "formatSource": null,
-      "lookupAvailable": false
+      "formatSource": null
     },
     {
       "country": "Aruba",
@@ -130,8 +116,7 @@
       "officialUrl": "https://my.arubachamber.com/register/zoeken",
       "urlSource": "research",
       "queryFormat": "",
-      "formatSource": null,
-      "lookupAvailable": false
+      "formatSource": null
     },
     {
       "country": "Australia",
@@ -140,8 +125,7 @@
       "officialUrl": "https://abr.business.gov.au/",
       "urlSource": "research",
       "queryFormat": "ABN: 00000000000 (11 digits) / ACN: 000000000 (9 digits)",
-      "formatSource": "research",
-      "lookupAvailable": false
+      "formatSource": "research"
     },
     {
       "country": "Austria",
@@ -150,8 +134,7 @@
       "officialUrl": "https://www.justiz.gv.at/service/datenbanken/firmenbuch/firmenbuchabfrage.2c9484852308c2a601240b693e1c0860.de.html",
       "urlSource": "research",
       "queryFormat": "Firmenbuchnummer (digits plus check letter); EUID",
-      "formatSource": "research",
-      "lookupAvailable": false
+      "formatSource": "research"
     },
     {
       "country": "Azerbaijan",
@@ -160,8 +143,7 @@
       "officialUrl": "https://www.e-taxes.gov.az/ebyn/payerOrVoenChecker.jsp",
       "urlSource": "research",
       "queryFormat": "",
-      "formatSource": null,
-      "lookupAvailable": false
+      "formatSource": null
     },
     {
       "country": "Bahamas",
@@ -170,8 +152,7 @@
       "officialUrl": "https://www.rgd.gov.bs/service/company-search",
       "urlSource": "research",
       "queryFormat": "",
-      "formatSource": null,
-      "lookupAvailable": false
+      "formatSource": null
     },
     {
       "country": "Bahrain",
@@ -180,8 +161,7 @@
       "officialUrl": "https://www.sijilat.bh/",
       "urlSource": "research",
       "queryFormat": "",
-      "formatSource": null,
-      "lookupAvailable": false
+      "formatSource": null
     },
     {
       "country": "Bangladesh",
@@ -190,8 +170,7 @@
       "officialUrl": "https://app.roc.gov.bd/psp/nc_search",
       "urlSource": "research",
       "queryFormat": "",
-      "formatSource": null,
-      "lookupAvailable": false
+      "formatSource": null
     },
     {
       "country": "Barbados",
@@ -200,8 +179,7 @@
       "officialUrl": "https://caipo.gov.bb/search-our-database/",
       "urlSource": "research",
       "queryFormat": "",
-      "formatSource": null,
-      "lookupAvailable": false
+      "formatSource": null
     },
     {
       "country": "Belarus",
@@ -210,8 +188,7 @@
       "officialUrl": "",
       "urlSource": null,
       "queryFormat": "",
-      "formatSource": null,
-      "lookupAvailable": false
+      "formatSource": null
     },
     {
       "country": "Belgium",
@@ -220,8 +197,7 @@
       "officialUrl": "https://kbopub.economie.fgov.be/kbopub/zoeknummerform.html",
       "urlSource": "research",
       "queryFormat": "Enterprise number: 0xxx.xxx.xxx (10 digits)",
-      "formatSource": "research",
-      "lookupAvailable": false
+      "formatSource": "research"
     },
     {
       "country": "Belize",
@@ -230,8 +206,7 @@
       "officialUrl": "https://obrs.bccar.bz/bereg/searchbusinesspublic",
       "urlSource": "research",
       "queryFormat": "",
-      "formatSource": null,
-      "lookupAvailable": false
+      "formatSource": null
     },
     {
       "country": "Benin",
@@ -240,8 +215,7 @@
       "officialUrl": "https://monentreprise.bj/annuaire-des-entreprises",
       "urlSource": "research",
       "queryFormat": "",
-      "formatSource": null,
-      "lookupAvailable": false
+      "formatSource": null
     },
     {
       "country": "Bermuda",
@@ -250,8 +224,7 @@
       "officialUrl": "https://www.gov.bm/business/companies-directory",
       "urlSource": "research",
       "queryFormat": "",
-      "formatSource": null,
-      "lookupAvailable": false
+      "formatSource": null
     },
     {
       "country": "Bhutan",
@@ -260,8 +233,7 @@
       "officialUrl": "https://www.cra.gov.bt/",
       "urlSource": "research",
       "queryFormat": "",
-      "formatSource": null,
-      "lookupAvailable": false
+      "formatSource": null
     },
     {
       "country": "Bolivia",
@@ -270,8 +242,7 @@
       "officialUrl": "https://miempresa.seprec.gob.bo/",
       "urlSource": "research",
       "queryFormat": "",
-      "formatSource": null,
-      "lookupAvailable": false
+      "formatSource": null
     },
     {
       "country": "Bonaire, Sint Eustatius and Saba",
@@ -280,8 +251,7 @@
       "officialUrl": "https://www.kvk.nl/en/about-the-business-register/islands-of-the-kingdom-of-the-netherlands/",
       "urlSource": "research",
       "queryFormat": "",
-      "formatSource": null,
-      "lookupAvailable": false
+      "formatSource": null
     },
     {
       "country": "Bosnia and Herzegovina",
@@ -290,8 +260,7 @@
       "officialUrl": "",
       "urlSource": null,
       "queryFormat": "",
-      "formatSource": null,
-      "lookupAvailable": false
+      "formatSource": null
     },
     {
       "country": "Botswana",
@@ -300,8 +269,7 @@
       "officialUrl": "https://www.cipa.co.bw/master/ui/start/CIPARegisterSearch",
       "urlSource": "research",
       "queryFormat": "",
-      "formatSource": null,
-      "lookupAvailable": false
+      "formatSource": null
     },
     {
       "country": "Bouvet Island",
@@ -310,8 +278,7 @@
       "officialUrl": "https://www.regjeringen.no/en/topics/polar-affairs/bouvet-island/id449430/",
       "urlSource": "research",
       "queryFormat": "",
-      "formatSource": null,
-      "lookupAvailable": false
+      "formatSource": null
     },
     {
       "country": "Brazil",
@@ -320,8 +287,7 @@
       "officialUrl": "https://www.gov.br/receitafederal/pt-br/acesso-a-informacao/dados-abertos/cadastros",
       "urlSource": "research",
       "queryFormat": "CNPJ (14 digits); NIRE (state commercial registration number)",
-      "formatSource": "research",
-      "lookupAvailable": false
+      "formatSource": "research"
     },
     {
       "country": "British Indian Ocean Territory",
@@ -330,8 +296,7 @@
       "officialUrl": "https://www.biot.gov.io/",
       "urlSource": "research",
       "queryFormat": "",
-      "formatSource": null,
-      "lookupAvailable": false
+      "formatSource": null
     },
     {
       "country": "British Virgin Islands",
@@ -340,8 +305,7 @@
       "officialUrl": "https://www.bvifsc.vg/searches-bvi-registered-entities",
       "urlSource": "research",
       "queryFormat": "",
-      "formatSource": null,
-      "lookupAvailable": false
+      "formatSource": null
     },
     {
       "country": "Brunei Darussalam",
@@ -350,8 +314,7 @@
       "officialUrl": "https://www.ocp.mofe.gov.bn/",
       "urlSource": "research",
       "queryFormat": "",
-      "formatSource": null,
-      "lookupAvailable": false
+      "formatSource": null
     },
     {
       "country": "Bulgaria",
@@ -360,8 +323,7 @@
       "officialUrl": "https://portal.registryagency.bg/",
       "urlSource": "research",
       "queryFormat": "EIK/BULSTAT (unified identification code)",
-      "formatSource": "research",
-      "lookupAvailable": false
+      "formatSource": "research"
     },
     {
       "country": "Burkina Faso",
@@ -370,8 +332,7 @@
       "officialUrl": "https://fichiernationalrccm.bf/",
       "urlSource": "research",
       "queryFormat": "",
-      "formatSource": null,
-      "lookupAvailable": false
+      "formatSource": null
     },
     {
       "country": "Burundi",
@@ -380,8 +341,7 @@
       "officialUrl": "https://easybusiness.bi/",
       "urlSource": "research",
       "queryFormat": "",
-      "formatSource": null,
-      "lookupAvailable": false
+      "formatSource": null
     },
     {
       "country": "Cabo Verde",
@@ -390,8 +350,7 @@
       "officialUrl": "https://portondinosilhas.gov.cv/portonprd/porton.portoncv?p=B&E=1",
       "urlSource": "research",
       "queryFormat": "",
-      "formatSource": null,
-      "lookupAvailable": false
+      "formatSource": null
     },
     {
       "country": "Cambodia",
@@ -400,8 +359,7 @@
       "officialUrl": "",
       "urlSource": null,
       "queryFormat": "",
-      "formatSource": null,
-      "lookupAvailable": false
+      "formatSource": null
     },
     {
       "country": "Cameroon",
@@ -410,8 +368,7 @@
       "officialUrl": "https://www.minjustice.gov.cm/",
       "urlSource": "research",
       "queryFormat": "",
-      "formatSource": null,
-      "lookupAvailable": false
+      "formatSource": null
     },
     {
       "country": "Canada",
@@ -420,8 +377,7 @@
       "officialUrl": "https://ised-isde.canada.ca/cbr-rec/",
       "urlSource": "research",
       "queryFormat": "corporation number (federal, 4-9 digits); Business Number (BN, CRA); provincial identifiers e.g. Ontario BIN (9 digits), BC 15-character program number",
-      "formatSource": "research",
-      "lookupAvailable": false
+      "formatSource": "research"
     },
     {
       "country": "Cayman Islands",
@@ -430,8 +386,7 @@
       "officialUrl": "https://www.registry.gov.ky/",
       "urlSource": "research",
       "queryFormat": "",
-      "formatSource": null,
-      "lookupAvailable": false
+      "formatSource": null
     },
     {
       "country": "Central African Republic",
@@ -440,8 +395,7 @@
       "officialUrl": "https://www.gouv.cf/",
       "urlSource": "research",
       "queryFormat": "",
-      "formatSource": null,
-      "lookupAvailable": false
+      "formatSource": null
     },
     {
       "country": "Chad",
@@ -450,8 +404,7 @@
       "officialUrl": "https://anie.td/",
       "urlSource": "research",
       "queryFormat": "",
-      "formatSource": null,
-      "lookupAvailable": false
+      "formatSource": null
     },
     {
       "country": "Chile",
@@ -460,8 +413,7 @@
       "officialUrl": "https://www.registrodeempresasysociedades.cl/",
       "urlSource": "research",
       "queryFormat": "",
-      "formatSource": null,
-      "lookupAvailable": false
+      "formatSource": null
     },
     {
       "country": "China",
@@ -470,8 +422,7 @@
       "officialUrl": "https://www.gsxt.gov.cn/index.html",
       "urlSource": "research",
       "queryFormat": "",
-      "formatSource": null,
-      "lookupAvailable": false
+      "formatSource": null
     },
     {
       "country": "Christmas Island",
@@ -480,8 +431,7 @@
       "officialUrl": "",
       "urlSource": null,
       "queryFormat": "",
-      "formatSource": null,
-      "lookupAvailable": false
+      "formatSource": null
     },
     {
       "country": "Cocos (Keeling) Islands",
@@ -490,8 +440,7 @@
       "officialUrl": "",
       "urlSource": null,
       "queryFormat": "",
-      "formatSource": null,
-      "lookupAvailable": false
+      "formatSource": null
     },
     {
       "country": "Colombia",
@@ -500,8 +449,7 @@
       "officialUrl": "https://www.rues.org.co/",
       "urlSource": "research",
       "queryFormat": "",
-      "formatSource": null,
-      "lookupAvailable": false
+      "formatSource": null
     },
     {
       "country": "Comoros",
@@ -510,8 +458,7 @@
       "officialUrl": "https://investcomoros.net/",
       "urlSource": "research",
       "queryFormat": "",
-      "formatSource": null,
-      "lookupAvailable": false
+      "formatSource": null
     },
     {
       "country": "Congo (Democratic Republic of the)",
@@ -520,8 +467,7 @@
       "officialUrl": "https://rccm.cd/",
       "urlSource": "research",
       "queryFormat": "",
-      "formatSource": null,
-      "lookupAvailable": false
+      "formatSource": null
     },
     {
       "country": "Congo (Republic of the)",
@@ -530,8 +476,7 @@
       "officialUrl": "https://acpce.cg/liste-des-entreprises/",
       "urlSource": "research",
       "queryFormat": "",
-      "formatSource": null,
-      "lookupAvailable": false
+      "formatSource": null
     },
     {
       "country": "Cook Islands",
@@ -540,8 +485,7 @@
       "officialUrl": "",
       "urlSource": null,
       "queryFormat": "",
-      "formatSource": null,
-      "lookupAvailable": false
+      "formatSource": null
     },
     {
       "country": "Costa Rica",
@@ -550,8 +494,7 @@
       "officialUrl": "https://www.rnpdigital.com/personas_juridicas/index.htm",
       "urlSource": "research",
       "queryFormat": "",
-      "formatSource": null,
-      "lookupAvailable": false
+      "formatSource": null
     },
     {
       "country": "Cote d'Ivoire",
@@ -560,8 +503,7 @@
       "officialUrl": "https://www.cepici.gouv.ci/",
       "urlSource": "research",
       "queryFormat": "",
-      "formatSource": null,
-      "lookupAvailable": false
+      "formatSource": null
     },
     {
       "country": "Croatia",
@@ -570,8 +512,7 @@
       "officialUrl": "https://sudreg.pravosudje.hr/registar/f?p=150:1",
       "urlSource": "research",
       "queryFormat": "MBS (court register number); OIB (personal identification number used for entities); EUID",
-      "formatSource": "research",
-      "lookupAvailable": false
+      "formatSource": "research"
     },
     {
       "country": "Cuba",
@@ -580,8 +521,7 @@
       "officialUrl": "https://www.minjus.gob.cu/es/servicios/registro-mercantil",
       "urlSource": "research",
       "queryFormat": "",
-      "formatSource": null,
-      "lookupAvailable": false
+      "formatSource": null
     },
     {
       "country": "Curacao",
@@ -590,8 +530,7 @@
       "officialUrl": "https://www2.curacao-chamber.cw/",
       "urlSource": "research",
       "queryFormat": "",
-      "formatSource": null,
-      "lookupAvailable": false
+      "formatSource": null
     },
     {
       "country": "Cyprus",
@@ -600,8 +539,7 @@
       "officialUrl": "https://e-justice.europa.eu/topics/registers-business-insolvency-land/business-registers-search-company-eu/general-information-find-company_en",
       "urlSource": "research",
       "queryFormat": "national registration number; EUID (country code + register id + national number)",
-      "formatSource": "research",
-      "lookupAvailable": false
+      "formatSource": "research"
     },
     {
       "country": "Czechia",
@@ -610,8 +548,7 @@
       "officialUrl": "https://ares.gov.cz/",
       "urlSource": "research",
       "queryFormat": "IČO: 00000000 (8 digits)",
-      "formatSource": "research",
-      "lookupAvailable": false
+      "formatSource": "research"
     },
     {
       "country": "Denmark",
@@ -620,8 +557,7 @@
       "officialUrl": "https://datacvr.virk.dk/",
       "urlSource": "research",
       "queryFormat": "CVR: 00000000 (8 digits)",
-      "formatSource": "research",
-      "lookupAvailable": false
+      "formatSource": "research"
     },
     {
       "country": "Djibouti",
@@ -630,8 +566,7 @@
       "officialUrl": "https://odpic.dj/",
       "urlSource": "research",
       "queryFormat": "",
-      "formatSource": null,
-      "lookupAvailable": false
+      "formatSource": null
     },
     {
       "country": "Dominica",
@@ -640,8 +575,7 @@
       "officialUrl": "https://eregistry.gov.dm/",
       "urlSource": "research",
       "queryFormat": "",
-      "formatSource": null,
-      "lookupAvailable": false
+      "formatSource": null
     },
     {
       "country": "Dominican Republic",
@@ -650,8 +584,7 @@
       "officialUrl": "https://www.fedocamaras.do/RegistroMercantil/RegistroMercantil",
       "urlSource": "research",
       "queryFormat": "",
-      "formatSource": null,
-      "lookupAvailable": false
+      "formatSource": null
     },
     {
       "country": "Ecuador",
@@ -660,8 +593,7 @@
       "officialUrl": "https://appscvsgen.supercias.gob.ec/consultaCompanias/societario/busquedaCompanias.jsf",
       "urlSource": "research",
       "queryFormat": "",
-      "formatSource": null,
-      "lookupAvailable": false
+      "formatSource": null
     },
     {
       "country": "Egypt",
@@ -670,8 +602,7 @@
       "officialUrl": "https://www.gafi.gov.eg/English/eServices/Pages/default.aspx",
       "urlSource": "research",
       "queryFormat": "",
-      "formatSource": null,
-      "lookupAvailable": false
+      "formatSource": null
     },
     {
       "country": "El Salvador",
@@ -680,8 +611,7 @@
       "officialUrl": "https://www.e.cnr.gob.sv/ServiciosOL/portada/rco.htm",
       "urlSource": "research",
       "queryFormat": "",
-      "formatSource": null,
-      "lookupAvailable": false
+      "formatSource": null
     },
     {
       "country": "Equatorial Guinea",
@@ -690,8 +620,7 @@
       "officialUrl": "https://www.guineaecuatorialpress.com/",
       "urlSource": "research",
       "queryFormat": "",
-      "formatSource": null,
-      "lookupAvailable": false
+      "formatSource": null
     },
     {
       "country": "Eritrea",
@@ -700,8 +629,7 @@
       "officialUrl": "https://shabait.com/",
       "urlSource": "research",
       "queryFormat": "",
-      "formatSource": null,
-      "lookupAvailable": false
+      "formatSource": null
     },
     {
       "country": "Estonia",
@@ -710,8 +638,7 @@
       "officialUrl": "https://ariregister.rik.ee/eng",
       "urlSource": "research",
       "queryFormat": "registry code (registrikood)",
-      "formatSource": "research",
-      "lookupAvailable": false
+      "formatSource": "research"
     },
     {
       "country": "Eswatini",
@@ -720,8 +647,7 @@
       "officialUrl": "https://www.online.gov.sz/e-companysearch.aspx",
       "urlSource": "research",
       "queryFormat": "",
-      "formatSource": null,
-      "lookupAvailable": false
+      "formatSource": null
     },
     {
       "country": "Ethiopia",
@@ -730,8 +656,7 @@
       "officialUrl": "https://business.gov.et/",
       "urlSource": "research",
       "queryFormat": "",
-      "formatSource": null,
-      "lookupAvailable": false
+      "formatSource": null
     },
     {
       "country": "Falkland Islands",
@@ -740,8 +665,7 @@
       "officialUrl": "https://services.registry.gov.fk/",
       "urlSource": "research",
       "queryFormat": "",
-      "formatSource": null,
-      "lookupAvailable": false
+      "formatSource": null
     },
     {
       "country": "Faroe Islands",
@@ -750,8 +674,7 @@
       "officialUrl": "",
       "urlSource": null,
       "queryFormat": "",
-      "formatSource": null,
-      "lookupAvailable": false
+      "formatSource": null
     },
     {
       "country": "Fiji",
@@ -760,8 +683,7 @@
       "officialUrl": "",
       "urlSource": null,
       "queryFormat": "",
-      "formatSource": null,
-      "lookupAvailable": false
+      "formatSource": null
     },
     {
       "country": "Finland",
@@ -770,8 +692,7 @@
       "officialUrl": "https://www.ytj.fi/en/index/companysearch.html",
       "urlSource": "research",
       "queryFormat": "Y-tunnus / Business ID",
-      "formatSource": "research",
-      "lookupAvailable": false
+      "formatSource": "research"
     },
     {
       "country": "France",
@@ -780,8 +701,7 @@
       "officialUrl": "https://data.inpi.fr/",
       "urlSource": "research",
       "queryFormat": "SIREN: 000000000 (9 digits) / SIRET: 00000000000000 (14 digits)",
-      "formatSource": "research",
-      "lookupAvailable": false
+      "formatSource": "research"
     },
     {
       "country": "French Guiana",
@@ -790,8 +710,7 @@
       "officialUrl": "https://data.inpi.fr/",
       "urlSource": "research",
       "queryFormat": "",
-      "formatSource": null,
-      "lookupAvailable": false
+      "formatSource": null
     },
     {
       "country": "French Polynesia",
@@ -800,8 +719,7 @@
       "officialUrl": "",
       "urlSource": null,
       "queryFormat": "",
-      "formatSource": null,
-      "lookupAvailable": false
+      "formatSource": null
     },
     {
       "country": "French Southern Territories",
@@ -810,8 +728,7 @@
       "officialUrl": "https://taaf.fr/",
       "urlSource": "research",
       "queryFormat": "",
-      "formatSource": null,
-      "lookupAvailable": false
+      "formatSource": null
     },
     {
       "country": "Gabon",
@@ -820,8 +737,7 @@
       "officialUrl": "https://anpi-gabon.com/",
       "urlSource": "research",
       "queryFormat": "",
-      "formatSource": null,
-      "lookupAvailable": false
+      "formatSource": null
     },
     {
       "country": "Gambia",
@@ -830,8 +746,7 @@
       "officialUrl": "https://www.easybusiness.gm/",
       "urlSource": "research",
       "queryFormat": "",
-      "formatSource": null,
-      "lookupAvailable": false
+      "formatSource": null
     },
     {
       "country": "Georgia",
@@ -840,8 +755,7 @@
       "officialUrl": "https://enreg.reestri.gov.ge/",
       "urlSource": "research",
       "queryFormat": "identification number assigned by NAPR, which also serves as the VAT number",
-      "formatSource": "research",
-      "lookupAvailable": false
+      "formatSource": "research"
     },
     {
       "country": "Germany",
@@ -850,8 +764,7 @@
       "officialUrl": "https://www.handelsregister.de/",
       "urlSource": "research",
       "queryFormat": "HRA/HRB number + Registergericht; EUID",
-      "formatSource": "research",
-      "lookupAvailable": false
+      "formatSource": "research"
     },
     {
       "country": "Ghana",
@@ -860,8 +773,7 @@
       "officialUrl": "https://orc.gov.gh/index.php/services/name-search",
       "urlSource": "research",
       "queryFormat": "",
-      "formatSource": null,
-      "lookupAvailable": false
+      "formatSource": null
     },
     {
       "country": "Gibraltar",
@@ -870,8 +782,7 @@
       "officialUrl": "",
       "urlSource": null,
       "queryFormat": "",
-      "formatSource": null,
-      "lookupAvailable": false
+      "formatSource": null
     },
     {
       "country": "Greece",
@@ -880,8 +791,7 @@
       "officialUrl": "https://www.businessregistry.gr/publicity/index",
       "urlSource": "research",
       "queryFormat": "Arithmos G.E.MI.; AFM (tax number)",
-      "formatSource": "research",
-      "lookupAvailable": false
+      "formatSource": "research"
     },
     {
       "country": "Greenland",
@@ -890,8 +800,7 @@
       "officialUrl": "https://datacvr.virk.dk/",
       "urlSource": "research",
       "queryFormat": "CVR-nummer",
-      "formatSource": "research",
-      "lookupAvailable": false
+      "formatSource": "research"
     },
     {
       "country": "Grenada",
@@ -900,8 +809,7 @@
       "officialUrl": "",
       "urlSource": null,
       "queryFormat": "",
-      "formatSource": null,
-      "lookupAvailable": false
+      "formatSource": null
     },
     {
       "country": "Guadeloupe",
@@ -910,8 +818,7 @@
       "officialUrl": "https://data.inpi.fr/",
       "urlSource": "research",
       "queryFormat": "",
-      "formatSource": null,
-      "lookupAvailable": false
+      "formatSource": null
     },
     {
       "country": "Guam",
@@ -920,8 +827,7 @@
       "officialUrl": "",
       "urlSource": null,
       "queryFormat": "",
-      "formatSource": null,
-      "lookupAvailable": false
+      "formatSource": null
     },
     {
       "country": "Guatemala",
@@ -930,8 +836,7 @@
       "officialUrl": "https://sedevirtual.registromercantil.gob.gt/",
       "urlSource": "research",
       "queryFormat": "",
-      "formatSource": null,
-      "lookupAvailable": false
+      "formatSource": null
     },
     {
       "country": "Guernsey",
@@ -940,8 +845,7 @@
       "officialUrl": "",
       "urlSource": null,
       "queryFormat": "",
-      "formatSource": null,
-      "lookupAvailable": false
+      "formatSource": null
     },
     {
       "country": "Guinea",
@@ -950,8 +854,7 @@
       "officialUrl": "https://apip.gov.gn/",
       "urlSource": "research",
       "queryFormat": "",
-      "formatSource": null,
-      "lookupAvailable": false
+      "formatSource": null
     },
     {
       "country": "Guinea-Bissau",
@@ -960,8 +863,7 @@
       "officialUrl": "https://www.gov.gw/",
       "urlSource": "research",
       "queryFormat": "",
-      "formatSource": null,
-      "lookupAvailable": false
+      "formatSource": null
     },
     {
       "country": "Guyana",
@@ -970,8 +872,7 @@
       "officialUrl": "https://dcra.gov.gy/",
       "urlSource": "research",
       "queryFormat": "",
-      "formatSource": null,
-      "lookupAvailable": false
+      "formatSource": null
     },
     {
       "country": "Haiti",
@@ -980,8 +881,7 @@
       "officialUrl": "https://mci.gouv.ht/enregistrement-dun-nom-commercial.php",
       "urlSource": "research",
       "queryFormat": "",
-      "formatSource": null,
-      "lookupAvailable": false
+      "formatSource": null
     },
     {
       "country": "Heard Island and McDonald Islands",
@@ -990,8 +890,7 @@
       "officialUrl": "",
       "urlSource": null,
       "queryFormat": "",
-      "formatSource": null,
-      "lookupAvailable": false
+      "formatSource": null
     },
     {
       "country": "Holy See",
@@ -1000,8 +899,7 @@
       "officialUrl": "",
       "urlSource": null,
       "queryFormat": "",
-      "formatSource": null,
-      "lookupAvailable": false
+      "formatSource": null
     },
     {
       "country": "Honduras",
@@ -1010,8 +908,7 @@
       "officialUrl": "https://registromercantil.ccichonduras.org/app/consulta-registro-mercantil/Consulta_de_empresas.htm",
       "urlSource": "research",
       "queryFormat": "",
-      "formatSource": null,
-      "lookupAvailable": false
+      "formatSource": null
     },
     {
       "country": "Hong Kong",
@@ -1020,8 +917,7 @@
       "officialUrl": "https://www.e-services.cr.gov.hk/",
       "urlSource": "research",
       "queryFormat": "",
-      "formatSource": null,
-      "lookupAvailable": false
+      "formatSource": null
     },
     {
       "country": "Hungary",
@@ -1030,8 +926,7 @@
       "officialUrl": "https://www.e-cegjegyzek.hu/",
       "urlSource": "research",
       "queryFormat": "cegjegyzekszam (company registration number); adoszam (tax number)",
-      "formatSource": "research",
-      "lookupAvailable": false
+      "formatSource": "research"
     },
     {
       "country": "Iceland",
@@ -1040,8 +935,7 @@
       "officialUrl": "https://e-justice.europa.eu/topics/registers-business-insolvency-land/business-registers-search-company-eu/general-information-find-company_en",
       "urlSource": "research",
       "queryFormat": "national registration number; EUID (country code + register id + national number)",
-      "formatSource": "research",
-      "lookupAvailable": false
+      "formatSource": "research"
     },
     {
       "country": "India",
@@ -1050,8 +944,7 @@
       "officialUrl": "https://www.mca.gov.in/content/mca/global/en/mca/master-data/MDS.html",
       "urlSource": "research",
       "queryFormat": "CIN: 21 alphanumeric characters / LLPIN / FCRN",
-      "formatSource": "research",
-      "lookupAvailable": false
+      "formatSource": "research"
     },
     {
       "country": "Indonesia",
@@ -1060,8 +953,7 @@
       "officialUrl": "",
       "urlSource": null,
       "queryFormat": "",
-      "formatSource": null,
-      "lookupAvailable": false
+      "formatSource": null
     },
     {
       "country": "Iran",
@@ -1070,8 +962,7 @@
       "officialUrl": "https://ilenc.ssaa.ir/",
       "urlSource": "research",
       "queryFormat": "",
-      "formatSource": null,
-      "lookupAvailable": false
+      "formatSource": null
     },
     {
       "country": "Iraq",
@@ -1080,8 +971,7 @@
       "officialUrl": "",
       "urlSource": null,
       "queryFormat": "",
-      "formatSource": null,
-      "lookupAvailable": false
+      "formatSource": null
     },
     {
       "country": "Ireland",
@@ -1090,8 +980,7 @@
       "officialUrl": "https://core.cro.ie/",
       "urlSource": "research",
       "queryFormat": "CRO company number; business name number",
-      "formatSource": "research",
-      "lookupAvailable": false
+      "formatSource": "research"
     },
     {
       "country": "Isle of Man",
@@ -1100,8 +989,7 @@
       "officialUrl": "",
       "urlSource": null,
       "queryFormat": "",
-      "formatSource": null,
-      "lookupAvailable": false
+      "formatSource": null
     },
     {
       "country": "Israel",
@@ -1110,8 +998,7 @@
       "officialUrl": "",
       "urlSource": null,
       "queryFormat": "",
-      "formatSource": null,
-      "lookupAvailable": false
+      "formatSource": null
     },
     {
       "country": "Italy",
@@ -1120,8 +1007,7 @@
       "officialUrl": "https://italianbusinessregister.it/en/",
       "urlSource": "research",
       "queryFormat": "codice fiscale / partita IVA; numero REA; numero di iscrizione RI; EUID",
-      "formatSource": "research",
-      "lookupAvailable": false
+      "formatSource": "research"
     },
     {
       "country": "Jamaica",
@@ -1130,8 +1016,7 @@
       "officialUrl": "https://www.orcjamaica.com/CompanySearch.aspx",
       "urlSource": "research",
       "queryFormat": "",
-      "formatSource": null,
-      "lookupAvailable": false
+      "formatSource": null
     },
     {
       "country": "Japan",
@@ -1140,8 +1025,7 @@
       "officialUrl": "https://www.houjin-bangou.nta.go.jp/en/",
       "urlSource": "research",
       "queryFormat": "Corporate Number: 0000000000000 (13 digits)",
-      "formatSource": "research",
-      "lookupAvailable": false
+      "formatSource": "research"
     },
     {
       "country": "Jersey",
@@ -1150,8 +1034,7 @@
       "officialUrl": "",
       "urlSource": null,
       "queryFormat": "",
-      "formatSource": null,
-      "lookupAvailable": false
+      "formatSource": null
     },
     {
       "country": "Jordan",
@@ -1160,8 +1043,7 @@
       "officialUrl": "",
       "urlSource": null,
       "queryFormat": "",
-      "formatSource": null,
-      "lookupAvailable": false
+      "formatSource": null
     },
     {
       "country": "Kazakhstan",
@@ -1170,8 +1052,7 @@
       "officialUrl": "https://egov.kz/cms/en/services/business_registration/pass042com_mu",
       "urlSource": "research",
       "queryFormat": "",
-      "formatSource": null,
-      "lookupAvailable": false
+      "formatSource": null
     },
     {
       "country": "Kenya",
@@ -1180,8 +1061,7 @@
       "officialUrl": "https://brs.go.ke/",
       "urlSource": "research",
       "queryFormat": "",
-      "formatSource": null,
-      "lookupAvailable": false
+      "formatSource": null
     },
     {
       "country": "Kiribati",
@@ -1190,8 +1070,7 @@
       "officialUrl": "",
       "urlSource": null,
       "queryFormat": "",
-      "formatSource": null,
-      "lookupAvailable": false
+      "formatSource": null
     },
     {
       "country": "Korea (Democratic People's Republic of)",
@@ -1200,8 +1079,7 @@
       "officialUrl": "http://www.naenara.com.kp/",
       "urlSource": "research",
       "queryFormat": "",
-      "formatSource": null,
-      "lookupAvailable": false
+      "formatSource": null
     },
     {
       "country": "Korea (Republic of)",
@@ -1210,8 +1088,7 @@
       "officialUrl": "https://www.iros.go.kr/",
       "urlSource": "research",
       "queryFormat": "",
-      "formatSource": null,
-      "lookupAvailable": false
+      "formatSource": null
     },
     {
       "country": "Kosovo",
@@ -1220,8 +1097,7 @@
       "officialUrl": "",
       "urlSource": null,
       "queryFormat": "",
-      "formatSource": null,
-      "lookupAvailable": false
+      "formatSource": null
     },
     {
       "country": "Kuwait",
@@ -1230,8 +1106,7 @@
       "officialUrl": "",
       "urlSource": null,
       "queryFormat": "",
-      "formatSource": null,
-      "lookupAvailable": false
+      "formatSource": null
     },
     {
       "country": "Kyrgyzstan",
@@ -1240,8 +1115,7 @@
       "officialUrl": "https://record.minjust.gov.kg/",
       "urlSource": "research",
       "queryFormat": "",
-      "formatSource": null,
-      "lookupAvailable": false
+      "formatSource": null
     },
     {
       "country": "Lao PDR",
@@ -1250,8 +1124,7 @@
       "officialUrl": "",
       "urlSource": null,
       "queryFormat": "",
-      "formatSource": null,
-      "lookupAvailable": false
+      "formatSource": null
     },
     {
       "country": "Latvia",
@@ -1260,8 +1133,7 @@
       "officialUrl": "https://info.ur.gov.lv/",
       "urlSource": "research",
       "queryFormat": "vienotais registracijas numurs (unified registration number); SEPA payee identifier where assigned",
-      "formatSource": "research",
-      "lookupAvailable": false
+      "formatSource": "research"
     },
     {
       "country": "Lebanon",
@@ -1270,8 +1142,7 @@
       "officialUrl": "",
       "urlSource": null,
       "queryFormat": "",
-      "formatSource": null,
-      "lookupAvailable": false
+      "formatSource": null
     },
     {
       "country": "Lesotho",
@@ -1280,8 +1151,7 @@
       "officialUrl": "https://businessregistrations.gov.ls/",
       "urlSource": "research",
       "queryFormat": "",
-      "formatSource": null,
-      "lookupAvailable": false
+      "formatSource": null
     },
     {
       "country": "Liberia",
@@ -1290,8 +1160,7 @@
       "officialUrl": "https://lbr.gov.lr/",
       "urlSource": "research",
       "queryFormat": "",
-      "formatSource": null,
-      "lookupAvailable": false
+      "formatSource": null
     },
     {
       "country": "Libya",
@@ -1300,8 +1169,7 @@
       "officialUrl": "https://ejraat.gov.ly/",
       "urlSource": "research",
       "queryFormat": "",
-      "formatSource": null,
-      "lookupAvailable": false
+      "formatSource": null
     },
     {
       "country": "Liechtenstein",
@@ -1310,8 +1178,7 @@
       "officialUrl": "https://www.oera.li/cr-portal/suche/suche.xhtml",
       "urlSource": "research",
       "queryFormat": "national registration number; EUID (country code + register id + national number)",
-      "formatSource": "research",
-      "lookupAvailable": false
+      "formatSource": "research"
     },
     {
       "country": "Lithuania",
@@ -1320,8 +1187,7 @@
       "officialUrl": "https://www.registrucentras.lt/jar/p_en/",
       "urlSource": "research",
       "queryFormat": "juridinio asmens kodas (legal entity code)",
-      "formatSource": "research",
-      "lookupAvailable": false
+      "formatSource": "research"
     },
     {
       "country": "Luxembourg",
@@ -1330,8 +1196,7 @@
       "officialUrl": "https://www.lbr.lu/mjrcs/jsp/IndexActionNotSecured.action",
       "urlSource": "research",
       "queryFormat": "RCS number (e.g. B123456); VAT number; EUID",
-      "formatSource": "research",
-      "lookupAvailable": false
+      "formatSource": "research"
     },
     {
       "country": "Macao",
@@ -1340,8 +1205,7 @@
       "officialUrl": "https://eservice3.rn.dsaj.gov.mo/commercial/platform/home",
       "urlSource": "research",
       "queryFormat": "",
-      "formatSource": null,
-      "lookupAvailable": false
+      "formatSource": null
     },
     {
       "country": "Madagascar",
@@ -1350,8 +1214,7 @@
       "officialUrl": "https://orinasa.edbm.mg/",
       "urlSource": "research",
       "queryFormat": "",
-      "formatSource": null,
-      "lookupAvailable": false
+      "formatSource": null
     },
     {
       "country": "Malawi",
@@ -1360,8 +1223,7 @@
       "officialUrl": "https://mbrs.gov.mw/search",
       "urlSource": "research",
       "queryFormat": "",
-      "formatSource": null,
-      "lookupAvailable": false
+      "formatSource": null
     },
     {
       "country": "Malaysia",
@@ -1370,8 +1232,7 @@
       "officialUrl": "",
       "urlSource": null,
       "queryFormat": "",
-      "formatSource": null,
-      "lookupAvailable": false
+      "formatSource": null
     },
     {
       "country": "Maldives",
@@ -1380,8 +1241,7 @@
       "officialUrl": "https://business.egov.mv/",
       "urlSource": "research",
       "queryFormat": "",
-      "formatSource": null,
-      "lookupAvailable": false
+      "formatSource": null
     },
     {
       "country": "Mali",
@@ -1390,8 +1250,7 @@
       "officialUrl": "https://apimali.gov.ml/",
       "urlSource": "research",
       "queryFormat": "",
-      "formatSource": null,
-      "lookupAvailable": false
+      "formatSource": null
     },
     {
       "country": "Malta",
@@ -1400,8 +1259,7 @@
       "officialUrl": "https://register.mbr.mt/app/query/search",
       "urlSource": "research",
       "queryFormat": "national registration number; EUID (country code + register id + national number)",
-      "formatSource": "research",
-      "lookupAvailable": false
+      "formatSource": "research"
     },
     {
       "country": "Marshall Islands",
@@ -1410,8 +1268,7 @@
       "officialUrl": "",
       "urlSource": null,
       "queryFormat": "",
-      "formatSource": null,
-      "lookupAvailable": false
+      "formatSource": null
     },
     {
       "country": "Martinique",
@@ -1420,8 +1277,7 @@
       "officialUrl": "https://data.inpi.fr/",
       "urlSource": "research",
       "queryFormat": "",
-      "formatSource": null,
-      "lookupAvailable": false
+      "formatSource": null
     },
     {
       "country": "Mauritania",
@@ -1430,8 +1286,7 @@
       "officialUrl": "https://apim.gov.mr/",
       "urlSource": "research",
       "queryFormat": "",
-      "formatSource": null,
-      "lookupAvailable": false
+      "formatSource": null
     },
     {
       "country": "Mauritius",
@@ -1440,8 +1295,7 @@
       "officialUrl": "https://onlinesearch.mns.mu/",
       "urlSource": "research",
       "queryFormat": "",
-      "formatSource": null,
-      "lookupAvailable": false
+      "formatSource": null
     },
     {
       "country": "Mayotte",
@@ -1450,8 +1304,7 @@
       "officialUrl": "https://data.inpi.fr/",
       "urlSource": "research",
       "queryFormat": "",
-      "formatSource": null,
-      "lookupAvailable": false
+      "formatSource": null
     },
     {
       "country": "Mexico",
@@ -1460,8 +1313,7 @@
       "officialUrl": "https://rpc.economia.gob.mx/siger2/xhtml/login/login.xhtml",
       "urlSource": "research",
       "queryFormat": "",
-      "formatSource": null,
-      "lookupAvailable": false
+      "formatSource": null
     },
     {
       "country": "Micronesia (Federated States of)",
@@ -1470,8 +1322,7 @@
       "officialUrl": "",
       "urlSource": null,
       "queryFormat": "",
-      "formatSource": null,
-      "lookupAvailable": false
+      "formatSource": null
     },
     {
       "country": "Moldova",
@@ -1480,8 +1331,7 @@
       "officialUrl": "",
       "urlSource": null,
       "queryFormat": "",
-      "formatSource": null,
-      "lookupAvailable": false
+      "formatSource": null
     },
     {
       "country": "Monaco",
@@ -1490,8 +1340,7 @@
       "officialUrl": "",
       "urlSource": null,
       "queryFormat": "",
-      "formatSource": null,
-      "lookupAvailable": false
+      "formatSource": null
     },
     {
       "country": "Mongolia",
@@ -1500,8 +1349,7 @@
       "officialUrl": "https://opendata.burtgel.gov.mn/les",
       "urlSource": "research",
       "queryFormat": "",
-      "formatSource": null,
-      "lookupAvailable": false
+      "formatSource": null
     },
     {
       "country": "Montenegro",
@@ -1510,8 +1358,7 @@
       "officialUrl": "",
       "urlSource": null,
       "queryFormat": "",
-      "formatSource": null,
-      "lookupAvailable": false
+      "formatSource": null
     },
     {
       "country": "Montserrat",
@@ -1520,8 +1367,7 @@
       "officialUrl": "https://cipo.fsc.ms/",
       "urlSource": "research",
       "queryFormat": "",
-      "formatSource": null,
-      "lookupAvailable": false
+      "formatSource": null
     },
     {
       "country": "Morocco",
@@ -1530,8 +1376,7 @@
       "officialUrl": "https://www.directinfo.ma/",
       "urlSource": "research",
       "queryFormat": "",
-      "formatSource": null,
-      "lookupAvailable": false
+      "formatSource": null
     },
     {
       "country": "Mozambique",
@@ -1540,8 +1385,7 @@
       "officialUrl": "https://www.bau.gov.mz/",
       "urlSource": "research",
       "queryFormat": "",
-      "formatSource": null,
-      "lookupAvailable": false
+      "formatSource": null
     },
     {
       "country": "Myanmar",
@@ -1550,8 +1394,7 @@
       "officialUrl": "https://www.myco.dica.gov.mm/",
       "urlSource": "research",
       "queryFormat": "",
-      "formatSource": null,
-      "lookupAvailable": false
+      "formatSource": null
     },
     {
       "country": "Namibia",
@@ -1560,8 +1403,7 @@
       "officialUrl": "https://www.bipa.na/search/",
       "urlSource": "research",
       "queryFormat": "",
-      "formatSource": null,
-      "lookupAvailable": false
+      "formatSource": null
     },
     {
       "country": "Nauru",
@@ -1570,8 +1412,7 @@
       "officialUrl": "",
       "urlSource": null,
       "queryFormat": "",
-      "formatSource": null,
-      "lookupAvailable": false
+      "formatSource": null
     },
     {
       "country": "Nepal",
@@ -1580,8 +1421,7 @@
       "officialUrl": "https://application.ocr.gov.np/faces/CompanyDetails.jsp",
       "urlSource": "research",
       "queryFormat": "",
-      "formatSource": null,
-      "lookupAvailable": false
+      "formatSource": null
     },
     {
       "country": "Netherlands",
@@ -1590,8 +1430,7 @@
       "officialUrl": "https://www.kvk.nl/zoeken/",
       "urlSource": "research",
       "queryFormat": "KVK number: 00000000 (8 digits)",
-      "formatSource": "research",
-      "lookupAvailable": false
+      "formatSource": "research"
     },
     {
       "country": "New Caledonia",
@@ -1600,8 +1439,7 @@
       "officialUrl": "",
       "urlSource": null,
       "queryFormat": "",
-      "formatSource": null,
-      "lookupAvailable": false
+      "formatSource": null
     },
     {
       "country": "New Zealand",
@@ -1610,8 +1448,7 @@
       "officialUrl": "https://companies-register.companiesoffice.govt.nz/",
       "urlSource": "research",
       "queryFormat": "NZBN: 0000000000000 (13 digits) / company number",
-      "formatSource": "research",
-      "lookupAvailable": false
+      "formatSource": "research"
     },
     {
       "country": "Nicaragua",
@@ -1620,8 +1457,7 @@
       "officialUrl": "https://www.registropublico.gob.ni/",
       "urlSource": "research",
       "queryFormat": "",
-      "formatSource": null,
-      "lookupAvailable": false
+      "formatSource": null
     },
     {
       "country": "Niger",
@@ -1630,8 +1466,7 @@
       "officialUrl": "https://www.mde.ne/",
       "urlSource": "research",
       "queryFormat": "",
-      "formatSource": null,
-      "lookupAvailable": false
+      "formatSource": null
     },
     {
       "country": "Nigeria",
@@ -1640,8 +1475,7 @@
       "officialUrl": "https://search.cac.gov.ng/",
       "urlSource": "research",
       "queryFormat": "",
-      "formatSource": null,
-      "lookupAvailable": false
+      "formatSource": null
     },
     {
       "country": "Niue",
@@ -1650,8 +1484,7 @@
       "officialUrl": "",
       "urlSource": null,
       "queryFormat": "",
-      "formatSource": null,
-      "lookupAvailable": false
+      "formatSource": null
     },
     {
       "country": "Norfolk Island",
@@ -1660,8 +1493,7 @@
       "officialUrl": "",
       "urlSource": null,
       "queryFormat": "",
-      "formatSource": null,
-      "lookupAvailable": false
+      "formatSource": null
     },
     {
       "country": "North Macedonia",
@@ -1670,8 +1502,7 @@
       "officialUrl": "",
       "urlSource": null,
       "queryFormat": "",
-      "formatSource": null,
-      "lookupAvailable": false
+      "formatSource": null
     },
     {
       "country": "Northern Mariana Islands",
@@ -1680,8 +1511,7 @@
       "officialUrl": "",
       "urlSource": null,
       "queryFormat": "",
-      "formatSource": null,
-      "lookupAvailable": false
+      "formatSource": null
     },
     {
       "country": "Norway",
@@ -1690,8 +1520,7 @@
       "officialUrl": "https://virksomhet.brreg.no/",
       "urlSource": "research",
       "queryFormat": "Organisation number: 000000000 (9 digits)",
-      "formatSource": "research",
-      "lookupAvailable": true
+      "formatSource": "research"
     },
     {
       "country": "Oman",
@@ -1700,8 +1529,7 @@
       "officialUrl": "",
       "urlSource": null,
       "queryFormat": "",
-      "formatSource": null,
-      "lookupAvailable": false
+      "formatSource": null
     },
     {
       "country": "Pakistan",
@@ -1710,8 +1538,7 @@
       "officialUrl": "https://eservices.secp.gov.pk/eServices/CTC_CompanySearch.jsp",
       "urlSource": "research",
       "queryFormat": "",
-      "formatSource": null,
-      "lookupAvailable": false
+      "formatSource": null
     },
     {
       "country": "Palau",
@@ -1720,8 +1547,7 @@
       "officialUrl": "",
       "urlSource": null,
       "queryFormat": "",
-      "formatSource": null,
-      "lookupAvailable": false
+      "formatSource": null
     },
     {
       "country": "Palestine, State of",
@@ -1730,8 +1556,7 @@
       "officialUrl": "",
       "urlSource": null,
       "queryFormat": "",
-      "formatSource": null,
-      "lookupAvailable": false
+      "formatSource": null
     },
     {
       "country": "Panama",
@@ -1740,8 +1565,7 @@
       "officialUrl": "https://www.registro-publico.gob.pa/RediWeb/default.asp",
       "urlSource": "research",
       "queryFormat": "",
-      "formatSource": null,
-      "lookupAvailable": false
+      "formatSource": null
     },
     {
       "country": "Papua New Guinea",
@@ -1750,8 +1574,7 @@
       "officialUrl": "",
       "urlSource": null,
       "queryFormat": "",
-      "formatSource": null,
-      "lookupAvailable": false
+      "formatSource": null
     },
     {
       "country": "Paraguay",
@@ -1760,8 +1583,7 @@
       "officialUrl": "https://www.dnit.gov.py/web/portal-institucional/consulta-ruc",
       "urlSource": "research",
       "queryFormat": "",
-      "formatSource": null,
-      "lookupAvailable": false
+      "formatSource": null
     },
     {
       "country": "Peru",
@@ -1770,8 +1592,7 @@
       "officialUrl": "https://www.sunarp.gob.pe/bus-personas-juridicas.asp",
       "urlSource": "research",
       "queryFormat": "",
-      "formatSource": null,
-      "lookupAvailable": false
+      "formatSource": null
     },
     {
       "country": "Philippines",
@@ -1780,8 +1601,7 @@
       "officialUrl": "https://esearch.sec.gov.ph/",
       "urlSource": "research",
       "queryFormat": "",
-      "formatSource": null,
-      "lookupAvailable": false
+      "formatSource": null
     },
     {
       "country": "Pitcairn",
@@ -1790,8 +1610,7 @@
       "officialUrl": "",
       "urlSource": null,
       "queryFormat": "",
-      "formatSource": null,
-      "lookupAvailable": false
+      "formatSource": null
     },
     {
       "country": "Poland",
@@ -1800,8 +1619,7 @@
       "officialUrl": "https://wyszukiwarka-krs.ms.gov.pl/",
       "urlSource": "research",
       "queryFormat": "KRS number; NIP (tax); REGON (statistical)",
-      "formatSource": "research",
-      "lookupAvailable": false
+      "formatSource": "research"
     },
     {
       "country": "Portugal",
@@ -1810,8 +1628,7 @@
       "officialUrl": "https://publicacoes.mj.pt/Pesquisa.aspx",
       "urlSource": "research",
       "queryFormat": "NIPC (also the tax number); certidao permanente 12-digit access code",
-      "formatSource": "research",
-      "lookupAvailable": false
+      "formatSource": "research"
     },
     {
       "country": "Puerto Rico",
@@ -1820,8 +1637,7 @@
       "officialUrl": "https://rcp.estado.pr.gov/en",
       "urlSource": "research",
       "queryFormat": "",
-      "formatSource": null,
-      "lookupAvailable": false
+      "formatSource": null
     },
     {
       "country": "Qatar",
@@ -1830,8 +1646,7 @@
       "officialUrl": "",
       "urlSource": null,
       "queryFormat": "",
-      "formatSource": null,
-      "lookupAvailable": false
+      "formatSource": null
     },
     {
       "country": "Réunion",
@@ -1840,8 +1655,7 @@
       "officialUrl": "https://data.inpi.fr/",
       "urlSource": "research",
       "queryFormat": "",
-      "formatSource": null,
-      "lookupAvailable": false
+      "formatSource": null
     },
     {
       "country": "Romania",
@@ -1850,8 +1664,7 @@
       "officialUrl": "https://portal.onrc.ro/",
       "urlSource": "research",
       "queryFormat": "CUI (unique registration code); numar de ordine in registrul comertului; EUID",
-      "formatSource": "research",
-      "lookupAvailable": false
+      "formatSource": "research"
     },
     {
       "country": "Russian Federation",
@@ -1860,8 +1673,7 @@
       "officialUrl": "https://egrul.nalog.ru/",
       "urlSource": "research",
       "queryFormat": "OGRN; INN; KPP",
-      "formatSource": "research",
-      "lookupAvailable": false
+      "formatSource": "research"
     },
     {
       "country": "Rwanda",
@@ -1870,8 +1682,7 @@
       "officialUrl": "https://org.rdb.rw/",
       "urlSource": "research",
       "queryFormat": "",
-      "formatSource": null,
-      "lookupAvailable": false
+      "formatSource": null
     },
     {
       "country": "Saint Barthelemy",
@@ -1880,8 +1691,7 @@
       "officialUrl": "https://data.inpi.fr/",
       "urlSource": "research",
       "queryFormat": "",
-      "formatSource": null,
-      "lookupAvailable": false
+      "formatSource": null
     },
     {
       "country": "Saint Helena, Ascension and Tristan da Cunha",
@@ -1890,8 +1700,7 @@
       "officialUrl": "https://www.sainthelena.gov.sh/public-services/companies-registry/",
       "urlSource": "research",
       "queryFormat": "",
-      "formatSource": null,
-      "lookupAvailable": false
+      "formatSource": null
     },
     {
       "country": "Saint Kitts and Nevis",
@@ -1900,8 +1709,7 @@
       "officialUrl": "https://www.fsrc.kn/companies/names-of-companies",
       "urlSource": "research",
       "queryFormat": "",
-      "formatSource": null,
-      "lookupAvailable": false
+      "formatSource": null
     },
     {
       "country": "Saint Lucia",
@@ -1910,8 +1718,7 @@
       "officialUrl": "https://attorneygeneralchambers.com/p/search-for-a-company-or-business-name",
       "urlSource": "research",
       "queryFormat": "",
-      "formatSource": null,
-      "lookupAvailable": false
+      "formatSource": null
     },
     {
       "country": "Saint Martin (French part)",
@@ -1920,8 +1727,7 @@
       "officialUrl": "https://data.inpi.fr/",
       "urlSource": "research",
       "queryFormat": "",
-      "formatSource": null,
-      "lookupAvailable": false
+      "formatSource": null
     },
     {
       "country": "Saint Pierre and Miquelon",
@@ -1930,8 +1736,7 @@
       "officialUrl": "",
       "urlSource": null,
       "queryFormat": "",
-      "formatSource": null,
-      "lookupAvailable": false
+      "formatSource": null
     },
     {
       "country": "Saint Vincent and the Grenadines",
@@ -1940,8 +1745,7 @@
       "officialUrl": "https://cipo.gov.vc/",
       "urlSource": "research",
       "queryFormat": "",
-      "formatSource": null,
-      "lookupAvailable": false
+      "formatSource": null
     },
     {
       "country": "Samoa",
@@ -1950,8 +1754,7 @@
       "officialUrl": "",
       "urlSource": null,
       "queryFormat": "",
-      "formatSource": null,
-      "lookupAvailable": false
+      "formatSource": null
     },
     {
       "country": "San Marino",
@@ -1960,8 +1763,7 @@
       "officialUrl": "",
       "urlSource": null,
       "queryFormat": "",
-      "formatSource": null,
-      "lookupAvailable": false
+      "formatSource": null
     },
     {
       "country": "Sao Tome and Principe",
@@ -1970,8 +1772,7 @@
       "officialUrl": "https://justica.gov.st/",
       "urlSource": "research",
       "queryFormat": "",
-      "formatSource": null,
-      "lookupAvailable": false
+      "formatSource": null
     },
     {
       "country": "Saudi Arabia",
@@ -1980,8 +1781,7 @@
       "officialUrl": "",
       "urlSource": null,
       "queryFormat": "",
-      "formatSource": null,
-      "lookupAvailable": false
+      "formatSource": null
     },
     {
       "country": "Senegal",
@@ -1990,8 +1790,7 @@
       "officialUrl": "https://www.seninfogreffe.sn/",
       "urlSource": "research",
       "queryFormat": "",
-      "formatSource": null,
-      "lookupAvailable": false
+      "formatSource": null
     },
     {
       "country": "Serbia",
@@ -2000,8 +1799,7 @@
       "officialUrl": "https://pretraga.apr.gov.rs/",
       "urlSource": "research",
       "queryFormat": "maticni broj (registration number); PIB (tax identification number)",
-      "formatSource": "research",
-      "lookupAvailable": false
+      "formatSource": "research"
     },
     {
       "country": "Seychelles",
@@ -2010,8 +1808,7 @@
       "officialUrl": "https://www.registry.gov.sc/BizRegistration/WebSearchBusiness.aspx",
       "urlSource": "research",
       "queryFormat": "",
-      "formatSource": null,
-      "lookupAvailable": false
+      "formatSource": null
     },
     {
       "country": "Sierra Leone",
@@ -2020,8 +1817,7 @@
       "officialUrl": "https://oarg.gov.sl/",
       "urlSource": "research",
       "queryFormat": "",
-      "formatSource": null,
-      "lookupAvailable": false
+      "formatSource": null
     },
     {
       "country": "Singapore",
@@ -2030,8 +1826,7 @@
       "officialUrl": "https://www.bizfile.gov.sg/",
       "urlSource": "research",
       "queryFormat": "UEN",
-      "formatSource": "research",
-      "lookupAvailable": true
+      "formatSource": "research"
     },
     {
       "country": "Sint Maarten",
@@ -2040,8 +1835,7 @@
       "officialUrl": "https://www.chamberofcommerce.sx/?page_id=5476",
       "urlSource": "research",
       "queryFormat": "",
-      "formatSource": null,
-      "lookupAvailable": false
+      "formatSource": null
     },
     {
       "country": "Slovakia",
@@ -2050,8 +1844,7 @@
       "officialUrl": "https://rpo.statistics.sk/rpo/#search",
       "urlSource": "research",
       "queryFormat": "IČO: 00000000 (8 digits)",
-      "formatSource": "research",
-      "lookupAvailable": true
+      "formatSource": "research"
     },
     {
       "country": "Slovenia",
@@ -2060,8 +1853,7 @@
       "officialUrl": "https://www.ajpes.si/prs/",
       "urlSource": "research",
       "queryFormat": "maticna stevilka (registration number); davcna stevilka (tax number); HSMID address identifier",
-      "formatSource": "research",
-      "lookupAvailable": false
+      "formatSource": "research"
     },
     {
       "country": "Solomon Islands",
@@ -2070,8 +1862,7 @@
       "officialUrl": "",
       "urlSource": null,
       "queryFormat": "",
-      "formatSource": null,
-      "lookupAvailable": false
+      "formatSource": null
     },
     {
       "country": "Somalia",
@@ -2080,8 +1871,7 @@
       "officialUrl": "https://ebusiness.gov.so/",
       "urlSource": "research",
       "queryFormat": "",
-      "formatSource": null,
-      "lookupAvailable": false
+      "formatSource": null
     },
     {
       "country": "South Africa",
@@ -2090,8 +1880,7 @@
       "officialUrl": "https://eservices.cipc.co.za/Search.aspx",
       "urlSource": "research",
       "queryFormat": "Registration number: YYYY/NNNNNN/NN",
-      "formatSource": "research",
-      "lookupAvailable": false
+      "formatSource": "research"
     },
     {
       "country": "South Georgia and the South Sandwich Islands",
@@ -2100,8 +1889,7 @@
       "officialUrl": "https://gov.gs/",
       "urlSource": "research",
       "queryFormat": "",
-      "formatSource": null,
-      "lookupAvailable": false
+      "formatSource": null
     },
     {
       "country": "South Sudan",
@@ -2110,8 +1898,7 @@
       "officialUrl": "https://brs.eservices.gov.ss/",
       "urlSource": "research",
       "queryFormat": "",
-      "formatSource": null,
-      "lookupAvailable": false
+      "formatSource": null
     },
     {
       "country": "Spain",
@@ -2120,8 +1907,7 @@
       "officialUrl": "https://www.registradores.org/directorio/-/registros/mercantil",
       "urlSource": "research",
       "queryFormat": "NIF/CIF; hoja registral and provincial register data; no single free national company number index",
-      "formatSource": "research",
-      "lookupAvailable": false
+      "formatSource": "research"
     },
     {
       "country": "Sri Lanka",
@@ -2130,8 +1916,7 @@
       "officialUrl": "https://eroc.drc.gov.lk/",
       "urlSource": "research",
       "queryFormat": "",
-      "formatSource": null,
-      "lookupAvailable": false
+      "formatSource": null
     },
     {
       "country": "Sudan",
@@ -2140,8 +1925,7 @@
       "officialUrl": "https://business.gov.sd/",
       "urlSource": "research",
       "queryFormat": "",
-      "formatSource": null,
-      "lookupAvailable": false
+      "formatSource": null
     },
     {
       "country": "Suriname",
@@ -2150,8 +1934,7 @@
       "officialUrl": "https://www.surinamechamber.com/",
       "urlSource": "research",
       "queryFormat": "",
-      "formatSource": null,
-      "lookupAvailable": false
+      "formatSource": null
     },
     {
       "country": "Svalbard and Jan Mayen",
@@ -2160,8 +1943,7 @@
       "officialUrl": "",
       "urlSource": null,
       "queryFormat": "",
-      "formatSource": null,
-      "lookupAvailable": false
+      "formatSource": null
     },
     {
       "country": "Sweden",
@@ -2170,8 +1952,7 @@
       "officialUrl": "https://foretagsinfo.bolagsverket.se/sok-foretagsinformation-web/",
       "urlSource": "research",
       "queryFormat": "organisationsnummer",
-      "formatSource": "research",
-      "lookupAvailable": false
+      "formatSource": "research"
     },
     {
       "country": "Switzerland",
@@ -2180,8 +1961,7 @@
       "officialUrl": "https://www.zefix.ch/",
       "urlSource": "research",
       "queryFormat": "UID: CHE-000.000.000 / CH-ID / EHRA-ID",
-      "formatSource": "research",
-      "lookupAvailable": false
+      "formatSource": "research"
     },
     {
       "country": "Syrian Arab Republic",
@@ -2190,8 +1970,7 @@
       "officialUrl": "",
       "urlSource": null,
       "queryFormat": "",
-      "formatSource": null,
-      "lookupAvailable": false
+      "formatSource": null
     },
     {
       "country": "Taiwan",
@@ -2200,8 +1979,7 @@
       "officialUrl": "https://findbiz.nat.gov.tw/fts/query/QueryBar/queryInit.do",
       "urlSource": "research",
       "queryFormat": "統一編號: 00000000",
-      "formatSource": "research",
-      "lookupAvailable": false
+      "formatSource": "research"
     },
     {
       "country": "Tajikistan",
@@ -2210,8 +1988,7 @@
       "officialUrl": "https://services.andoz.tj/",
       "urlSource": "research",
       "queryFormat": "",
-      "formatSource": null,
-      "lookupAvailable": false
+      "formatSource": null
     },
     {
       "country": "Tanzania",
@@ -2220,8 +1997,7 @@
       "officialUrl": "https://ors.brela.go.tz/",
       "urlSource": "research",
       "queryFormat": "",
-      "formatSource": null,
-      "lookupAvailable": false
+      "formatSource": null
     },
     {
       "country": "Thailand",
@@ -2230,8 +2006,7 @@
       "officialUrl": "https://datawarehouse.dbd.go.th/",
       "urlSource": "research",
       "queryFormat": "",
-      "formatSource": null,
-      "lookupAvailable": false
+      "formatSource": null
     },
     {
       "country": "Timor-Leste",
@@ -2240,8 +2015,7 @@
       "officialUrl": "https://serve.gov.tl/en/companies/",
       "urlSource": "research",
       "queryFormat": "",
-      "formatSource": null,
-      "lookupAvailable": false
+      "formatSource": null
     },
     {
       "country": "Togo",
@@ -2250,8 +2024,7 @@
       "officialUrl": "https://cfetogo.tg/entreprise/recherche",
       "urlSource": "research",
       "queryFormat": "",
-      "formatSource": null,
-      "lookupAvailable": false
+      "formatSource": null
     },
     {
       "country": "Tokelau",
@@ -2260,8 +2033,7 @@
       "officialUrl": "",
       "urlSource": null,
       "queryFormat": "",
-      "formatSource": null,
-      "lookupAvailable": false
+      "formatSource": null
     },
     {
       "country": "Tonga",
@@ -2270,8 +2042,7 @@
       "officialUrl": "",
       "urlSource": null,
       "queryFormat": "",
-      "formatSource": null,
-      "lookupAvailable": false
+      "formatSource": null
     },
     {
       "country": "Trinidad and Tobago",
@@ -2280,8 +2051,7 @@
       "officialUrl": "https://legalaffairs.gov.tt/registerbusiness.php",
       "urlSource": "research",
       "queryFormat": "",
-      "formatSource": null,
-      "lookupAvailable": false
+      "formatSource": null
     },
     {
       "country": "Tunisia",
@@ -2290,8 +2060,7 @@
       "officialUrl": "https://www.registre-entreprises.tn/rne-public/#/",
       "urlSource": "research",
       "queryFormat": "",
-      "formatSource": null,
-      "lookupAvailable": false
+      "formatSource": null
     },
     {
       "country": "Turkiye",
@@ -2300,8 +2069,7 @@
       "officialUrl": "",
       "urlSource": null,
       "queryFormat": "",
-      "formatSource": null,
-      "lookupAvailable": false
+      "formatSource": null
     },
     {
       "country": "Turkmenistan",
@@ -2310,8 +2078,7 @@
       "officialUrl": "https://turkmenistan.gov.tm/en/post/78320/statistical-business-register-being-developed-turkmenistan-being-improved",
       "urlSource": "research",
       "queryFormat": "",
-      "formatSource": null,
-      "lookupAvailable": false
+      "formatSource": null
     },
     {
       "country": "Turks and Caicos Islands",
@@ -2320,8 +2087,7 @@
       "officialUrl": "https://busreg.gov.tc/busreg/",
       "urlSource": "research",
       "queryFormat": "",
-      "formatSource": null,
-      "lookupAvailable": false
+      "formatSource": null
     },
     {
       "country": "Tuvalu",
@@ -2330,8 +2096,7 @@
       "officialUrl": "",
       "urlSource": null,
       "queryFormat": "",
-      "formatSource": null,
-      "lookupAvailable": false
+      "formatSource": null
     },
     {
       "country": "Uganda",
@@ -2340,8 +2105,7 @@
       "officialUrl": "https://obrs.ursb.go.ug/",
       "urlSource": "research",
       "queryFormat": "",
-      "formatSource": null,
-      "lookupAvailable": false
+      "formatSource": null
     },
     {
       "country": "Ukraine",
@@ -2350,8 +2114,7 @@
       "officialUrl": "https://usr.minjust.gov.ua/content/free-search",
       "urlSource": "research",
       "queryFormat": "EDRPOU code (legal entities); RNOKPP (individual entrepreneurs)",
-      "formatSource": "research",
-      "lookupAvailable": false
+      "formatSource": "research"
     },
     {
       "country": "United Arab Emirates",
@@ -2360,8 +2123,7 @@
       "officialUrl": "",
       "urlSource": null,
       "queryFormat": "",
-      "formatSource": null,
-      "lookupAvailable": false
+      "formatSource": null
     },
     {
       "country": "United Kingdom",
@@ -2370,8 +2132,7 @@
       "officialUrl": "https://find-and-update.company-information.service.gov.uk/",
       "urlSource": "research",
       "queryFormat": "company number (CRN)",
-      "formatSource": "research",
-      "lookupAvailable": false
+      "formatSource": "research"
     },
     {
       "country": "United States Minor Outlying Islands",
@@ -2380,8 +2141,7 @@
       "officialUrl": "",
       "urlSource": null,
       "queryFormat": "",
-      "formatSource": null,
-      "lookupAvailable": false
+      "formatSource": null
     },
     {
       "country": "United States of America",
@@ -2390,8 +2150,7 @@
       "officialUrl": "https://www.usa.gov/state-governments",
       "urlSource": "research",
       "queryFormat": "state entity/file number (per state); EIN (IRS, not a public search key); CIK (SEC)",
-      "formatSource": "research",
-      "lookupAvailable": false
+      "formatSource": "research"
     },
     {
       "country": "Uruguay",
@@ -2400,8 +2159,7 @@
       "officialUrl": "https://portal.dgr.gub.uy/",
       "urlSource": "research",
       "queryFormat": "",
-      "formatSource": null,
-      "lookupAvailable": false
+      "formatSource": null
     },
     {
       "country": "Uzbekistan",
@@ -2410,8 +2168,7 @@
       "officialUrl": "https://my.soliq.uz/searchtin/index?lang=ru",
       "urlSource": "research",
       "queryFormat": "",
-      "formatSource": null,
-      "lookupAvailable": false
+      "formatSource": null
     },
     {
       "country": "Vanuatu",
@@ -2420,8 +2177,7 @@
       "officialUrl": "",
       "urlSource": null,
       "queryFormat": "",
-      "formatSource": null,
-      "lookupAvailable": false
+      "formatSource": null
     },
     {
       "country": "Venezuela",
@@ -2430,8 +2186,7 @@
       "officialUrl": "https://tramites.saren.gob.ve/",
       "urlSource": "research",
       "queryFormat": "",
-      "formatSource": null,
-      "lookupAvailable": false
+      "formatSource": null
     },
     {
       "country": "Viet Nam",
@@ -2440,8 +2195,7 @@
       "officialUrl": "https://dangkykinhdoanh.gov.vn/en/Pages/default.aspx",
       "urlSource": "research",
       "queryFormat": "",
-      "formatSource": null,
-      "lookupAvailable": false
+      "formatSource": null
     },
     {
       "country": "Virgin Islands (U.S.)",
@@ -2450,8 +2204,7 @@
       "officialUrl": "https://www.corporationsandtrademarks.vi.gov/",
       "urlSource": "research",
       "queryFormat": "",
-      "formatSource": null,
-      "lookupAvailable": false
+      "formatSource": null
     },
     {
       "country": "Wallis and Futuna",
@@ -2460,8 +2213,7 @@
       "officialUrl": "",
       "urlSource": null,
       "queryFormat": "",
-      "formatSource": null,
-      "lookupAvailable": false
+      "formatSource": null
     },
     {
       "country": "Western Sahara",
@@ -2470,8 +2222,7 @@
       "officialUrl": "https://www.ompic.ma/en/content/commercial-register",
       "urlSource": "research",
       "queryFormat": "",
-      "formatSource": null,
-      "lookupAvailable": false
+      "formatSource": null
     },
     {
       "country": "Yemen",
@@ -2480,8 +2231,7 @@
       "officialUrl": "",
       "urlSource": null,
       "queryFormat": "",
-      "formatSource": null,
-      "lookupAvailable": false
+      "formatSource": null
     },
     {
       "country": "Zambia",
@@ -2490,8 +2240,7 @@
       "officialUrl": "https://search.pacra.org.zm/",
       "urlSource": "research",
       "queryFormat": "",
-      "formatSource": null,
-      "lookupAvailable": false
+      "formatSource": null
     },
     {
       "country": "Zimbabwe",
@@ -2500,8 +2249,7 @@
       "officialUrl": "https://zimconnect.gov.zw/",
       "urlSource": "research",
       "queryFormat": "",
-      "formatSource": null,
-      "lookupAvailable": false
+      "formatSource": null
     }
   ]
 }
