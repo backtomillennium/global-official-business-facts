@@ -1,3 +1,4 @@
+import { createFacilitatorConfig } from "@coinbase/x402";
 
 import {
   FacilitatorTimeoutError,
@@ -245,11 +246,17 @@ export function createTestnetPaymentGate(): PaymentGate {
 }
 
 
-export function createProductionPaymentGate(_secrets?: Partial<PaymentSecrets>): PaymentGate {
-  const facilitator = new HTTPFacilitatorClient({
-    url: "https://facilitator.payai.network",
-    timeoutMs: 10_000,
-  });
+export function createProductionPaymentGate(secrets?: Partial<PaymentSecrets>): PaymentGate {
+  const apiKeyId = secrets?.CDP_API_KEY_ID;
+  const apiKeySecret = secrets?.CDP_API_KEY_SECRET;
+
+  if (!apiKeyId || !apiKeySecret) {
+    throw new Error("CDP facilitator credentials are missing");
+  }
+
+  const facilitator = new HTTPFacilitatorClient(
+    createFacilitatorConfig(apiKeyId, apiKeySecret),
+  );
 
   return new X402PaymentGate({
     facilitator,
