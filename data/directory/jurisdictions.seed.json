@@ -1,0 +1,2507 @@
+{
+  "schemaVersion": "gobf-jurisdiction-directory-seed-v1",
+  "seededAt": "2026-08-16",
+  "note": "Manual review seed. Blank values are intentional; do not infer missing formats or URLs.",
+  "jurisdictions": [
+    {
+      "country": "Afghanistan",
+      "iso2": "AF",
+      "iso3": "AFG",
+      "officialUrl": "https://moci.gov.af/en/central-business-registry-intellectual-property-acbr-ip",
+      "urlSource": "research",
+      "queryFormat": "",
+      "formatSource": null,
+      "lookupAvailable": false
+    },
+    {
+      "country": "Aland Islands",
+      "iso2": "AX",
+      "iso3": "ALA",
+      "officialUrl": "https://www.ytj.fi/en/index/companysearch.html",
+      "urlSource": "research",
+      "queryFormat": "Y-tunnus",
+      "formatSource": "research",
+      "lookupAvailable": false
+    },
+    {
+      "country": "Albania",
+      "iso2": "AL",
+      "iso3": "ALB",
+      "officialUrl": "",
+      "urlSource": null,
+      "queryFormat": "",
+      "formatSource": null,
+      "lookupAvailable": false
+    },
+    {
+      "country": "Algeria",
+      "iso2": "DZ",
+      "iso3": "DZA",
+      "officialUrl": "https://sidjilcom.cnrc.dz/",
+      "urlSource": "research",
+      "queryFormat": "",
+      "formatSource": null,
+      "lookupAvailable": false
+    },
+    {
+      "country": "American Samoa",
+      "iso2": "AS",
+      "iso3": "ASM",
+      "officialUrl": "",
+      "urlSource": null,
+      "queryFormat": "",
+      "formatSource": null,
+      "lookupAvailable": false
+    },
+    {
+      "country": "Andorra",
+      "iso2": "AD",
+      "iso3": "AND",
+      "officialUrl": "",
+      "urlSource": null,
+      "queryFormat": "",
+      "formatSource": null,
+      "lookupAvailable": false
+    },
+    {
+      "country": "Angola",
+      "iso2": "AO",
+      "iso3": "AGO",
+      "officialUrl": "https://gue.gov.ao/",
+      "urlSource": "research",
+      "queryFormat": "",
+      "formatSource": null,
+      "lookupAvailable": false
+    },
+    {
+      "country": "Anguilla",
+      "iso2": "AI",
+      "iso3": "AIA",
+      "officialUrl": "https://cres.gov.ai/bereg/searchbusinesspublic",
+      "urlSource": "research",
+      "queryFormat": "",
+      "formatSource": null,
+      "lookupAvailable": false
+    },
+    {
+      "country": "Antarctica",
+      "iso2": "AQ",
+      "iso3": "ATA",
+      "officialUrl": "https://www.ats.aq/e/antarctictreaty.html",
+      "urlSource": "research",
+      "queryFormat": "",
+      "formatSource": null,
+      "lookupAvailable": false
+    },
+    {
+      "country": "Antigua and Barbuda",
+      "iso2": "AG",
+      "iso3": "ATG",
+      "officialUrl": "https://abipco.gov.ag/searchtheregister/",
+      "urlSource": "research",
+      "queryFormat": "",
+      "formatSource": null,
+      "lookupAvailable": false
+    },
+    {
+      "country": "Argentina",
+      "iso2": "AR",
+      "iso3": "ARG",
+      "officialUrl": "https://www.argentina.gob.ar/justicia/igj",
+      "urlSource": "research",
+      "queryFormat": "",
+      "formatSource": null,
+      "lookupAvailable": false
+    },
+    {
+      "country": "Armenia",
+      "iso2": "AM",
+      "iso3": "ARM",
+      "officialUrl": "https://www.e-register.am/en/",
+      "urlSource": "research",
+      "queryFormat": "",
+      "formatSource": null,
+      "lookupAvailable": false
+    },
+    {
+      "country": "Aruba",
+      "iso2": "AW",
+      "iso3": "ABW",
+      "officialUrl": "https://my.arubachamber.com/register/zoeken",
+      "urlSource": "research",
+      "queryFormat": "",
+      "formatSource": null,
+      "lookupAvailable": false
+    },
+    {
+      "country": "Australia",
+      "iso2": "AU",
+      "iso3": "AUS",
+      "officialUrl": "https://abr.business.gov.au/",
+      "urlSource": "research",
+      "queryFormat": "ABN: 00000000000 (11 digits) / ACN: 000000000 (9 digits)",
+      "formatSource": "research",
+      "lookupAvailable": false
+    },
+    {
+      "country": "Austria",
+      "iso2": "AT",
+      "iso3": "AUT",
+      "officialUrl": "https://www.justiz.gv.at/service/datenbanken/firmenbuch/firmenbuchabfrage.2c9484852308c2a601240b693e1c0860.de.html",
+      "urlSource": "research",
+      "queryFormat": "Firmenbuchnummer (digits plus check letter); EUID",
+      "formatSource": "research",
+      "lookupAvailable": false
+    },
+    {
+      "country": "Azerbaijan",
+      "iso2": "AZ",
+      "iso3": "AZE",
+      "officialUrl": "https://www.e-taxes.gov.az/ebyn/payerOrVoenChecker.jsp",
+      "urlSource": "research",
+      "queryFormat": "",
+      "formatSource": null,
+      "lookupAvailable": false
+    },
+    {
+      "country": "Bahamas",
+      "iso2": "BS",
+      "iso3": "BHS",
+      "officialUrl": "https://www.rgd.gov.bs/service/company-search",
+      "urlSource": "research",
+      "queryFormat": "",
+      "formatSource": null,
+      "lookupAvailable": false
+    },
+    {
+      "country": "Bahrain",
+      "iso2": "BH",
+      "iso3": "BHR",
+      "officialUrl": "https://www.sijilat.bh/",
+      "urlSource": "research",
+      "queryFormat": "",
+      "formatSource": null,
+      "lookupAvailable": false
+    },
+    {
+      "country": "Bangladesh",
+      "iso2": "BD",
+      "iso3": "BGD",
+      "officialUrl": "https://app.roc.gov.bd/psp/nc_search",
+      "urlSource": "research",
+      "queryFormat": "",
+      "formatSource": null,
+      "lookupAvailable": false
+    },
+    {
+      "country": "Barbados",
+      "iso2": "BB",
+      "iso3": "BRB",
+      "officialUrl": "https://caipo.gov.bb/search-our-database/",
+      "urlSource": "research",
+      "queryFormat": "",
+      "formatSource": null,
+      "lookupAvailable": false
+    },
+    {
+      "country": "Belarus",
+      "iso2": "BY",
+      "iso3": "BLR",
+      "officialUrl": "",
+      "urlSource": null,
+      "queryFormat": "",
+      "formatSource": null,
+      "lookupAvailable": false
+    },
+    {
+      "country": "Belgium",
+      "iso2": "BE",
+      "iso3": "BEL",
+      "officialUrl": "https://kbopub.economie.fgov.be/kbopub/zoeknummerform.html",
+      "urlSource": "research",
+      "queryFormat": "Enterprise number: 0xxx.xxx.xxx (10 digits)",
+      "formatSource": "research",
+      "lookupAvailable": false
+    },
+    {
+      "country": "Belize",
+      "iso2": "BZ",
+      "iso3": "BLZ",
+      "officialUrl": "https://obrs.bccar.bz/bereg/searchbusinesspublic",
+      "urlSource": "research",
+      "queryFormat": "",
+      "formatSource": null,
+      "lookupAvailable": false
+    },
+    {
+      "country": "Benin",
+      "iso2": "BJ",
+      "iso3": "BEN",
+      "officialUrl": "https://monentreprise.bj/annuaire-des-entreprises",
+      "urlSource": "research",
+      "queryFormat": "",
+      "formatSource": null,
+      "lookupAvailable": false
+    },
+    {
+      "country": "Bermuda",
+      "iso2": "BM",
+      "iso3": "BMU",
+      "officialUrl": "https://www.gov.bm/business/companies-directory",
+      "urlSource": "research",
+      "queryFormat": "",
+      "formatSource": null,
+      "lookupAvailable": false
+    },
+    {
+      "country": "Bhutan",
+      "iso2": "BT",
+      "iso3": "BTN",
+      "officialUrl": "https://www.cra.gov.bt/",
+      "urlSource": "research",
+      "queryFormat": "",
+      "formatSource": null,
+      "lookupAvailable": false
+    },
+    {
+      "country": "Bolivia",
+      "iso2": "BO",
+      "iso3": "BOL",
+      "officialUrl": "https://miempresa.seprec.gob.bo/",
+      "urlSource": "research",
+      "queryFormat": "",
+      "formatSource": null,
+      "lookupAvailable": false
+    },
+    {
+      "country": "Bonaire, Sint Eustatius and Saba",
+      "iso2": "BQ",
+      "iso3": "BES",
+      "officialUrl": "https://www.kvk.nl/en/about-the-business-register/islands-of-the-kingdom-of-the-netherlands/",
+      "urlSource": "research",
+      "queryFormat": "",
+      "formatSource": null,
+      "lookupAvailable": false
+    },
+    {
+      "country": "Bosnia and Herzegovina",
+      "iso2": "BA",
+      "iso3": "BIH",
+      "officialUrl": "",
+      "urlSource": null,
+      "queryFormat": "",
+      "formatSource": null,
+      "lookupAvailable": false
+    },
+    {
+      "country": "Botswana",
+      "iso2": "BW",
+      "iso3": "BWA",
+      "officialUrl": "https://www.cipa.co.bw/master/ui/start/CIPARegisterSearch",
+      "urlSource": "research",
+      "queryFormat": "",
+      "formatSource": null,
+      "lookupAvailable": false
+    },
+    {
+      "country": "Bouvet Island",
+      "iso2": "BV",
+      "iso3": "BVT",
+      "officialUrl": "https://www.regjeringen.no/en/topics/polar-affairs/bouvet-island/id449430/",
+      "urlSource": "research",
+      "queryFormat": "",
+      "formatSource": null,
+      "lookupAvailable": false
+    },
+    {
+      "country": "Brazil",
+      "iso2": "BR",
+      "iso3": "BRA",
+      "officialUrl": "https://www.gov.br/receitafederal/pt-br/acesso-a-informacao/dados-abertos/cadastros",
+      "urlSource": "research",
+      "queryFormat": "CNPJ (14 digits); NIRE (state commercial registration number)",
+      "formatSource": "research",
+      "lookupAvailable": false
+    },
+    {
+      "country": "British Indian Ocean Territory",
+      "iso2": "IO",
+      "iso3": "IOT",
+      "officialUrl": "https://www.biot.gov.io/",
+      "urlSource": "research",
+      "queryFormat": "",
+      "formatSource": null,
+      "lookupAvailable": false
+    },
+    {
+      "country": "British Virgin Islands",
+      "iso2": "VG",
+      "iso3": "VGB",
+      "officialUrl": "https://www.bvifsc.vg/searches-bvi-registered-entities",
+      "urlSource": "research",
+      "queryFormat": "",
+      "formatSource": null,
+      "lookupAvailable": false
+    },
+    {
+      "country": "Brunei Darussalam",
+      "iso2": "BN",
+      "iso3": "BRN",
+      "officialUrl": "https://www.ocp.mofe.gov.bn/",
+      "urlSource": "research",
+      "queryFormat": "",
+      "formatSource": null,
+      "lookupAvailable": false
+    },
+    {
+      "country": "Bulgaria",
+      "iso2": "BG",
+      "iso3": "BGR",
+      "officialUrl": "https://portal.registryagency.bg/",
+      "urlSource": "research",
+      "queryFormat": "EIK/BULSTAT (unified identification code)",
+      "formatSource": "research",
+      "lookupAvailable": false
+    },
+    {
+      "country": "Burkina Faso",
+      "iso2": "BF",
+      "iso3": "BFA",
+      "officialUrl": "https://fichiernationalrccm.bf/",
+      "urlSource": "research",
+      "queryFormat": "",
+      "formatSource": null,
+      "lookupAvailable": false
+    },
+    {
+      "country": "Burundi",
+      "iso2": "BI",
+      "iso3": "BDI",
+      "officialUrl": "https://easybusiness.bi/",
+      "urlSource": "research",
+      "queryFormat": "",
+      "formatSource": null,
+      "lookupAvailable": false
+    },
+    {
+      "country": "Cabo Verde",
+      "iso2": "CV",
+      "iso3": "CPV",
+      "officialUrl": "https://portondinosilhas.gov.cv/portonprd/porton.portoncv?p=B&E=1",
+      "urlSource": "research",
+      "queryFormat": "",
+      "formatSource": null,
+      "lookupAvailable": false
+    },
+    {
+      "country": "Cambodia",
+      "iso2": "KH",
+      "iso3": "KHM",
+      "officialUrl": "",
+      "urlSource": null,
+      "queryFormat": "",
+      "formatSource": null,
+      "lookupAvailable": false
+    },
+    {
+      "country": "Cameroon",
+      "iso2": "CM",
+      "iso3": "CMR",
+      "officialUrl": "https://www.minjustice.gov.cm/",
+      "urlSource": "research",
+      "queryFormat": "",
+      "formatSource": null,
+      "lookupAvailable": false
+    },
+    {
+      "country": "Canada",
+      "iso2": "CA",
+      "iso3": "CAN",
+      "officialUrl": "https://ised-isde.canada.ca/cbr-rec/",
+      "urlSource": "research",
+      "queryFormat": "corporation number (federal, 4-9 digits); Business Number (BN, CRA); provincial identifiers e.g. Ontario BIN (9 digits), BC 15-character program number",
+      "formatSource": "research",
+      "lookupAvailable": false
+    },
+    {
+      "country": "Cayman Islands",
+      "iso2": "KY",
+      "iso3": "CYM",
+      "officialUrl": "https://www.registry.gov.ky/",
+      "urlSource": "research",
+      "queryFormat": "",
+      "formatSource": null,
+      "lookupAvailable": false
+    },
+    {
+      "country": "Central African Republic",
+      "iso2": "CF",
+      "iso3": "CAF",
+      "officialUrl": "https://www.gouv.cf/",
+      "urlSource": "research",
+      "queryFormat": "",
+      "formatSource": null,
+      "lookupAvailable": false
+    },
+    {
+      "country": "Chad",
+      "iso2": "TD",
+      "iso3": "TCD",
+      "officialUrl": "https://anie.td/",
+      "urlSource": "research",
+      "queryFormat": "",
+      "formatSource": null,
+      "lookupAvailable": false
+    },
+    {
+      "country": "Chile",
+      "iso2": "CL",
+      "iso3": "CHL",
+      "officialUrl": "https://www.registrodeempresasysociedades.cl/",
+      "urlSource": "research",
+      "queryFormat": "",
+      "formatSource": null,
+      "lookupAvailable": false
+    },
+    {
+      "country": "China",
+      "iso2": "CN",
+      "iso3": "CHN",
+      "officialUrl": "https://www.gsxt.gov.cn/index.html",
+      "urlSource": "research",
+      "queryFormat": "",
+      "formatSource": null,
+      "lookupAvailable": false
+    },
+    {
+      "country": "Christmas Island",
+      "iso2": "CX",
+      "iso3": "CXR",
+      "officialUrl": "",
+      "urlSource": null,
+      "queryFormat": "",
+      "formatSource": null,
+      "lookupAvailable": false
+    },
+    {
+      "country": "Cocos (Keeling) Islands",
+      "iso2": "CC",
+      "iso3": "CCK",
+      "officialUrl": "",
+      "urlSource": null,
+      "queryFormat": "",
+      "formatSource": null,
+      "lookupAvailable": false
+    },
+    {
+      "country": "Colombia",
+      "iso2": "CO",
+      "iso3": "COL",
+      "officialUrl": "https://www.rues.org.co/",
+      "urlSource": "research",
+      "queryFormat": "",
+      "formatSource": null,
+      "lookupAvailable": false
+    },
+    {
+      "country": "Comoros",
+      "iso2": "KM",
+      "iso3": "COM",
+      "officialUrl": "https://investcomoros.net/",
+      "urlSource": "research",
+      "queryFormat": "",
+      "formatSource": null,
+      "lookupAvailable": false
+    },
+    {
+      "country": "Congo (Democratic Republic of the)",
+      "iso2": "CD",
+      "iso3": "COD",
+      "officialUrl": "https://rccm.cd/",
+      "urlSource": "research",
+      "queryFormat": "",
+      "formatSource": null,
+      "lookupAvailable": false
+    },
+    {
+      "country": "Congo (Republic of the)",
+      "iso2": "CG",
+      "iso3": "COG",
+      "officialUrl": "https://acpce.cg/liste-des-entreprises/",
+      "urlSource": "research",
+      "queryFormat": "",
+      "formatSource": null,
+      "lookupAvailable": false
+    },
+    {
+      "country": "Cook Islands",
+      "iso2": "CK",
+      "iso3": "COK",
+      "officialUrl": "",
+      "urlSource": null,
+      "queryFormat": "",
+      "formatSource": null,
+      "lookupAvailable": false
+    },
+    {
+      "country": "Costa Rica",
+      "iso2": "CR",
+      "iso3": "CRI",
+      "officialUrl": "https://www.rnpdigital.com/personas_juridicas/index.htm",
+      "urlSource": "research",
+      "queryFormat": "",
+      "formatSource": null,
+      "lookupAvailable": false
+    },
+    {
+      "country": "Cote d'Ivoire",
+      "iso2": "CI",
+      "iso3": "CIV",
+      "officialUrl": "https://www.cepici.gouv.ci/",
+      "urlSource": "research",
+      "queryFormat": "",
+      "formatSource": null,
+      "lookupAvailable": false
+    },
+    {
+      "country": "Croatia",
+      "iso2": "HR",
+      "iso3": "HRV",
+      "officialUrl": "https://sudreg.pravosudje.hr/registar/f?p=150:1",
+      "urlSource": "research",
+      "queryFormat": "MBS (court register number); OIB (personal identification number used for entities); EUID",
+      "formatSource": "research",
+      "lookupAvailable": false
+    },
+    {
+      "country": "Cuba",
+      "iso2": "CU",
+      "iso3": "CUB",
+      "officialUrl": "https://www.minjus.gob.cu/es/servicios/registro-mercantil",
+      "urlSource": "research",
+      "queryFormat": "",
+      "formatSource": null,
+      "lookupAvailable": false
+    },
+    {
+      "country": "Curacao",
+      "iso2": "CW",
+      "iso3": "CUW",
+      "officialUrl": "https://www2.curacao-chamber.cw/",
+      "urlSource": "research",
+      "queryFormat": "",
+      "formatSource": null,
+      "lookupAvailable": false
+    },
+    {
+      "country": "Cyprus",
+      "iso2": "CY",
+      "iso3": "CYP",
+      "officialUrl": "https://e-justice.europa.eu/topics/registers-business-insolvency-land/business-registers-search-company-eu/general-information-find-company_en",
+      "urlSource": "research",
+      "queryFormat": "national registration number; EUID (country code + register id + national number)",
+      "formatSource": "research",
+      "lookupAvailable": false
+    },
+    {
+      "country": "Czechia",
+      "iso2": "CZ",
+      "iso3": "CZE",
+      "officialUrl": "https://ares.gov.cz/",
+      "urlSource": "research",
+      "queryFormat": "IČO: 00000000 (8 digits)",
+      "formatSource": "research",
+      "lookupAvailable": false
+    },
+    {
+      "country": "Denmark",
+      "iso2": "DK",
+      "iso3": "DNK",
+      "officialUrl": "https://datacvr.virk.dk/",
+      "urlSource": "research",
+      "queryFormat": "CVR: 00000000 (8 digits)",
+      "formatSource": "research",
+      "lookupAvailable": false
+    },
+    {
+      "country": "Djibouti",
+      "iso2": "DJ",
+      "iso3": "DJI",
+      "officialUrl": "https://odpic.dj/",
+      "urlSource": "research",
+      "queryFormat": "",
+      "formatSource": null,
+      "lookupAvailable": false
+    },
+    {
+      "country": "Dominica",
+      "iso2": "DM",
+      "iso3": "DMA",
+      "officialUrl": "https://eregistry.gov.dm/",
+      "urlSource": "research",
+      "queryFormat": "",
+      "formatSource": null,
+      "lookupAvailable": false
+    },
+    {
+      "country": "Dominican Republic",
+      "iso2": "DO",
+      "iso3": "DOM",
+      "officialUrl": "https://www.fedocamaras.do/RegistroMercantil/RegistroMercantil",
+      "urlSource": "research",
+      "queryFormat": "",
+      "formatSource": null,
+      "lookupAvailable": false
+    },
+    {
+      "country": "Ecuador",
+      "iso2": "EC",
+      "iso3": "ECU",
+      "officialUrl": "https://appscvsgen.supercias.gob.ec/consultaCompanias/societario/busquedaCompanias.jsf",
+      "urlSource": "research",
+      "queryFormat": "",
+      "formatSource": null,
+      "lookupAvailable": false
+    },
+    {
+      "country": "Egypt",
+      "iso2": "EG",
+      "iso3": "EGY",
+      "officialUrl": "https://www.gafi.gov.eg/English/eServices/Pages/default.aspx",
+      "urlSource": "research",
+      "queryFormat": "",
+      "formatSource": null,
+      "lookupAvailable": false
+    },
+    {
+      "country": "El Salvador",
+      "iso2": "SV",
+      "iso3": "SLV",
+      "officialUrl": "https://www.e.cnr.gob.sv/ServiciosOL/portada/rco.htm",
+      "urlSource": "research",
+      "queryFormat": "",
+      "formatSource": null,
+      "lookupAvailable": false
+    },
+    {
+      "country": "Equatorial Guinea",
+      "iso2": "GQ",
+      "iso3": "GNQ",
+      "officialUrl": "https://www.guineaecuatorialpress.com/",
+      "urlSource": "research",
+      "queryFormat": "",
+      "formatSource": null,
+      "lookupAvailable": false
+    },
+    {
+      "country": "Eritrea",
+      "iso2": "ER",
+      "iso3": "ERI",
+      "officialUrl": "https://shabait.com/",
+      "urlSource": "research",
+      "queryFormat": "",
+      "formatSource": null,
+      "lookupAvailable": false
+    },
+    {
+      "country": "Estonia",
+      "iso2": "EE",
+      "iso3": "EST",
+      "officialUrl": "https://ariregister.rik.ee/eng",
+      "urlSource": "research",
+      "queryFormat": "registry code (registrikood)",
+      "formatSource": "research",
+      "lookupAvailable": false
+    },
+    {
+      "country": "Eswatini",
+      "iso2": "SZ",
+      "iso3": "SWZ",
+      "officialUrl": "https://www.online.gov.sz/e-companysearch.aspx",
+      "urlSource": "research",
+      "queryFormat": "",
+      "formatSource": null,
+      "lookupAvailable": false
+    },
+    {
+      "country": "Ethiopia",
+      "iso2": "ET",
+      "iso3": "ETH",
+      "officialUrl": "https://business.gov.et/",
+      "urlSource": "research",
+      "queryFormat": "",
+      "formatSource": null,
+      "lookupAvailable": false
+    },
+    {
+      "country": "Falkland Islands",
+      "iso2": "FK",
+      "iso3": "FLK",
+      "officialUrl": "https://services.registry.gov.fk/",
+      "urlSource": "research",
+      "queryFormat": "",
+      "formatSource": null,
+      "lookupAvailable": false
+    },
+    {
+      "country": "Faroe Islands",
+      "iso2": "FO",
+      "iso3": "FRO",
+      "officialUrl": "",
+      "urlSource": null,
+      "queryFormat": "",
+      "formatSource": null,
+      "lookupAvailable": false
+    },
+    {
+      "country": "Fiji",
+      "iso2": "FJ",
+      "iso3": "FJI",
+      "officialUrl": "",
+      "urlSource": null,
+      "queryFormat": "",
+      "formatSource": null,
+      "lookupAvailable": false
+    },
+    {
+      "country": "Finland",
+      "iso2": "FI",
+      "iso3": "FIN",
+      "officialUrl": "https://www.ytj.fi/en/index/companysearch.html",
+      "urlSource": "research",
+      "queryFormat": "Y-tunnus / Business ID",
+      "formatSource": "research",
+      "lookupAvailable": false
+    },
+    {
+      "country": "France",
+      "iso2": "FR",
+      "iso3": "FRA",
+      "officialUrl": "https://data.inpi.fr/",
+      "urlSource": "research",
+      "queryFormat": "SIREN: 000000000 (9 digits) / SIRET: 00000000000000 (14 digits)",
+      "formatSource": "research",
+      "lookupAvailable": false
+    },
+    {
+      "country": "French Guiana",
+      "iso2": "GF",
+      "iso3": "GUF",
+      "officialUrl": "https://data.inpi.fr/",
+      "urlSource": "research",
+      "queryFormat": "",
+      "formatSource": null,
+      "lookupAvailable": false
+    },
+    {
+      "country": "French Polynesia",
+      "iso2": "PF",
+      "iso3": "PYF",
+      "officialUrl": "",
+      "urlSource": null,
+      "queryFormat": "",
+      "formatSource": null,
+      "lookupAvailable": false
+    },
+    {
+      "country": "French Southern Territories",
+      "iso2": "TF",
+      "iso3": "ATF",
+      "officialUrl": "https://taaf.fr/",
+      "urlSource": "research",
+      "queryFormat": "",
+      "formatSource": null,
+      "lookupAvailable": false
+    },
+    {
+      "country": "Gabon",
+      "iso2": "GA",
+      "iso3": "GAB",
+      "officialUrl": "https://anpi-gabon.com/",
+      "urlSource": "research",
+      "queryFormat": "",
+      "formatSource": null,
+      "lookupAvailable": false
+    },
+    {
+      "country": "Gambia",
+      "iso2": "GM",
+      "iso3": "GMB",
+      "officialUrl": "https://www.easybusiness.gm/",
+      "urlSource": "research",
+      "queryFormat": "",
+      "formatSource": null,
+      "lookupAvailable": false
+    },
+    {
+      "country": "Georgia",
+      "iso2": "GE",
+      "iso3": "GEO",
+      "officialUrl": "https://enreg.reestri.gov.ge/",
+      "urlSource": "research",
+      "queryFormat": "identification number assigned by NAPR, which also serves as the VAT number",
+      "formatSource": "research",
+      "lookupAvailable": false
+    },
+    {
+      "country": "Germany",
+      "iso2": "DE",
+      "iso3": "DEU",
+      "officialUrl": "https://www.handelsregister.de/",
+      "urlSource": "research",
+      "queryFormat": "HRA/HRB number + Registergericht; EUID",
+      "formatSource": "research",
+      "lookupAvailable": false
+    },
+    {
+      "country": "Ghana",
+      "iso2": "GH",
+      "iso3": "GHA",
+      "officialUrl": "https://orc.gov.gh/index.php/services/name-search",
+      "urlSource": "research",
+      "queryFormat": "",
+      "formatSource": null,
+      "lookupAvailable": false
+    },
+    {
+      "country": "Gibraltar",
+      "iso2": "GI",
+      "iso3": "GIB",
+      "officialUrl": "",
+      "urlSource": null,
+      "queryFormat": "",
+      "formatSource": null,
+      "lookupAvailable": false
+    },
+    {
+      "country": "Greece",
+      "iso2": "GR",
+      "iso3": "GRC",
+      "officialUrl": "https://www.businessregistry.gr/publicity/index",
+      "urlSource": "research",
+      "queryFormat": "Arithmos G.E.MI.; AFM (tax number)",
+      "formatSource": "research",
+      "lookupAvailable": false
+    },
+    {
+      "country": "Greenland",
+      "iso2": "GL",
+      "iso3": "GRL",
+      "officialUrl": "https://datacvr.virk.dk/",
+      "urlSource": "research",
+      "queryFormat": "CVR-nummer",
+      "formatSource": "research",
+      "lookupAvailable": false
+    },
+    {
+      "country": "Grenada",
+      "iso2": "GD",
+      "iso3": "GRD",
+      "officialUrl": "",
+      "urlSource": null,
+      "queryFormat": "",
+      "formatSource": null,
+      "lookupAvailable": false
+    },
+    {
+      "country": "Guadeloupe",
+      "iso2": "GP",
+      "iso3": "GLP",
+      "officialUrl": "https://data.inpi.fr/",
+      "urlSource": "research",
+      "queryFormat": "",
+      "formatSource": null,
+      "lookupAvailable": false
+    },
+    {
+      "country": "Guam",
+      "iso2": "GU",
+      "iso3": "GUM",
+      "officialUrl": "",
+      "urlSource": null,
+      "queryFormat": "",
+      "formatSource": null,
+      "lookupAvailable": false
+    },
+    {
+      "country": "Guatemala",
+      "iso2": "GT",
+      "iso3": "GTM",
+      "officialUrl": "https://sedevirtual.registromercantil.gob.gt/",
+      "urlSource": "research",
+      "queryFormat": "",
+      "formatSource": null,
+      "lookupAvailable": false
+    },
+    {
+      "country": "Guernsey",
+      "iso2": "GG",
+      "iso3": "GGY",
+      "officialUrl": "",
+      "urlSource": null,
+      "queryFormat": "",
+      "formatSource": null,
+      "lookupAvailable": false
+    },
+    {
+      "country": "Guinea",
+      "iso2": "GN",
+      "iso3": "GIN",
+      "officialUrl": "https://apip.gov.gn/",
+      "urlSource": "research",
+      "queryFormat": "",
+      "formatSource": null,
+      "lookupAvailable": false
+    },
+    {
+      "country": "Guinea-Bissau",
+      "iso2": "GW",
+      "iso3": "GNB",
+      "officialUrl": "https://www.gov.gw/",
+      "urlSource": "research",
+      "queryFormat": "",
+      "formatSource": null,
+      "lookupAvailable": false
+    },
+    {
+      "country": "Guyana",
+      "iso2": "GY",
+      "iso3": "GUY",
+      "officialUrl": "https://dcra.gov.gy/",
+      "urlSource": "research",
+      "queryFormat": "",
+      "formatSource": null,
+      "lookupAvailable": false
+    },
+    {
+      "country": "Haiti",
+      "iso2": "HT",
+      "iso3": "HTI",
+      "officialUrl": "https://mci.gouv.ht/enregistrement-dun-nom-commercial.php",
+      "urlSource": "research",
+      "queryFormat": "",
+      "formatSource": null,
+      "lookupAvailable": false
+    },
+    {
+      "country": "Heard Island and McDonald Islands",
+      "iso2": "HM",
+      "iso3": "HMD",
+      "officialUrl": "",
+      "urlSource": null,
+      "queryFormat": "",
+      "formatSource": null,
+      "lookupAvailable": false
+    },
+    {
+      "country": "Holy See",
+      "iso2": "VA",
+      "iso3": "VAT",
+      "officialUrl": "",
+      "urlSource": null,
+      "queryFormat": "",
+      "formatSource": null,
+      "lookupAvailable": false
+    },
+    {
+      "country": "Honduras",
+      "iso2": "HN",
+      "iso3": "HND",
+      "officialUrl": "https://registromercantil.ccichonduras.org/app/consulta-registro-mercantil/Consulta_de_empresas.htm",
+      "urlSource": "research",
+      "queryFormat": "",
+      "formatSource": null,
+      "lookupAvailable": false
+    },
+    {
+      "country": "Hong Kong",
+      "iso2": "HK",
+      "iso3": "HKG",
+      "officialUrl": "https://www.e-services.cr.gov.hk/",
+      "urlSource": "research",
+      "queryFormat": "",
+      "formatSource": null,
+      "lookupAvailable": false
+    },
+    {
+      "country": "Hungary",
+      "iso2": "HU",
+      "iso3": "HUN",
+      "officialUrl": "https://www.e-cegjegyzek.hu/",
+      "urlSource": "research",
+      "queryFormat": "cegjegyzekszam (company registration number); adoszam (tax number)",
+      "formatSource": "research",
+      "lookupAvailable": false
+    },
+    {
+      "country": "Iceland",
+      "iso2": "IS",
+      "iso3": "ISL",
+      "officialUrl": "https://e-justice.europa.eu/topics/registers-business-insolvency-land/business-registers-search-company-eu/general-information-find-company_en",
+      "urlSource": "research",
+      "queryFormat": "national registration number; EUID (country code + register id + national number)",
+      "formatSource": "research",
+      "lookupAvailable": false
+    },
+    {
+      "country": "India",
+      "iso2": "IN",
+      "iso3": "IND",
+      "officialUrl": "https://www.mca.gov.in/content/mca/global/en/mca/master-data/MDS.html",
+      "urlSource": "research",
+      "queryFormat": "CIN: 21 alphanumeric characters / LLPIN / FCRN",
+      "formatSource": "research",
+      "lookupAvailable": false
+    },
+    {
+      "country": "Indonesia",
+      "iso2": "ID",
+      "iso3": "IDN",
+      "officialUrl": "",
+      "urlSource": null,
+      "queryFormat": "",
+      "formatSource": null,
+      "lookupAvailable": false
+    },
+    {
+      "country": "Iran",
+      "iso2": "IR",
+      "iso3": "IRN",
+      "officialUrl": "https://ilenc.ssaa.ir/",
+      "urlSource": "research",
+      "queryFormat": "",
+      "formatSource": null,
+      "lookupAvailable": false
+    },
+    {
+      "country": "Iraq",
+      "iso2": "IQ",
+      "iso3": "IRQ",
+      "officialUrl": "",
+      "urlSource": null,
+      "queryFormat": "",
+      "formatSource": null,
+      "lookupAvailable": false
+    },
+    {
+      "country": "Ireland",
+      "iso2": "IE",
+      "iso3": "IRL",
+      "officialUrl": "https://core.cro.ie/",
+      "urlSource": "research",
+      "queryFormat": "CRO company number; business name number",
+      "formatSource": "research",
+      "lookupAvailable": false
+    },
+    {
+      "country": "Isle of Man",
+      "iso2": "IM",
+      "iso3": "IMN",
+      "officialUrl": "",
+      "urlSource": null,
+      "queryFormat": "",
+      "formatSource": null,
+      "lookupAvailable": false
+    },
+    {
+      "country": "Israel",
+      "iso2": "IL",
+      "iso3": "ISR",
+      "officialUrl": "",
+      "urlSource": null,
+      "queryFormat": "",
+      "formatSource": null,
+      "lookupAvailable": false
+    },
+    {
+      "country": "Italy",
+      "iso2": "IT",
+      "iso3": "ITA",
+      "officialUrl": "https://italianbusinessregister.it/en/",
+      "urlSource": "research",
+      "queryFormat": "codice fiscale / partita IVA; numero REA; numero di iscrizione RI; EUID",
+      "formatSource": "research",
+      "lookupAvailable": false
+    },
+    {
+      "country": "Jamaica",
+      "iso2": "JM",
+      "iso3": "JAM",
+      "officialUrl": "https://www.orcjamaica.com/CompanySearch.aspx",
+      "urlSource": "research",
+      "queryFormat": "",
+      "formatSource": null,
+      "lookupAvailable": false
+    },
+    {
+      "country": "Japan",
+      "iso2": "JP",
+      "iso3": "JPN",
+      "officialUrl": "https://www.houjin-bangou.nta.go.jp/en/",
+      "urlSource": "research",
+      "queryFormat": "Corporate Number: 0000000000000 (13 digits)",
+      "formatSource": "research",
+      "lookupAvailable": false
+    },
+    {
+      "country": "Jersey",
+      "iso2": "JE",
+      "iso3": "JEY",
+      "officialUrl": "",
+      "urlSource": null,
+      "queryFormat": "",
+      "formatSource": null,
+      "lookupAvailable": false
+    },
+    {
+      "country": "Jordan",
+      "iso2": "JO",
+      "iso3": "JOR",
+      "officialUrl": "",
+      "urlSource": null,
+      "queryFormat": "",
+      "formatSource": null,
+      "lookupAvailable": false
+    },
+    {
+      "country": "Kazakhstan",
+      "iso2": "KZ",
+      "iso3": "KAZ",
+      "officialUrl": "https://egov.kz/cms/en/services/business_registration/pass042com_mu",
+      "urlSource": "research",
+      "queryFormat": "",
+      "formatSource": null,
+      "lookupAvailable": false
+    },
+    {
+      "country": "Kenya",
+      "iso2": "KE",
+      "iso3": "KEN",
+      "officialUrl": "https://brs.go.ke/",
+      "urlSource": "research",
+      "queryFormat": "",
+      "formatSource": null,
+      "lookupAvailable": false
+    },
+    {
+      "country": "Kiribati",
+      "iso2": "KI",
+      "iso3": "KIR",
+      "officialUrl": "",
+      "urlSource": null,
+      "queryFormat": "",
+      "formatSource": null,
+      "lookupAvailable": false
+    },
+    {
+      "country": "Korea (Democratic People's Republic of)",
+      "iso2": "KP",
+      "iso3": "PRK",
+      "officialUrl": "http://www.naenara.com.kp/",
+      "urlSource": "research",
+      "queryFormat": "",
+      "formatSource": null,
+      "lookupAvailable": false
+    },
+    {
+      "country": "Korea (Republic of)",
+      "iso2": "KR",
+      "iso3": "KOR",
+      "officialUrl": "https://www.iros.go.kr/",
+      "urlSource": "research",
+      "queryFormat": "",
+      "formatSource": null,
+      "lookupAvailable": false
+    },
+    {
+      "country": "Kosovo",
+      "iso2": "XK",
+      "iso3": "XKX",
+      "officialUrl": "",
+      "urlSource": null,
+      "queryFormat": "",
+      "formatSource": null,
+      "lookupAvailable": false
+    },
+    {
+      "country": "Kuwait",
+      "iso2": "KW",
+      "iso3": "KWT",
+      "officialUrl": "",
+      "urlSource": null,
+      "queryFormat": "",
+      "formatSource": null,
+      "lookupAvailable": false
+    },
+    {
+      "country": "Kyrgyzstan",
+      "iso2": "KG",
+      "iso3": "KGZ",
+      "officialUrl": "https://record.minjust.gov.kg/",
+      "urlSource": "research",
+      "queryFormat": "",
+      "formatSource": null,
+      "lookupAvailable": false
+    },
+    {
+      "country": "Lao PDR",
+      "iso2": "LA",
+      "iso3": "LAO",
+      "officialUrl": "",
+      "urlSource": null,
+      "queryFormat": "",
+      "formatSource": null,
+      "lookupAvailable": false
+    },
+    {
+      "country": "Latvia",
+      "iso2": "LV",
+      "iso3": "LVA",
+      "officialUrl": "https://info.ur.gov.lv/",
+      "urlSource": "research",
+      "queryFormat": "vienotais registracijas numurs (unified registration number); SEPA payee identifier where assigned",
+      "formatSource": "research",
+      "lookupAvailable": false
+    },
+    {
+      "country": "Lebanon",
+      "iso2": "LB",
+      "iso3": "LBN",
+      "officialUrl": "",
+      "urlSource": null,
+      "queryFormat": "",
+      "formatSource": null,
+      "lookupAvailable": false
+    },
+    {
+      "country": "Lesotho",
+      "iso2": "LS",
+      "iso3": "LSO",
+      "officialUrl": "https://businessregistrations.gov.ls/",
+      "urlSource": "research",
+      "queryFormat": "",
+      "formatSource": null,
+      "lookupAvailable": false
+    },
+    {
+      "country": "Liberia",
+      "iso2": "LR",
+      "iso3": "LBR",
+      "officialUrl": "https://lbr.gov.lr/",
+      "urlSource": "research",
+      "queryFormat": "",
+      "formatSource": null,
+      "lookupAvailable": false
+    },
+    {
+      "country": "Libya",
+      "iso2": "LY",
+      "iso3": "LBY",
+      "officialUrl": "https://ejraat.gov.ly/",
+      "urlSource": "research",
+      "queryFormat": "",
+      "formatSource": null,
+      "lookupAvailable": false
+    },
+    {
+      "country": "Liechtenstein",
+      "iso2": "LI",
+      "iso3": "LIE",
+      "officialUrl": "https://www.oera.li/cr-portal/suche/suche.xhtml",
+      "urlSource": "research",
+      "queryFormat": "national registration number; EUID (country code + register id + national number)",
+      "formatSource": "research",
+      "lookupAvailable": false
+    },
+    {
+      "country": "Lithuania",
+      "iso2": "LT",
+      "iso3": "LTU",
+      "officialUrl": "https://www.registrucentras.lt/jar/p_en/",
+      "urlSource": "research",
+      "queryFormat": "juridinio asmens kodas (legal entity code)",
+      "formatSource": "research",
+      "lookupAvailable": false
+    },
+    {
+      "country": "Luxembourg",
+      "iso2": "LU",
+      "iso3": "LUX",
+      "officialUrl": "https://www.lbr.lu/mjrcs/jsp/IndexActionNotSecured.action",
+      "urlSource": "research",
+      "queryFormat": "RCS number (e.g. B123456); VAT number; EUID",
+      "formatSource": "research",
+      "lookupAvailable": false
+    },
+    {
+      "country": "Macao",
+      "iso2": "MO",
+      "iso3": "MAC",
+      "officialUrl": "https://eservice3.rn.dsaj.gov.mo/commercial/platform/home",
+      "urlSource": "research",
+      "queryFormat": "",
+      "formatSource": null,
+      "lookupAvailable": false
+    },
+    {
+      "country": "Madagascar",
+      "iso2": "MG",
+      "iso3": "MDG",
+      "officialUrl": "https://orinasa.edbm.mg/",
+      "urlSource": "research",
+      "queryFormat": "",
+      "formatSource": null,
+      "lookupAvailable": false
+    },
+    {
+      "country": "Malawi",
+      "iso2": "MW",
+      "iso3": "MWI",
+      "officialUrl": "https://mbrs.gov.mw/search",
+      "urlSource": "research",
+      "queryFormat": "",
+      "formatSource": null,
+      "lookupAvailable": false
+    },
+    {
+      "country": "Malaysia",
+      "iso2": "MY",
+      "iso3": "MYS",
+      "officialUrl": "",
+      "urlSource": null,
+      "queryFormat": "",
+      "formatSource": null,
+      "lookupAvailable": false
+    },
+    {
+      "country": "Maldives",
+      "iso2": "MV",
+      "iso3": "MDV",
+      "officialUrl": "https://business.egov.mv/",
+      "urlSource": "research",
+      "queryFormat": "",
+      "formatSource": null,
+      "lookupAvailable": false
+    },
+    {
+      "country": "Mali",
+      "iso2": "ML",
+      "iso3": "MLI",
+      "officialUrl": "https://apimali.gov.ml/",
+      "urlSource": "research",
+      "queryFormat": "",
+      "formatSource": null,
+      "lookupAvailable": false
+    },
+    {
+      "country": "Malta",
+      "iso2": "MT",
+      "iso3": "MLT",
+      "officialUrl": "https://register.mbr.mt/app/query/search",
+      "urlSource": "research",
+      "queryFormat": "national registration number; EUID (country code + register id + national number)",
+      "formatSource": "research",
+      "lookupAvailable": false
+    },
+    {
+      "country": "Marshall Islands",
+      "iso2": "MH",
+      "iso3": "MHL",
+      "officialUrl": "",
+      "urlSource": null,
+      "queryFormat": "",
+      "formatSource": null,
+      "lookupAvailable": false
+    },
+    {
+      "country": "Martinique",
+      "iso2": "MQ",
+      "iso3": "MTQ",
+      "officialUrl": "https://data.inpi.fr/",
+      "urlSource": "research",
+      "queryFormat": "",
+      "formatSource": null,
+      "lookupAvailable": false
+    },
+    {
+      "country": "Mauritania",
+      "iso2": "MR",
+      "iso3": "MRT",
+      "officialUrl": "https://apim.gov.mr/",
+      "urlSource": "research",
+      "queryFormat": "",
+      "formatSource": null,
+      "lookupAvailable": false
+    },
+    {
+      "country": "Mauritius",
+      "iso2": "MU",
+      "iso3": "MUS",
+      "officialUrl": "https://onlinesearch.mns.mu/",
+      "urlSource": "research",
+      "queryFormat": "",
+      "formatSource": null,
+      "lookupAvailable": false
+    },
+    {
+      "country": "Mayotte",
+      "iso2": "YT",
+      "iso3": "MYT",
+      "officialUrl": "https://data.inpi.fr/",
+      "urlSource": "research",
+      "queryFormat": "",
+      "formatSource": null,
+      "lookupAvailable": false
+    },
+    {
+      "country": "Mexico",
+      "iso2": "MX",
+      "iso3": "MEX",
+      "officialUrl": "https://rpc.economia.gob.mx/siger2/xhtml/login/login.xhtml",
+      "urlSource": "research",
+      "queryFormat": "",
+      "formatSource": null,
+      "lookupAvailable": false
+    },
+    {
+      "country": "Micronesia (Federated States of)",
+      "iso2": "FM",
+      "iso3": "FSM",
+      "officialUrl": "",
+      "urlSource": null,
+      "queryFormat": "",
+      "formatSource": null,
+      "lookupAvailable": false
+    },
+    {
+      "country": "Moldova",
+      "iso2": "MD",
+      "iso3": "MDA",
+      "officialUrl": "",
+      "urlSource": null,
+      "queryFormat": "",
+      "formatSource": null,
+      "lookupAvailable": false
+    },
+    {
+      "country": "Monaco",
+      "iso2": "MC",
+      "iso3": "MCO",
+      "officialUrl": "",
+      "urlSource": null,
+      "queryFormat": "",
+      "formatSource": null,
+      "lookupAvailable": false
+    },
+    {
+      "country": "Mongolia",
+      "iso2": "MN",
+      "iso3": "MNG",
+      "officialUrl": "https://opendata.burtgel.gov.mn/les",
+      "urlSource": "research",
+      "queryFormat": "",
+      "formatSource": null,
+      "lookupAvailable": false
+    },
+    {
+      "country": "Montenegro",
+      "iso2": "ME",
+      "iso3": "MNE",
+      "officialUrl": "",
+      "urlSource": null,
+      "queryFormat": "",
+      "formatSource": null,
+      "lookupAvailable": false
+    },
+    {
+      "country": "Montserrat",
+      "iso2": "MS",
+      "iso3": "MSR",
+      "officialUrl": "https://cipo.fsc.ms/",
+      "urlSource": "research",
+      "queryFormat": "",
+      "formatSource": null,
+      "lookupAvailable": false
+    },
+    {
+      "country": "Morocco",
+      "iso2": "MA",
+      "iso3": "MAR",
+      "officialUrl": "https://www.directinfo.ma/",
+      "urlSource": "research",
+      "queryFormat": "",
+      "formatSource": null,
+      "lookupAvailable": false
+    },
+    {
+      "country": "Mozambique",
+      "iso2": "MZ",
+      "iso3": "MOZ",
+      "officialUrl": "https://www.bau.gov.mz/",
+      "urlSource": "research",
+      "queryFormat": "",
+      "formatSource": null,
+      "lookupAvailable": false
+    },
+    {
+      "country": "Myanmar",
+      "iso2": "MM",
+      "iso3": "MMR",
+      "officialUrl": "https://www.myco.dica.gov.mm/",
+      "urlSource": "research",
+      "queryFormat": "",
+      "formatSource": null,
+      "lookupAvailable": false
+    },
+    {
+      "country": "Namibia",
+      "iso2": "NA",
+      "iso3": "NAM",
+      "officialUrl": "https://www.bipa.na/search/",
+      "urlSource": "research",
+      "queryFormat": "",
+      "formatSource": null,
+      "lookupAvailable": false
+    },
+    {
+      "country": "Nauru",
+      "iso2": "NR",
+      "iso3": "NRU",
+      "officialUrl": "",
+      "urlSource": null,
+      "queryFormat": "",
+      "formatSource": null,
+      "lookupAvailable": false
+    },
+    {
+      "country": "Nepal",
+      "iso2": "NP",
+      "iso3": "NPL",
+      "officialUrl": "https://application.ocr.gov.np/faces/CompanyDetails.jsp",
+      "urlSource": "research",
+      "queryFormat": "",
+      "formatSource": null,
+      "lookupAvailable": false
+    },
+    {
+      "country": "Netherlands",
+      "iso2": "NL",
+      "iso3": "NLD",
+      "officialUrl": "https://www.kvk.nl/zoeken/",
+      "urlSource": "research",
+      "queryFormat": "KVK number: 00000000 (8 digits)",
+      "formatSource": "research",
+      "lookupAvailable": false
+    },
+    {
+      "country": "New Caledonia",
+      "iso2": "NC",
+      "iso3": "NCL",
+      "officialUrl": "",
+      "urlSource": null,
+      "queryFormat": "",
+      "formatSource": null,
+      "lookupAvailable": false
+    },
+    {
+      "country": "New Zealand",
+      "iso2": "NZ",
+      "iso3": "NZL",
+      "officialUrl": "https://companies-register.companiesoffice.govt.nz/",
+      "urlSource": "research",
+      "queryFormat": "NZBN: 0000000000000 (13 digits) / company number",
+      "formatSource": "research",
+      "lookupAvailable": false
+    },
+    {
+      "country": "Nicaragua",
+      "iso2": "NI",
+      "iso3": "NIC",
+      "officialUrl": "https://www.registropublico.gob.ni/",
+      "urlSource": "research",
+      "queryFormat": "",
+      "formatSource": null,
+      "lookupAvailable": false
+    },
+    {
+      "country": "Niger",
+      "iso2": "NE",
+      "iso3": "NER",
+      "officialUrl": "https://www.mde.ne/",
+      "urlSource": "research",
+      "queryFormat": "",
+      "formatSource": null,
+      "lookupAvailable": false
+    },
+    {
+      "country": "Nigeria",
+      "iso2": "NG",
+      "iso3": "NGA",
+      "officialUrl": "https://search.cac.gov.ng/",
+      "urlSource": "research",
+      "queryFormat": "",
+      "formatSource": null,
+      "lookupAvailable": false
+    },
+    {
+      "country": "Niue",
+      "iso2": "NU",
+      "iso3": "NIU",
+      "officialUrl": "",
+      "urlSource": null,
+      "queryFormat": "",
+      "formatSource": null,
+      "lookupAvailable": false
+    },
+    {
+      "country": "Norfolk Island",
+      "iso2": "NF",
+      "iso3": "NFK",
+      "officialUrl": "",
+      "urlSource": null,
+      "queryFormat": "",
+      "formatSource": null,
+      "lookupAvailable": false
+    },
+    {
+      "country": "North Macedonia",
+      "iso2": "MK",
+      "iso3": "MKD",
+      "officialUrl": "",
+      "urlSource": null,
+      "queryFormat": "",
+      "formatSource": null,
+      "lookupAvailable": false
+    },
+    {
+      "country": "Northern Mariana Islands",
+      "iso2": "MP",
+      "iso3": "MNP",
+      "officialUrl": "",
+      "urlSource": null,
+      "queryFormat": "",
+      "formatSource": null,
+      "lookupAvailable": false
+    },
+    {
+      "country": "Norway",
+      "iso2": "NO",
+      "iso3": "NOR",
+      "officialUrl": "https://virksomhet.brreg.no/",
+      "urlSource": "research",
+      "queryFormat": "Organisation number: 000000000 (9 digits)",
+      "formatSource": "research",
+      "lookupAvailable": true
+    },
+    {
+      "country": "Oman",
+      "iso2": "OM",
+      "iso3": "OMN",
+      "officialUrl": "",
+      "urlSource": null,
+      "queryFormat": "",
+      "formatSource": null,
+      "lookupAvailable": false
+    },
+    {
+      "country": "Pakistan",
+      "iso2": "PK",
+      "iso3": "PAK",
+      "officialUrl": "https://eservices.secp.gov.pk/eServices/CTC_CompanySearch.jsp",
+      "urlSource": "research",
+      "queryFormat": "",
+      "formatSource": null,
+      "lookupAvailable": false
+    },
+    {
+      "country": "Palau",
+      "iso2": "PW",
+      "iso3": "PLW",
+      "officialUrl": "",
+      "urlSource": null,
+      "queryFormat": "",
+      "formatSource": null,
+      "lookupAvailable": false
+    },
+    {
+      "country": "Palestine, State of",
+      "iso2": "PS",
+      "iso3": "PSE",
+      "officialUrl": "",
+      "urlSource": null,
+      "queryFormat": "",
+      "formatSource": null,
+      "lookupAvailable": false
+    },
+    {
+      "country": "Panama",
+      "iso2": "PA",
+      "iso3": "PAN",
+      "officialUrl": "https://www.registro-publico.gob.pa/RediWeb/default.asp",
+      "urlSource": "research",
+      "queryFormat": "",
+      "formatSource": null,
+      "lookupAvailable": false
+    },
+    {
+      "country": "Papua New Guinea",
+      "iso2": "PG",
+      "iso3": "PNG",
+      "officialUrl": "",
+      "urlSource": null,
+      "queryFormat": "",
+      "formatSource": null,
+      "lookupAvailable": false
+    },
+    {
+      "country": "Paraguay",
+      "iso2": "PY",
+      "iso3": "PRY",
+      "officialUrl": "https://www.dnit.gov.py/web/portal-institucional/consulta-ruc",
+      "urlSource": "research",
+      "queryFormat": "",
+      "formatSource": null,
+      "lookupAvailable": false
+    },
+    {
+      "country": "Peru",
+      "iso2": "PE",
+      "iso3": "PER",
+      "officialUrl": "https://www.sunarp.gob.pe/bus-personas-juridicas.asp",
+      "urlSource": "research",
+      "queryFormat": "",
+      "formatSource": null,
+      "lookupAvailable": false
+    },
+    {
+      "country": "Philippines",
+      "iso2": "PH",
+      "iso3": "PHL",
+      "officialUrl": "https://esearch.sec.gov.ph/",
+      "urlSource": "research",
+      "queryFormat": "",
+      "formatSource": null,
+      "lookupAvailable": false
+    },
+    {
+      "country": "Pitcairn",
+      "iso2": "PN",
+      "iso3": "PCN",
+      "officialUrl": "",
+      "urlSource": null,
+      "queryFormat": "",
+      "formatSource": null,
+      "lookupAvailable": false
+    },
+    {
+      "country": "Poland",
+      "iso2": "PL",
+      "iso3": "POL",
+      "officialUrl": "https://wyszukiwarka-krs.ms.gov.pl/",
+      "urlSource": "research",
+      "queryFormat": "KRS number; NIP (tax); REGON (statistical)",
+      "formatSource": "research",
+      "lookupAvailable": false
+    },
+    {
+      "country": "Portugal",
+      "iso2": "PT",
+      "iso3": "PRT",
+      "officialUrl": "https://publicacoes.mj.pt/Pesquisa.aspx",
+      "urlSource": "research",
+      "queryFormat": "NIPC (also the tax number); certidao permanente 12-digit access code",
+      "formatSource": "research",
+      "lookupAvailable": false
+    },
+    {
+      "country": "Puerto Rico",
+      "iso2": "PR",
+      "iso3": "PRI",
+      "officialUrl": "https://rcp.estado.pr.gov/en",
+      "urlSource": "research",
+      "queryFormat": "",
+      "formatSource": null,
+      "lookupAvailable": false
+    },
+    {
+      "country": "Qatar",
+      "iso2": "QA",
+      "iso3": "QAT",
+      "officialUrl": "",
+      "urlSource": null,
+      "queryFormat": "",
+      "formatSource": null,
+      "lookupAvailable": false
+    },
+    {
+      "country": "Réunion",
+      "iso2": "RE",
+      "iso3": "REU",
+      "officialUrl": "https://data.inpi.fr/",
+      "urlSource": "research",
+      "queryFormat": "",
+      "formatSource": null,
+      "lookupAvailable": false
+    },
+    {
+      "country": "Romania",
+      "iso2": "RO",
+      "iso3": "ROU",
+      "officialUrl": "https://portal.onrc.ro/",
+      "urlSource": "research",
+      "queryFormat": "CUI (unique registration code); numar de ordine in registrul comertului; EUID",
+      "formatSource": "research",
+      "lookupAvailable": false
+    },
+    {
+      "country": "Russian Federation",
+      "iso2": "RU",
+      "iso3": "RUS",
+      "officialUrl": "https://egrul.nalog.ru/",
+      "urlSource": "research",
+      "queryFormat": "OGRN; INN; KPP",
+      "formatSource": "research",
+      "lookupAvailable": false
+    },
+    {
+      "country": "Rwanda",
+      "iso2": "RW",
+      "iso3": "RWA",
+      "officialUrl": "https://org.rdb.rw/",
+      "urlSource": "research",
+      "queryFormat": "",
+      "formatSource": null,
+      "lookupAvailable": false
+    },
+    {
+      "country": "Saint Barthelemy",
+      "iso2": "BL",
+      "iso3": "BLM",
+      "officialUrl": "https://data.inpi.fr/",
+      "urlSource": "research",
+      "queryFormat": "",
+      "formatSource": null,
+      "lookupAvailable": false
+    },
+    {
+      "country": "Saint Helena, Ascension and Tristan da Cunha",
+      "iso2": "SH",
+      "iso3": "SHN",
+      "officialUrl": "https://www.sainthelena.gov.sh/public-services/companies-registry/",
+      "urlSource": "research",
+      "queryFormat": "",
+      "formatSource": null,
+      "lookupAvailable": false
+    },
+    {
+      "country": "Saint Kitts and Nevis",
+      "iso2": "KN",
+      "iso3": "KNA",
+      "officialUrl": "https://www.fsrc.kn/companies/names-of-companies",
+      "urlSource": "research",
+      "queryFormat": "",
+      "formatSource": null,
+      "lookupAvailable": false
+    },
+    {
+      "country": "Saint Lucia",
+      "iso2": "LC",
+      "iso3": "LCA",
+      "officialUrl": "https://attorneygeneralchambers.com/p/search-for-a-company-or-business-name",
+      "urlSource": "research",
+      "queryFormat": "",
+      "formatSource": null,
+      "lookupAvailable": false
+    },
+    {
+      "country": "Saint Martin (French part)",
+      "iso2": "MF",
+      "iso3": "MAF",
+      "officialUrl": "https://data.inpi.fr/",
+      "urlSource": "research",
+      "queryFormat": "",
+      "formatSource": null,
+      "lookupAvailable": false
+    },
+    {
+      "country": "Saint Pierre and Miquelon",
+      "iso2": "PM",
+      "iso3": "SPM",
+      "officialUrl": "",
+      "urlSource": null,
+      "queryFormat": "",
+      "formatSource": null,
+      "lookupAvailable": false
+    },
+    {
+      "country": "Saint Vincent and the Grenadines",
+      "iso2": "VC",
+      "iso3": "VCT",
+      "officialUrl": "https://cipo.gov.vc/",
+      "urlSource": "research",
+      "queryFormat": "",
+      "formatSource": null,
+      "lookupAvailable": false
+    },
+    {
+      "country": "Samoa",
+      "iso2": "WS",
+      "iso3": "WSM",
+      "officialUrl": "",
+      "urlSource": null,
+      "queryFormat": "",
+      "formatSource": null,
+      "lookupAvailable": false
+    },
+    {
+      "country": "San Marino",
+      "iso2": "SM",
+      "iso3": "SMR",
+      "officialUrl": "",
+      "urlSource": null,
+      "queryFormat": "",
+      "formatSource": null,
+      "lookupAvailable": false
+    },
+    {
+      "country": "Sao Tome and Principe",
+      "iso2": "ST",
+      "iso3": "STP",
+      "officialUrl": "https://justica.gov.st/",
+      "urlSource": "research",
+      "queryFormat": "",
+      "formatSource": null,
+      "lookupAvailable": false
+    },
+    {
+      "country": "Saudi Arabia",
+      "iso2": "SA",
+      "iso3": "SAU",
+      "officialUrl": "",
+      "urlSource": null,
+      "queryFormat": "",
+      "formatSource": null,
+      "lookupAvailable": false
+    },
+    {
+      "country": "Senegal",
+      "iso2": "SN",
+      "iso3": "SEN",
+      "officialUrl": "https://www.seninfogreffe.sn/",
+      "urlSource": "research",
+      "queryFormat": "",
+      "formatSource": null,
+      "lookupAvailable": false
+    },
+    {
+      "country": "Serbia",
+      "iso2": "RS",
+      "iso3": "SRB",
+      "officialUrl": "https://pretraga.apr.gov.rs/",
+      "urlSource": "research",
+      "queryFormat": "maticni broj (registration number); PIB (tax identification number)",
+      "formatSource": "research",
+      "lookupAvailable": false
+    },
+    {
+      "country": "Seychelles",
+      "iso2": "SC",
+      "iso3": "SYC",
+      "officialUrl": "https://www.registry.gov.sc/BizRegistration/WebSearchBusiness.aspx",
+      "urlSource": "research",
+      "queryFormat": "",
+      "formatSource": null,
+      "lookupAvailable": false
+    },
+    {
+      "country": "Sierra Leone",
+      "iso2": "SL",
+      "iso3": "SLE",
+      "officialUrl": "https://oarg.gov.sl/",
+      "urlSource": "research",
+      "queryFormat": "",
+      "formatSource": null,
+      "lookupAvailable": false
+    },
+    {
+      "country": "Singapore",
+      "iso2": "SG",
+      "iso3": "SGP",
+      "officialUrl": "https://www.bizfile.gov.sg/",
+      "urlSource": "research",
+      "queryFormat": "UEN",
+      "formatSource": "research",
+      "lookupAvailable": true
+    },
+    {
+      "country": "Sint Maarten",
+      "iso2": "SX",
+      "iso3": "SXM",
+      "officialUrl": "https://www.chamberofcommerce.sx/?page_id=5476",
+      "urlSource": "research",
+      "queryFormat": "",
+      "formatSource": null,
+      "lookupAvailable": false
+    },
+    {
+      "country": "Slovakia",
+      "iso2": "SK",
+      "iso3": "SVK",
+      "officialUrl": "https://rpo.statistics.sk/rpo/#search",
+      "urlSource": "research",
+      "queryFormat": "IČO: 00000000 (8 digits)",
+      "formatSource": "research",
+      "lookupAvailable": true
+    },
+    {
+      "country": "Slovenia",
+      "iso2": "SI",
+      "iso3": "SVN",
+      "officialUrl": "https://www.ajpes.si/prs/",
+      "urlSource": "research",
+      "queryFormat": "maticna stevilka (registration number); davcna stevilka (tax number); HSMID address identifier",
+      "formatSource": "research",
+      "lookupAvailable": false
+    },
+    {
+      "country": "Solomon Islands",
+      "iso2": "SB",
+      "iso3": "SLB",
+      "officialUrl": "",
+      "urlSource": null,
+      "queryFormat": "",
+      "formatSource": null,
+      "lookupAvailable": false
+    },
+    {
+      "country": "Somalia",
+      "iso2": "SO",
+      "iso3": "SOM",
+      "officialUrl": "https://ebusiness.gov.so/",
+      "urlSource": "research",
+      "queryFormat": "",
+      "formatSource": null,
+      "lookupAvailable": false
+    },
+    {
+      "country": "South Africa",
+      "iso2": "ZA",
+      "iso3": "ZAF",
+      "officialUrl": "https://eservices.cipc.co.za/Search.aspx",
+      "urlSource": "research",
+      "queryFormat": "Registration number: YYYY/NNNNNN/NN",
+      "formatSource": "research",
+      "lookupAvailable": false
+    },
+    {
+      "country": "South Georgia and the South Sandwich Islands",
+      "iso2": "GS",
+      "iso3": "SGS",
+      "officialUrl": "https://gov.gs/",
+      "urlSource": "research",
+      "queryFormat": "",
+      "formatSource": null,
+      "lookupAvailable": false
+    },
+    {
+      "country": "South Sudan",
+      "iso2": "SS",
+      "iso3": "SSD",
+      "officialUrl": "https://brs.eservices.gov.ss/",
+      "urlSource": "research",
+      "queryFormat": "",
+      "formatSource": null,
+      "lookupAvailable": false
+    },
+    {
+      "country": "Spain",
+      "iso2": "ES",
+      "iso3": "ESP",
+      "officialUrl": "https://www.registradores.org/directorio/-/registros/mercantil",
+      "urlSource": "research",
+      "queryFormat": "NIF/CIF; hoja registral and provincial register data; no single free national company number index",
+      "formatSource": "research",
+      "lookupAvailable": false
+    },
+    {
+      "country": "Sri Lanka",
+      "iso2": "LK",
+      "iso3": "LKA",
+      "officialUrl": "https://eroc.drc.gov.lk/",
+      "urlSource": "research",
+      "queryFormat": "",
+      "formatSource": null,
+      "lookupAvailable": false
+    },
+    {
+      "country": "Sudan",
+      "iso2": "SD",
+      "iso3": "SDN",
+      "officialUrl": "https://business.gov.sd/",
+      "urlSource": "research",
+      "queryFormat": "",
+      "formatSource": null,
+      "lookupAvailable": false
+    },
+    {
+      "country": "Suriname",
+      "iso2": "SR",
+      "iso3": "SUR",
+      "officialUrl": "https://www.surinamechamber.com/",
+      "urlSource": "research",
+      "queryFormat": "",
+      "formatSource": null,
+      "lookupAvailable": false
+    },
+    {
+      "country": "Svalbard and Jan Mayen",
+      "iso2": "SJ",
+      "iso3": "SJM",
+      "officialUrl": "",
+      "urlSource": null,
+      "queryFormat": "",
+      "formatSource": null,
+      "lookupAvailable": false
+    },
+    {
+      "country": "Sweden",
+      "iso2": "SE",
+      "iso3": "SWE",
+      "officialUrl": "https://foretagsinfo.bolagsverket.se/sok-foretagsinformation-web/",
+      "urlSource": "research",
+      "queryFormat": "organisationsnummer",
+      "formatSource": "research",
+      "lookupAvailable": false
+    },
+    {
+      "country": "Switzerland",
+      "iso2": "CH",
+      "iso3": "CHE",
+      "officialUrl": "https://www.zefix.ch/",
+      "urlSource": "research",
+      "queryFormat": "UID: CHE-000.000.000 / CH-ID / EHRA-ID",
+      "formatSource": "research",
+      "lookupAvailable": false
+    },
+    {
+      "country": "Syrian Arab Republic",
+      "iso2": "SY",
+      "iso3": "SYR",
+      "officialUrl": "",
+      "urlSource": null,
+      "queryFormat": "",
+      "formatSource": null,
+      "lookupAvailable": false
+    },
+    {
+      "country": "Taiwan",
+      "iso2": "TW",
+      "iso3": "TWN",
+      "officialUrl": "https://findbiz.nat.gov.tw/fts/query/QueryBar/queryInit.do",
+      "urlSource": "research",
+      "queryFormat": "統一編號: 00000000",
+      "formatSource": "research",
+      "lookupAvailable": false
+    },
+    {
+      "country": "Tajikistan",
+      "iso2": "TJ",
+      "iso3": "TJK",
+      "officialUrl": "https://services.andoz.tj/",
+      "urlSource": "research",
+      "queryFormat": "",
+      "formatSource": null,
+      "lookupAvailable": false
+    },
+    {
+      "country": "Tanzania",
+      "iso2": "TZ",
+      "iso3": "TZA",
+      "officialUrl": "https://ors.brela.go.tz/",
+      "urlSource": "research",
+      "queryFormat": "",
+      "formatSource": null,
+      "lookupAvailable": false
+    },
+    {
+      "country": "Thailand",
+      "iso2": "TH",
+      "iso3": "THA",
+      "officialUrl": "https://datawarehouse.dbd.go.th/",
+      "urlSource": "research",
+      "queryFormat": "",
+      "formatSource": null,
+      "lookupAvailable": false
+    },
+    {
+      "country": "Timor-Leste",
+      "iso2": "TL",
+      "iso3": "TLS",
+      "officialUrl": "https://serve.gov.tl/en/companies/",
+      "urlSource": "research",
+      "queryFormat": "",
+      "formatSource": null,
+      "lookupAvailable": false
+    },
+    {
+      "country": "Togo",
+      "iso2": "TG",
+      "iso3": "TGO",
+      "officialUrl": "https://cfetogo.tg/entreprise/recherche",
+      "urlSource": "research",
+      "queryFormat": "",
+      "formatSource": null,
+      "lookupAvailable": false
+    },
+    {
+      "country": "Tokelau",
+      "iso2": "TK",
+      "iso3": "TKL",
+      "officialUrl": "",
+      "urlSource": null,
+      "queryFormat": "",
+      "formatSource": null,
+      "lookupAvailable": false
+    },
+    {
+      "country": "Tonga",
+      "iso2": "TO",
+      "iso3": "TON",
+      "officialUrl": "",
+      "urlSource": null,
+      "queryFormat": "",
+      "formatSource": null,
+      "lookupAvailable": false
+    },
+    {
+      "country": "Trinidad and Tobago",
+      "iso2": "TT",
+      "iso3": "TTO",
+      "officialUrl": "https://legalaffairs.gov.tt/registerbusiness.php",
+      "urlSource": "research",
+      "queryFormat": "",
+      "formatSource": null,
+      "lookupAvailable": false
+    },
+    {
+      "country": "Tunisia",
+      "iso2": "TN",
+      "iso3": "TUN",
+      "officialUrl": "https://www.registre-entreprises.tn/rne-public/#/",
+      "urlSource": "research",
+      "queryFormat": "",
+      "formatSource": null,
+      "lookupAvailable": false
+    },
+    {
+      "country": "Turkiye",
+      "iso2": "TR",
+      "iso3": "TUR",
+      "officialUrl": "",
+      "urlSource": null,
+      "queryFormat": "",
+      "formatSource": null,
+      "lookupAvailable": false
+    },
+    {
+      "country": "Turkmenistan",
+      "iso2": "TM",
+      "iso3": "TKM",
+      "officialUrl": "https://turkmenistan.gov.tm/en/post/78320/statistical-business-register-being-developed-turkmenistan-being-improved",
+      "urlSource": "research",
+      "queryFormat": "",
+      "formatSource": null,
+      "lookupAvailable": false
+    },
+    {
+      "country": "Turks and Caicos Islands",
+      "iso2": "TC",
+      "iso3": "TCA",
+      "officialUrl": "https://busreg.gov.tc/busreg/",
+      "urlSource": "research",
+      "queryFormat": "",
+      "formatSource": null,
+      "lookupAvailable": false
+    },
+    {
+      "country": "Tuvalu",
+      "iso2": "TV",
+      "iso3": "TUV",
+      "officialUrl": "",
+      "urlSource": null,
+      "queryFormat": "",
+      "formatSource": null,
+      "lookupAvailable": false
+    },
+    {
+      "country": "Uganda",
+      "iso2": "UG",
+      "iso3": "UGA",
+      "officialUrl": "https://obrs.ursb.go.ug/",
+      "urlSource": "research",
+      "queryFormat": "",
+      "formatSource": null,
+      "lookupAvailable": false
+    },
+    {
+      "country": "Ukraine",
+      "iso2": "UA",
+      "iso3": "UKR",
+      "officialUrl": "https://usr.minjust.gov.ua/content/free-search",
+      "urlSource": "research",
+      "queryFormat": "EDRPOU code (legal entities); RNOKPP (individual entrepreneurs)",
+      "formatSource": "research",
+      "lookupAvailable": false
+    },
+    {
+      "country": "United Arab Emirates",
+      "iso2": "AE",
+      "iso3": "ARE",
+      "officialUrl": "",
+      "urlSource": null,
+      "queryFormat": "",
+      "formatSource": null,
+      "lookupAvailable": false
+    },
+    {
+      "country": "United Kingdom",
+      "iso2": "GB",
+      "iso3": "GBR",
+      "officialUrl": "https://find-and-update.company-information.service.gov.uk/",
+      "urlSource": "research",
+      "queryFormat": "company number (CRN)",
+      "formatSource": "research",
+      "lookupAvailable": false
+    },
+    {
+      "country": "United States Minor Outlying Islands",
+      "iso2": "UM",
+      "iso3": "UMI",
+      "officialUrl": "",
+      "urlSource": null,
+      "queryFormat": "",
+      "formatSource": null,
+      "lookupAvailable": false
+    },
+    {
+      "country": "United States of America",
+      "iso2": "US",
+      "iso3": "USA",
+      "officialUrl": "https://www.usa.gov/state-governments",
+      "urlSource": "research",
+      "queryFormat": "state entity/file number (per state); EIN (IRS, not a public search key); CIK (SEC)",
+      "formatSource": "research",
+      "lookupAvailable": false
+    },
+    {
+      "country": "Uruguay",
+      "iso2": "UY",
+      "iso3": "URY",
+      "officialUrl": "https://portal.dgr.gub.uy/",
+      "urlSource": "research",
+      "queryFormat": "",
+      "formatSource": null,
+      "lookupAvailable": false
+    },
+    {
+      "country": "Uzbekistan",
+      "iso2": "UZ",
+      "iso3": "UZB",
+      "officialUrl": "https://my.soliq.uz/searchtin/index?lang=ru",
+      "urlSource": "research",
+      "queryFormat": "",
+      "formatSource": null,
+      "lookupAvailable": false
+    },
+    {
+      "country": "Vanuatu",
+      "iso2": "VU",
+      "iso3": "VUT",
+      "officialUrl": "",
+      "urlSource": null,
+      "queryFormat": "",
+      "formatSource": null,
+      "lookupAvailable": false
+    },
+    {
+      "country": "Venezuela",
+      "iso2": "VE",
+      "iso3": "VEN",
+      "officialUrl": "https://tramites.saren.gob.ve/",
+      "urlSource": "research",
+      "queryFormat": "",
+      "formatSource": null,
+      "lookupAvailable": false
+    },
+    {
+      "country": "Viet Nam",
+      "iso2": "VN",
+      "iso3": "VNM",
+      "officialUrl": "https://dangkykinhdoanh.gov.vn/en/Pages/default.aspx",
+      "urlSource": "research",
+      "queryFormat": "",
+      "formatSource": null,
+      "lookupAvailable": false
+    },
+    {
+      "country": "Virgin Islands (U.S.)",
+      "iso2": "VI",
+      "iso3": "VIR",
+      "officialUrl": "https://www.corporationsandtrademarks.vi.gov/",
+      "urlSource": "research",
+      "queryFormat": "",
+      "formatSource": null,
+      "lookupAvailable": false
+    },
+    {
+      "country": "Wallis and Futuna",
+      "iso2": "WF",
+      "iso3": "WLF",
+      "officialUrl": "",
+      "urlSource": null,
+      "queryFormat": "",
+      "formatSource": null,
+      "lookupAvailable": false
+    },
+    {
+      "country": "Western Sahara",
+      "iso2": "EH",
+      "iso3": "ESH",
+      "officialUrl": "https://www.ompic.ma/en/content/commercial-register",
+      "urlSource": "research",
+      "queryFormat": "",
+      "formatSource": null,
+      "lookupAvailable": false
+    },
+    {
+      "country": "Yemen",
+      "iso2": "YE",
+      "iso3": "YEM",
+      "officialUrl": "",
+      "urlSource": null,
+      "queryFormat": "",
+      "formatSource": null,
+      "lookupAvailable": false
+    },
+    {
+      "country": "Zambia",
+      "iso2": "ZM",
+      "iso3": "ZMB",
+      "officialUrl": "https://search.pacra.org.zm/",
+      "urlSource": "research",
+      "queryFormat": "",
+      "formatSource": null,
+      "lookupAvailable": false
+    },
+    {
+      "country": "Zimbabwe",
+      "iso2": "ZW",
+      "iso3": "ZWE",
+      "officialUrl": "https://zimconnect.gov.zw/",
+      "urlSource": "research",
+      "queryFormat": "",
+      "formatSource": null,
+      "lookupAvailable": false
+    }
+  ]
+}

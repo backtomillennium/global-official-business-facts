@@ -1,0 +1,7 @@
+REPLACE  README.md
+REPLACE  scripts/build-static.ts
+REPLACE  src/static/styles.css
+ADD      src/static/review.js
+ADD      data/directory/jurisdictions.seed.json
+INFO     README-INSTALL.md
+INFO     DELETE-FILES.txt

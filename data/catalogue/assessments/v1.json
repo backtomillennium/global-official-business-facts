@@ -1,5 +1,0 @@
-[
-  { "jurisdictionId": "NOR", "publicness": { "total": null, "tier": null }, "integrationGrade": "I4", "confidence": "high", "researchCompleteness": "CLOSED_FOR_V1", "checkedAt": "2026-08-14" },
-  { "jurisdictionId": "SVK", "publicness": { "total": null, "tier": null }, "integrationGrade": "I4", "confidence": "high", "researchCompleteness": "CLOSED_FOR_V1", "checkedAt": "2026-08-14" },
-  { "jurisdictionId": "SGP", "publicness": { "total": null, "tier": null }, "integrationGrade": "I3", "confidence": "high", "researchCompleteness": "CLOSED_FOR_V1_FIELD_BINDING_PASSED", "checkedAt": "2026-08-14" }
-]
